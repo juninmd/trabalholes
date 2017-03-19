@@ -1,18 +1,12 @@
 using System;
 
-namespace Model
+namespace LES_17_I_N
 {
-    public class TIPOHORARIO
+    public class TipohorarioModel
     {
 
-         /// <summary>
-         ///  
-         /// </summary>
          public string THCODI { get; set; }
 
-         /// <summary>
-         ///  
-         /// </summary>
          public string THNOME { get; set; }
 
     }
