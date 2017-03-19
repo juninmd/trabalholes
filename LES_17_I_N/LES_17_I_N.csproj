@@ -49,7 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAIRROModel.cs" />
+    <Compile Include="CBOModel.cs" />
+    <Compile Include="DEPTOModel.cs" />
+    <Compile Include="ENDERECOModel.cs" />
     <Compile Include="FirebirdRepository.cs" />
+    <Compile Include="frmestado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmestado.Designer.cs">
+      <DependentUpon>frmestado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmpais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,10 +78,19 @@
     <Compile Include="frmsobre.Designer.cs">
       <DependentUpon>frmsobre.cs</DependentUpon>
     </Compile>
+    <Compile Include="EstadoDao.cs" />
+    <Compile Include="FUNCAOModel.cs" />
+    <Compile Include="FUNCIONARIOModel.cs" />
+    <Compile Include="HORARIOModel.cs" />
+    <Compile Include="MUNICIPIOModel.cs" />
     <Compile Include="PaisDao.cs" />
-    <Compile Include="PaisModel.cs" />
+    <Compile Include="EstadoModel.cs" />
+    <Compile Include="PAISModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmestado.resx">
+      <DependentUpon>frmestado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmpais.resx">
       <DependentUpon>frmpais.cs</DependentUpon>
     </EmbeddedResource>

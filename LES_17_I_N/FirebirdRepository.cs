@@ -1,6 +1,5 @@
 ﻿using System;
 using FirebirdSql.Data.FirebirdClient;
-using System.Windows.Forms;
 using System.Data;
 
 namespace LES_17_I_N
