@@ -1,21 +1,14 @@
+using System;
+
 namespace LES_17_I_N
 {
-    public class MUNICIPIOModel
+    public class MunicipioModel
     {
 
-         /// <summary>
-         ///  
-         /// </summary>
          public string MUNCODI { get; set; }
 
-         /// <summary>
-         ///  
-         /// </summary>
          public string MUNNOME { get; set; }
 
-         /// <summary>
-         ///  
-         /// </summary>
          public string ESTCODI { get; set; }
 
     }

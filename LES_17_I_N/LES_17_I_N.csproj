@@ -49,10 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BAIRROModel.cs" />
-    <Compile Include="CBOModel.cs" />
-    <Compile Include="DEPTOModel.cs" />
-    <Compile Include="ENDERECOModel.cs" />
+    <Compile Include="BairroDao.cs" />
+    <Compile Include="BairroModel.cs" />
+    <Compile Include="CboDao.cs" />
+    <Compile Include="CboModel.cs" />
+    <Compile Include="DeptoDao.cs" />
+    <Compile Include="DeptoModel.cs" />
+    <Compile Include="EnderecoDao.cs" />
+    <Compile Include="EnderecoModel.cs" />
+    <Compile Include="EstadoModel.cs" />
     <Compile Include="FirebirdRepository.cs" />
     <Compile Include="frmestado.cs">
       <SubType>Form</SubType>
@@ -79,15 +84,20 @@
       <DependentUpon>frmsobre.cs</DependentUpon>
     </Compile>
     <Compile Include="EstadoDao.cs" />
-    <Compile Include="FUNCAOModel.cs" />
-    <Compile Include="FUNCIONARIOModel.cs" />
-    <Compile Include="HORARIOModel.cs" />
-    <Compile Include="MUNICIPIOModel.cs" />
+    <Compile Include="FuncaoDao.cs" />
+    <Compile Include="FuncaoModel.cs" />
+    <Compile Include="FuncionarioDao.cs" />
+    <Compile Include="FuncionarioModel.cs" />
+    <Compile Include="HorarioDao.cs" />
+    <Compile Include="HorarioModel.cs" />
+    <Compile Include="MunicipioDao.cs" />
+    <Compile Include="MunicipioModel.cs" />
     <Compile Include="PaisDao.cs" />
-    <Compile Include="EstadoModel.cs" />
-    <Compile Include="PAISModel.cs" />
+    <Compile Include="PaisModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipohorarioDao.cs" />
+    <Compile Include="TipohorarioModel.cs" />
     <EmbeddedResource Include="frmestado.resx">
       <DependentUpon>frmestado.cs</DependentUpon>
     </EmbeddedResource>

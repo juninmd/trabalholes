@@ -21,7 +21,7 @@ namespace LES_17_I_N
             DgvDados();
         }
 
-        private PAISModel Entidade()
+        private PaisModel Entidade()
         {
             if (String.IsNullOrEmpty(txtpaicodi.Text) || String.IsNullOrEmpty(txtpainome.Text))
             {
@@ -29,7 +29,7 @@ namespace LES_17_I_N
                 return null;
             }
 
-            return new PAISModel
+            return new PaisModel
             {
                 PAICODI = int.Parse(txtpaicodi.Text),
                 PAINOME = txtpainome.Text
