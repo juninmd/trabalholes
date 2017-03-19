@@ -3,13 +3,15 @@ using System.Windows.Forms;
 
 namespace LES_17_I_N
 {
-    public partial class frmpais : Form
+    public partial class frmestado : Form
     {
-        public frmpais()
+        public frmestado()
         {
             InitializeComponent();
         }
+        public EstadoDao EstadoDao = new EstadoDao();
         public PaisDao PaisDao = new PaisDao();
+
         public bool edicao { get; set; }
 
         private void limpar()
@@ -21,7 +23,7 @@ namespace LES_17_I_N
             DgvDados();
         }
 
-        private PAISModel Entidade()
+        private EstadoModel Entidade()
         {
             if (String.IsNullOrEmpty(txtpaicodi.Text) || String.IsNullOrEmpty(txtpainome.Text))
             {
@@ -29,10 +31,9 @@ namespace LES_17_I_N
                 return null;
             }
 
-            return new PAISModel
+            return new EstadoModel
             {
-                PAICODI = int.Parse(txtpaicodi.Text),
-                PAINOME = txtpainome.Text
+               
             };
         }
 
@@ -43,10 +44,10 @@ namespace LES_17_I_N
                 return;
 
             if (edicao)
-                PaisDao.Update(entidade);
+                EstadoDao.Update(entidade);
             else
             {
-                PaisDao.Insert(entidade);
+                EstadoDao.Insert(entidade);
             }
 
             limpar();
@@ -59,7 +60,7 @@ namespace LES_17_I_N
             if (entidade == null)
                 return;
 
-            PaisDao.Update(entidade);
+            EstadoDao.Update(entidade);
             limpar();
             txtpaicodi.Focus();
         }
@@ -78,24 +79,24 @@ namespace LES_17_I_N
                 return;
             }
 
-            PaisDao.Delete(int.Parse(txtpaicodi.Text));
+            EstadoDao.Delete(int.Parse(txtpaicodi.Text));
             this.limpar();
         }
 
         private void DgvDados()
         {
-            var dt = PaisDao.GetAll();
-            if (dt.Rows.Count > 0)
-                dgvpais.DataSource = dt;
+            var dt = EstadoDao.GetAll();
+           // if (dt.Rows.Count > 0)
+               /// dvg.DataSource = dt;
         }
 
-        private void frmpais_KeyDown(object sender, KeyEventArgs e)
+        private void frmestado_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 this.SelectNextControl(this.ActiveControl, !e.Shift, true, true, true);
         }
 
-        private void frmpais_Load(object sender, EventArgs e)
+        private void frmestado_Load(object sender, EventArgs e)
         {
             DgvDados();
         }
@@ -105,7 +106,7 @@ namespace LES_17_I_N
             if (String.IsNullOrEmpty(txtpaicodi.Text))
                 return;
 
-            var dr = PaisDao.GetById(int.Parse(txtpaicodi.Text));
+            var dr = EstadoDao.GetById(int.Parse(txtpaicodi.Text));
             if (dr.Read())
             {
                 txtpaicodi.Text = dr["PAICODI"].ToString();
@@ -132,13 +133,13 @@ namespace LES_17_I_N
             tbcpais.SelectedIndex = 0;
         }
 
-        private void dgvpais_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvEstado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)
                 return;
-            txtpaicodi.Text = dgvpais.Rows[e.RowIndex].Cells["PAICODI"].Value.ToString();
+           // txtpaicodi.Text = dgvPais.Rows[e.RowIndex].Cells["PAICODI"].Value.ToString();
             txtpaicodi_Leave(null, null);
-            tbcpais.SelectedIndex = 1;
+          //  tbcEstado.SelectedIndex = 1;
             txtpainome.Focus();
             edicao = true;
         }
