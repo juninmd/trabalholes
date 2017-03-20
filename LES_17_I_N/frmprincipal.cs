@@ -35,5 +35,10 @@ namespace LES_17_I_N
         {
             new frmbairro().Show();
         }
+
+        private void endereçoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmendereco().Show();
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace LES_17_I_N
 
          public string ENDENDE { get; set; }
 
-         public string BAICODI { get; set; }
+         public int BAICODI { get; set; }
 
     }
 }
