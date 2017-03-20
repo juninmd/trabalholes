@@ -45,5 +45,10 @@ namespace LES_17_I_N
         {
             new frmcbo().Show();
         }
+
+        private void funçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmfuncao().Show();
+        }
     }
 }
