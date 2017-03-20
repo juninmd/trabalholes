@@ -5,9 +5,9 @@ namespace LES_17_I_N
 {
     public class EnderecoDao : FirebirdRepository { 
 
-    	public IDataReader GetById(int ID)
+    	public IDataReader GetById(string ID)
     	{
-    	 	var sql = $"SELECT * FROM ENDERECO WHERE ENDCEP = { ID }";
+    	 	var sql = $"SELECT * FROM ENDERECO WHERE ENDCEP = '{ ID }'";
     	 	return ExecuteReader(sql);
     	}
 
@@ -31,17 +31,16 @@ namespace LES_17_I_N
     	public void Update(EnderecoModel entidade)
     	{
     	 	var sql = $"UPDATE ENDERECO SET " 
-    		+$"ENDCEP = '{entidade.ENDCEP}',"
     		+$"ENDENDE = '{entidade.ENDENDE}',"
     		+$"BAICODI = '{entidade.BAICODI}' "
-    	 	+$"WHERE ENDCEP = { entidade.ENDCEP}"; 
+    	 	+$"WHERE ENDCEP = '{ entidade.ENDCEP}'"; 
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro gravado com sucesso !!!");
     	}
 
-    	public void Delete(int ID)
+    	public void Delete(string ID)
     	{
-    	 	var sql = $"DELETE FROM ENDERECO WHERE ENDCEP = { ID }";
+    	 	var sql = $"DELETE FROM ENDERECO WHERE ENDCEP = '{ ID }'";
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro excluído com sucesso !!!"); 
     	}

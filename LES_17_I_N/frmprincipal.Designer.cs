@@ -139,6 +139,7 @@
             this.endereçoToolStripMenuItem.Name = "endereçoToolStripMenuItem";
             this.endereçoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.endereçoToolStripMenuItem.Text = "Endereço";
+            this.endereçoToolStripMenuItem.Click += new System.EventHandler(this.endereçoToolStripMenuItem_Click);
             // 
             // bairroToolStripMenuItem
             // 
