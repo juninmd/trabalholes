@@ -20,14 +20,14 @@ namespace LES_17_I_N
 
     	public void Insert(HorarioModel entidade)
     	{
-    	 	var sql = $"INSERT INTO HORARIO VALUES"
-    		+$"({entidade.HORCODI}"
-    		+$"{entidade.HORNOME},"
-    		+$"{entidade.HORMANE},"
-    		+$"{entidade.HORMANS},"
-    		+$"{entidade.HORTARE},"
-    		+$"{entidade.HORTARS},"
-    		+$"{entidade.THCODI})";
+    	 	var sql = $"INSERT INTO HORARIO (HORCODI,HORNOME,HORMANE,HORMANS,HORTARE,HORTARS,THCODI) VALUES"
+    		+$"('{entidade.HORCODI}',"
+    		+$"'{entidade.HORNOME}',"
+    		+$"'{entidade.HORMANE}',"
+    		+$"'{entidade.HORMANS}',"
+    		+$"'{entidade.HORTARE}',"
+    		+$"'{entidade.HORTARS}',"
+    		+$"'{entidade.THCODI}')";
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro inserido com sucesso !!!"); 
     	}
@@ -35,13 +35,13 @@ namespace LES_17_I_N
     	public void Update(HorarioModel entidade)
     	{
     	 	var sql = $"UPDATE HORARIO SET " 
-    		+$"HORCODI = {entidade.HORCODI},"
-    		+$"HORNOME = {entidade.HORNOME},"
-    		+$"HORMANE = {entidade.HORMANE},"
-    		+$"HORMANS = {entidade.HORMANS},"
-    		+$"HORTARE = {entidade.HORTARE},"
-    		+$"HORTARS = {entidade.HORTARS},"
-    		+$"THCODI = {entidade.THCODI} "
+    		+$"HORCODI = '{entidade.HORCODI}',"
+    		+$"HORNOME = '{entidade.HORNOME}',"
+    		+$"HORMANE = '{entidade.HORMANE}',"
+    		+$"HORMANS = '{entidade.HORMANS}',"
+    		+$"HORTARE = '{entidade.HORTARE}',"
+    		+$"HORTARS = '{entidade.HORTARS}',"
+    		+$"THCODI = '{entidade.THCODI}' "
     	 	+$"WHERE HORCODI = { entidade.HORCODI}"; 
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro gravado com sucesso !!!");

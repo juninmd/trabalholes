@@ -20,9 +20,9 @@ namespace LES_17_I_N
 
     	public void Insert(DeptoModel entidade)
     	{
-    	 	var sql = $"INSERT INTO DEPTO VALUES"
-    		+$"({entidade.DEPCODI}"
-    		+$"{entidade.DEPNOME})";
+    	 	var sql = $"INSERT INTO DEPTO (DEPCODI,DEPNOME) VALUES"
+    		+$"('{entidade.DEPCODI}',"
+    		+$"'{entidade.DEPNOME}')";
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro inserido com sucesso !!!"); 
     	}
@@ -30,8 +30,8 @@ namespace LES_17_I_N
     	public void Update(DeptoModel entidade)
     	{
     	 	var sql = $"UPDATE DEPTO SET " 
-    		+$"DEPCODI = {entidade.DEPCODI},"
-    		+$"DEPNOME = {entidade.DEPNOME} "
+    		+$"DEPCODI = '{entidade.DEPCODI}',"
+    		+$"DEPNOME = '{entidade.DEPNOME}' "
     	 	+$"WHERE DEPCODI = { entidade.DEPCODI}"; 
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro gravado com sucesso !!!");

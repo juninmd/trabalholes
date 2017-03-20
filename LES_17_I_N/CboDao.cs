@@ -20,9 +20,9 @@ namespace LES_17_I_N
 
     	public void Insert(CboModel entidade)
     	{
-    	 	var sql = $"INSERT INTO CBO VALUES"
-    		+$"({entidade.CBOCODI}"
-    		+$"{entidade.CBONOME})";
+    	 	var sql = $"INSERT INTO CBO (CBOCODI,CBONOME) VALUES"
+    		+$"('{entidade.CBOCODI}',"
+    		+$"'{entidade.CBONOME}')";
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro inserido com sucesso !!!"); 
     	}
@@ -30,8 +30,8 @@ namespace LES_17_I_N
     	public void Update(CboModel entidade)
     	{
     	 	var sql = $"UPDATE CBO SET " 
-    		+$"CBOCODI = {entidade.CBOCODI},"
-    		+$"CBONOME = {entidade.CBONOME} "
+    		+$"CBOCODI = '{entidade.CBOCODI}',"
+    		+$"CBONOME = '{entidade.CBONOME}' "
     	 	+$"WHERE CBOCODI = { entidade.CBOCODI}"; 
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro gravado com sucesso !!!");

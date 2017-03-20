@@ -20,5 +20,10 @@ namespace LES_17_I_N
         {
             new frmpais().Show();
         }
+
+        private void estadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmestado().Show();
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace LES_17_I_N
 
          public string PAICODI { get; set; }
 
-         public string ESTCODI { get; set; }
+         public int ESTCODI { get; set; }
 
          public string ESTICMS { get; set; }
 
