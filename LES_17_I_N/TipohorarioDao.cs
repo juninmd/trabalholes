@@ -20,9 +20,9 @@ namespace LES_17_I_N
 
     	public void Insert(TipohorarioModel entidade)
     	{
-    	 	var sql = $"INSERT INTO TIPOHORARIO VALUES"
-    		+$"({entidade.THCODI}"
-    		+$"{entidade.THNOME})";
+    	 	var sql = $"INSERT INTO TIPOHORARIO (THCODI,THNOME) VALUES"
+    		+$"('{entidade.THCODI}',"
+    		+$"'{entidade.THNOME}')";
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro inserido com sucesso !!!"); 
     	}
@@ -30,8 +30,8 @@ namespace LES_17_I_N
     	public void Update(TipohorarioModel entidade)
     	{
     	 	var sql = $"UPDATE TIPOHORARIO SET " 
-    		+$"THCODI = {entidade.THCODI},"
-    		+$"THNOME = {entidade.THNOME} "
+    		+$"THCODI = '{entidade.THCODI}',"
+    		+$"THNOME = '{entidade.THNOME}' "
     	 	+$"WHERE THCODI = { entidade.THCODI}"; 
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro gravado com sucesso !!!");

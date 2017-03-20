@@ -20,20 +20,20 @@ namespace LES_17_I_N
 
     	public void Insert(FuncionarioModel entidade)
     	{
-    	 	var sql = $"INSERT INTO FUNCIONARIO VALUES"
-    		+$"({entidade.FUNCODI}"
-    		+$"{entidade.FUNNOME},"
-    		+$"{entidade.FUNSALA},"
-    		+$"{entidade.FUNDTNA},"
-    		+$"{entidade.FUNCPF},"
-    		+$"{entidade.FUNRG},"
-    		+$"{entidade.FUNFONE},"
-    		+$"{entidade.FUNCELU},"
-    		+$"{entidade.FUNCEL1},"
-    		+$"{entidade.FUNNUME},"
-    		+$"{entidade.FUNCEP},"
-    		+$"{entidade.FUNCCODI},"
-    		+$"{entidade.HORCODI})";
+    	 	var sql = $"INSERT INTO FUNCIONARIO (FUNCODI,FUNNOME,FUNSALA,FUNDTNA,FUNCPF,FUNRG,FUNFONE,FUNCELU,FUNCEL1,FUNNUME,FUNCEP,FUNCCODI,HORCODI) VALUES"
+    		+$"('{entidade.FUNCODI}',"
+    		+$"'{entidade.FUNNOME}',"
+    		+$"'{entidade.FUNSALA}',"
+    		+$"'{entidade.FUNDTNA}',"
+    		+$"'{entidade.FUNCPF}',"
+    		+$"'{entidade.FUNRG}',"
+    		+$"'{entidade.FUNFONE}',"
+    		+$"'{entidade.FUNCELU}',"
+    		+$"'{entidade.FUNCEL1}',"
+    		+$"'{entidade.FUNNUME}',"
+    		+$"'{entidade.FUNCEP}',"
+    		+$"'{entidade.FUNCCODI}',"
+    		+$"'{entidade.HORCODI}')";
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro inserido com sucesso !!!"); 
     	}
@@ -41,19 +41,19 @@ namespace LES_17_I_N
     	public void Update(FuncionarioModel entidade)
     	{
     	 	var sql = $"UPDATE FUNCIONARIO SET " 
-    		+$"FUNCODI = {entidade.FUNCODI},"
-    		+$"FUNNOME = {entidade.FUNNOME},"
-    		+$"FUNSALA = {entidade.FUNSALA},"
-    		+$"FUNDTNA = {entidade.FUNDTNA},"
-    		+$"FUNCPF = {entidade.FUNCPF},"
-    		+$"FUNRG = {entidade.FUNRG},"
-    		+$"FUNFONE = {entidade.FUNFONE},"
-    		+$"FUNCELU = {entidade.FUNCELU},"
-    		+$"FUNCEL1 = {entidade.FUNCEL1},"
-    		+$"FUNNUME = {entidade.FUNNUME},"
-    		+$"FUNCEP = {entidade.FUNCEP},"
-    		+$"FUNCCODI = {entidade.FUNCCODI},"
-    		+$"HORCODI = {entidade.HORCODI} "
+    		+$"FUNCODI = '{entidade.FUNCODI}',"
+    		+$"FUNNOME = '{entidade.FUNNOME}',"
+    		+$"FUNSALA = '{entidade.FUNSALA}',"
+    		+$"FUNDTNA = '{entidade.FUNDTNA}',"
+    		+$"FUNCPF = '{entidade.FUNCPF}',"
+    		+$"FUNRG = '{entidade.FUNRG}',"
+    		+$"FUNFONE = '{entidade.FUNFONE}',"
+    		+$"FUNCELU = '{entidade.FUNCELU}',"
+    		+$"FUNCEL1 = '{entidade.FUNCEL1}',"
+    		+$"FUNNUME = '{entidade.FUNNUME}',"
+    		+$"FUNCEP = '{entidade.FUNCEP}',"
+    		+$"FUNCCODI = '{entidade.FUNCCODI}',"
+    		+$"HORCODI = '{entidade.HORCODI}' "
     	 	+$"WHERE FUNCODI = { entidade.FUNCODI}"; 
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro gravado com sucesso !!!");

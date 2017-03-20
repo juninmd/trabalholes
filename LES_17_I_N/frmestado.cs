@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace LES_17_I_N
@@ -12,20 +15,29 @@ namespace LES_17_I_N
         public EstadoDao EstadoDao = new EstadoDao();
         public PaisDao PaisDao = new PaisDao();
 
+        public List<string> Paises { get; set; }
+
         public bool edicao { get; set; }
 
         private void limpar()
         {
-            txtpaicodi.Clear(); // Limpa o textbox
-            txtpainome.Clear(); // Limpa o textbox
-            txtpaicodi.Focus(); // Vai para o textbox código
+            txtestcodi.Clear(); // Limpa o textbox
+            txtestnome.Clear(); // Limpa o textbox
+            txtesticms.Clear(); // Limpa o textbox
+            txtestuf.Clear(); // Limpa o textbox
+            txtestcodi.Focus(); // Vai para o textbox código
+            cblPais.SelectedItem = null;
             edicao = false;
             DgvDados();
         }
 
         private EstadoModel Entidade()
         {
-            if (String.IsNullOrEmpty(txtpaicodi.Text) || String.IsNullOrEmpty(txtpainome.Text))
+            if (String.IsNullOrEmpty(txtestcodi.Text) ||
+                String.IsNullOrEmpty(txtestnome.Text) ||
+                String.IsNullOrEmpty(txtesticms.Text) ||
+                String.IsNullOrEmpty(txtestuf.Text) ||
+                (cblPais.SelectedItem) == null)
             {
                 MessageBox.Show("Preencha todos os campos!");
                 return null;
@@ -33,7 +45,11 @@ namespace LES_17_I_N
 
             return new EstadoModel
             {
-               
+                ESTCODI = int.Parse(txtestcodi.Text),
+                ESTNOME = txtestnome.Text,
+                ESTICMS = txtesticms.Text,
+                ESTUF = txtestuf.Text,
+                PAICODI = cblPais.Text.Split('-')[0]
             };
         }
 
@@ -51,7 +67,7 @@ namespace LES_17_I_N
             }
 
             limpar();
-            txtpaicodi.Focus();
+            txtestcodi.Focus();
         }
 
         private void btngravar_Click(object sender, System.EventArgs e)
@@ -62,12 +78,12 @@ namespace LES_17_I_N
 
             EstadoDao.Update(entidade);
             limpar();
-            txtpaicodi.Focus();
+            txtestcodi.Focus();
         }
 
         private void btnexcluir_Click(object sender, System.EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtpaicodi.Text))
+            if (String.IsNullOrEmpty(txtestcodi.Text))
             {
                 MessageBox.Show("Preencha o código!");
                 return;
@@ -79,15 +95,17 @@ namespace LES_17_I_N
                 return;
             }
 
-            EstadoDao.Delete(int.Parse(txtpaicodi.Text));
+            EstadoDao.Delete(int.Parse(txtestcodi.Text));
             this.limpar();
         }
 
         private void DgvDados()
         {
             var dt = EstadoDao.GetAll();
-           // if (dt.Rows.Count > 0)
-               /// dvg.DataSource = dt;
+            cblPais.Items.Clear();
+            cblPais.Items.AddRange(Paises.ToArray());
+            if (dt.Rows.Count > 0)
+                dvgestado.DataSource = dt;
         }
 
         private void frmestado_KeyDown(object sender, KeyEventArgs e)
@@ -98,19 +116,34 @@ namespace LES_17_I_N
 
         private void frmestado_Load(object sender, EventArgs e)
         {
+            Paises = GetPaises();
             DgvDados();
+        }
+
+        private List<string> GetPaises()
+        {
+            var lista = new List<string>();
+            var pais = PaisDao.GetAll();
+            foreach (var item in pais.Rows)
+            {
+                var row = item as DataRow;
+                lista.Add($"{row["PAICODI"]} - {row["PAINOME"]}");
+            }
+            return lista;
         }
 
         private void txtpaicodi_Leave(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtpaicodi.Text))
+            if (String.IsNullOrEmpty(txtestcodi.Text))
                 return;
 
-            var dr = EstadoDao.GetById(int.Parse(txtpaicodi.Text));
+            var dr = EstadoDao.GetById(int.Parse(txtestcodi.Text));
             if (dr.Read())
             {
-                txtpaicodi.Text = dr["PAICODI"].ToString();
-                txtpainome.Text = dr["PAINOME"].ToString();
+                txtestcodi.Text = dr["ESTCODI"].ToString();
+                txtestnome.Text = dr["ESTNOME"].ToString();
+                txtestuf.Text = dr["ESTUF"].ToString();
+                txtesticms.Text = dr["ESTICMS"].ToString();
                 edicao = true;
             }
             else
@@ -122,26 +155,27 @@ namespace LES_17_I_N
                 }
                 else
                 {
-                    txtpainome.Text = "";
-                    txtpainome.Focus();
+                    txtestnome.Text = "";
+                    txtestnome.Focus();
                 }
             }
         }
 
         private void btnvoltar_Click(object sender, EventArgs e)
         {
-            tbcpais.SelectedIndex = 0;
+            tbcestado.SelectedIndex = 0;
         }
 
-        private void dgvEstado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dvgestado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)
                 return;
-           // txtpaicodi.Text = dgvPais.Rows[e.RowIndex].Cells["PAICODI"].Value.ToString();
+            txtestcodi.Text = dvgestado.Rows[e.RowIndex].Cells["ESTCODI"].Value.ToString();
             txtpaicodi_Leave(null, null);
-          //  tbcEstado.SelectedIndex = 1;
-            txtpainome.Focus();
+            tbcestado.SelectedIndex = 1;
+            txtestnome.Focus();
             edicao = true;
+            cblPais.SelectedItem = Paises.FirstOrDefault(q=> q.Split('-')[0].Trim() == dvgestado.Rows[e.RowIndex].Cells["PAICODI"].Value.ToString());
         }
     }
 }

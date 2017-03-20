@@ -20,10 +20,10 @@ namespace LES_17_I_N
 
     	public void Insert(MunicipioModel entidade)
     	{
-    	 	var sql = $"INSERT INTO MUNICIPIO VALUES"
-    		+$"({entidade.MUNCODI}"
-    		+$"{entidade.MUNNOME},"
-    		+$"{entidade.ESTCODI})";
+    	 	var sql = $"INSERT INTO MUNICIPIO (MUNCODI,MUNNOME,ESTCODI) VALUES"
+    		+$"('{entidade.MUNCODI}',"
+    		+$"'{entidade.MUNNOME}',"
+    		+$"'{entidade.ESTCODI}')";
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro inserido com sucesso !!!"); 
     	}
@@ -31,9 +31,9 @@ namespace LES_17_I_N
     	public void Update(MunicipioModel entidade)
     	{
     	 	var sql = $"UPDATE MUNICIPIO SET " 
-    		+$"MUNCODI = {entidade.MUNCODI},"
-    		+$"MUNNOME = {entidade.MUNNOME},"
-    		+$"ESTCODI = {entidade.ESTCODI} "
+    		+$"MUNCODI = '{entidade.MUNCODI}',"
+    		+$"MUNNOME = '{entidade.MUNNOME}',"
+    		+$"ESTCODI = '{entidade.ESTCODI}' "
     	 	+$"WHERE MUNCODI = { entidade.MUNCODI}"; 
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro gravado com sucesso !!!");
