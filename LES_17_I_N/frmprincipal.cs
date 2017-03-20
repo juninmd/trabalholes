@@ -40,5 +40,10 @@ namespace LES_17_I_N
         {
             new frmendereco().Show();
         }
+
+        private void cBOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmcbo().Show();
+        }
     }
 }
