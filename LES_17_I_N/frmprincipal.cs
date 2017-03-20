@@ -25,5 +25,10 @@ namespace LES_17_I_N
         {
             new frmestado().Show();
         }
+
+        private void municípioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmmunicipio().Show();
+        }
     }
 }

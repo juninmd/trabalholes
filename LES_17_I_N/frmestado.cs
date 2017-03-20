@@ -144,6 +144,7 @@ namespace LES_17_I_N
                 txtestnome.Text = dr["ESTNOME"].ToString();
                 txtestuf.Text = dr["ESTUF"].ToString();
                 txtesticms.Text = dr["ESTICMS"].ToString();
+                cblPais.SelectedItem = Paises.FirstOrDefault(q => q.Split('-')[0].Trim() == dr["PAICODI"].ToString());
                 edicao = true;
             }
             else
