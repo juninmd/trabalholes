@@ -30,7 +30,6 @@ namespace LES_17_I_N
     	public void Update(CboModel entidade)
     	{
     	 	var sql = $"UPDATE CBO SET " 
-    		+$"CBOCODI = '{entidade.CBOCODI}',"
     		+$"CBONOME = '{entidade.CBONOME}' "
     	 	+$"WHERE CBOCODI = { entidade.CBOCODI}"; 
     	 	ExecuteNonResult(sql); 

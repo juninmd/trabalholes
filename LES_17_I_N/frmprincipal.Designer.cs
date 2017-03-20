@@ -47,6 +47,7 @@
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cBOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +88,8 @@
             this.deptoToolStripMenuItem,
             this.tipoHorárioToolStripMenuItem,
             this.horárioToolStripMenuItem,
-            this.funçãoToolStripMenuItem});
+            this.funçãoToolStripMenuItem,
+            this.cBOToolStripMenuItem});
             this.folhaDePagtoToolStripMenuItem.Name = "folhaDePagtoToolStripMenuItem";
             this.folhaDePagtoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.folhaDePagtoToolStripMenuItem.Text = "Folha de Pagto";
@@ -95,31 +97,31 @@
             // funcionárioToolStripMenuItem
             // 
             this.funcionárioToolStripMenuItem.Name = "funcionárioToolStripMenuItem";
-            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.funcionárioToolStripMenuItem.Text = "Funcionário";
             // 
             // deptoToolStripMenuItem
             // 
             this.deptoToolStripMenuItem.Name = "deptoToolStripMenuItem";
-            this.deptoToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.deptoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deptoToolStripMenuItem.Text = "Depto";
             // 
             // tipoHorárioToolStripMenuItem
             // 
             this.tipoHorárioToolStripMenuItem.Name = "tipoHorárioToolStripMenuItem";
-            this.tipoHorárioToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.tipoHorárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.tipoHorárioToolStripMenuItem.Text = "Tipo Horário";
             // 
             // horárioToolStripMenuItem
             // 
             this.horárioToolStripMenuItem.Name = "horárioToolStripMenuItem";
-            this.horárioToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.horárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.horárioToolStripMenuItem.Text = "Horário";
             // 
             // funçãoToolStripMenuItem
             // 
             this.funçãoToolStripMenuItem.Name = "funçãoToolStripMenuItem";
-            this.funçãoToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.funçãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.funçãoToolStripMenuItem.Text = "Função";
             // 
             // dadosComunsToolStripMenuItem
@@ -194,6 +196,13 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // cBOToolStripMenuItem
+            // 
+            this.cBOToolStripMenuItem.Name = "cBOToolStripMenuItem";
+            this.cBOToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cBOToolStripMenuItem.Text = "CBO";
+            this.cBOToolStripMenuItem.Click += new System.EventHandler(this.cBOToolStripMenuItem_Click);
+            // 
             // frmprincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +244,7 @@
         private System.Windows.Forms.ToolStripMenuItem municípioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paísToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cBOToolStripMenuItem;
     }
 }
 
