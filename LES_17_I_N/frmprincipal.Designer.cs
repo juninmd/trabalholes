@@ -151,6 +151,7 @@
             this.municípioToolStripMenuItem.Name = "municípioToolStripMenuItem";
             this.municípioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.municípioToolStripMenuItem.Text = "Município";
+            this.municípioToolStripMenuItem.Click += new System.EventHandler(this.municípioToolStripMenuItem_Click);
             // 
             // estadoToolStripMenuItem
             // 
