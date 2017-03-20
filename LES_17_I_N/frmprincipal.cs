@@ -30,5 +30,10 @@ namespace LES_17_I_N
         {
             new frmmunicipio().Show();
         }
+
+        private void bairroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmbairro().Show();
+        }
     }
 }
