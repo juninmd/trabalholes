@@ -111,6 +111,7 @@
             this.tipoHorárioToolStripMenuItem.Name = "tipoHorárioToolStripMenuItem";
             this.tipoHorárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.tipoHorárioToolStripMenuItem.Text = "Tipo Horário";
+            this.tipoHorárioToolStripMenuItem.Click += new System.EventHandler(this.tipoHorárioToolStripMenuItem_Click);
             // 
             // horárioToolStripMenuItem
             // 

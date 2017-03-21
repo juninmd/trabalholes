@@ -59,6 +59,12 @@
     <Compile Include="EnderecoModel.cs" />
     <Compile Include="EstadoModel.cs" />
     <Compile Include="FirebirdRepository.cs" />
+    <Compile Include="frmtipohorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmtipohorario.Designer.cs">
+      <DependentUpon>frmtipohorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmfuncao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipohorarioDao.cs" />
     <Compile Include="TipohorarioModel.cs" />
+    <EmbeddedResource Include="frmtipohorario.resx">
+      <DependentUpon>frmtipohorario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmfuncao.resx">
       <DependentUpon>frmfuncao.cs</DependentUpon>
     </EmbeddedResource>
