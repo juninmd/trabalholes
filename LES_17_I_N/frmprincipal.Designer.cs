@@ -104,7 +104,8 @@
             // 
             this.deptoToolStripMenuItem.Name = "deptoToolStripMenuItem";
             this.deptoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deptoToolStripMenuItem.Text = "Depto";
+            this.deptoToolStripMenuItem.Text = "Departamento";
+            this.deptoToolStripMenuItem.Click += new System.EventHandler(this.deptoToolStripMenuItem_Click);
             // 
             // tipoHorárioToolStripMenuItem
             // 
