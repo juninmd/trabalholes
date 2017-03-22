@@ -60,5 +60,15 @@ namespace LES_17_I_N
         {
             new frmdepto().Show();
         }
+
+        private void horárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void funcionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -5,7 +5,7 @@ namespace LES_17_I_N
     public class HorarioModel
     {
 
-         public string HORCODI { get; set; }
+         public int HORCODI { get; set; }
 
          public string HORNOME { get; set; }
 
@@ -17,7 +17,7 @@ namespace LES_17_I_N
 
          public string HORTARS { get; set; }
 
-         public string THCODI { get; set; }
+         public int THCODI { get; set; }
 
     }
 }
