@@ -99,6 +99,7 @@
             this.funcionárioToolStripMenuItem.Name = "funcionárioToolStripMenuItem";
             this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.funcionárioToolStripMenuItem.Text = "Funcionário";
+            this.funcionárioToolStripMenuItem.Click += new System.EventHandler(this.funcionárioToolStripMenuItem_Click);
             // 
             // deptoToolStripMenuItem
             // 
@@ -119,6 +120,7 @@
             this.horárioToolStripMenuItem.Name = "horárioToolStripMenuItem";
             this.horárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.horárioToolStripMenuItem.Text = "Horário";
+            this.horárioToolStripMenuItem.Click += new System.EventHandler(this.horárioToolStripMenuItem_Click);
             // 
             // funçãoToolStripMenuItem
             // 
