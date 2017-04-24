@@ -45,6 +45,10 @@
             this.txthornome = new System.Windows.Forms.TextBox();
             this.txthorcodi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tbcestado.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgestado)).BeginInit();
@@ -89,6 +93,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.txthoruf);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.txthoricms);
@@ -115,17 +123,17 @@
             this.txthoruf.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txthoruf.Location = new System.Drawing.Point(118, 154);
             this.txthoruf.Name = "txthoruf";
-            this.txthoruf.Size = new System.Drawing.Size(50, 20);
+            this.txthoruf.Size = new System.Drawing.Size(250, 20);
             this.txthoruf.TabIndex = 13;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 157);
+            this.label5.Location = new System.Drawing.Point(31, 225);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 13);
+            this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 12;
-            this.label5.Text = "UF:";
+            this.label5.Text = "Tipo de Horário:";
             // 
             // txthoricms
             // 
@@ -140,14 +148,14 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(31, 124);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 10;
-            this.label4.Text = "CMS:";
+            this.label4.Text = "Mans:";
             // 
             // cbltip
             // 
             this.cbltip.FormattingEnabled = true;
-            this.cbltip.Location = new System.Drawing.Point(118, 87);
+            this.cbltip.Location = new System.Drawing.Point(118, 217);
             this.cbltip.Name = "cbltip";
             this.cbltip.Size = new System.Drawing.Size(250, 21);
             this.cbltip.TabIndex = 9;
@@ -155,11 +163,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 90);
+            this.label3.Location = new System.Drawing.Point(32, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "País: ";
+            this.label3.Text = "Mane:";
             // 
             // btnvoltar
             // 
@@ -226,6 +234,40 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
+            // textBox1
+            // 
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox1.Location = new System.Drawing.Point(118, 88);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 20);
+            this.textBox1.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(29, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Tare:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(29, 191);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Tars:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox2.Location = new System.Drawing.Point(118, 184);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(250, 20);
+            this.textBox2.TabIndex = 17;
+            // 
             // frmhorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,5 +311,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txthoricms;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label7;
     }
 }
