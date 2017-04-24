@@ -63,7 +63,7 @@ namespace LES_17_I_N
 
         private void horárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new frmhorario().Show();
         }
 
         private void funcionárioToolStripMenuItem_Click(object sender, EventArgs e)
