@@ -32,13 +32,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txtautor = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
+            this.txtcidadeuf = new System.Windows.Forms.TextBox();
+            this.txtcelular = new System.Windows.Forms.TextBox();
+            this.pctautor = new System.Windows.Forms.PictureBox();
+            this.btnvoltar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pctautor)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,63 +77,69 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Cidade-UF:";
             // 
-            // textBox1
+            // txtautor
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtautor.Location = new System.Drawing.Point(127, 13);
+            this.txtautor.Name = "txtautor";
+            this.txtautor.Size = new System.Drawing.Size(245, 20);
+            this.txtautor.TabIndex = 4;
+            this.txtautor.Text = "Antonio Carlos";
             // 
-            // textBox2
+            // txtemail
             // 
-            this.textBox2.Location = new System.Drawing.Point(127, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(245, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtemail.Location = new System.Drawing.Point(127, 42);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(245, 20);
+            this.txtemail.TabIndex = 5;
+            this.txtemail.Text = "jr_acn@hotmail.com";
             // 
-            // textBox3
+            // txtcidadeuf
             // 
-            this.textBox3.Location = new System.Drawing.Point(127, 105);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(245, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtcidadeuf.Location = new System.Drawing.Point(127, 105);
+            this.txtcidadeuf.Name = "txtcidadeuf";
+            this.txtcidadeuf.Size = new System.Drawing.Size(245, 20);
+            this.txtcidadeuf.TabIndex = 6;
+            this.txtcidadeuf.Text = "Franca - SP";
             // 
-            // textBox4
+            // txtcelular
             // 
-            this.textBox4.Location = new System.Drawing.Point(127, 74);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(245, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtcelular.Location = new System.Drawing.Point(127, 74);
+            this.txtcelular.Name = "txtcelular";
+            this.txtcelular.Size = new System.Drawing.Size(245, 20);
+            this.txtcelular.TabIndex = 7;
+            this.txtcelular.Text = "(16) 99241.1372";
             // 
-            // pictureBox1
+            // pctautor
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(127, 144);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(245, 205);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.pctautor.Image = global::LES_17_I_N.Properties.Resources.vNlsRbF;
+            this.pctautor.Location = new System.Drawing.Point(127, 144);
+            this.pctautor.Name = "pctautor";
+            this.pctautor.Size = new System.Drawing.Size(245, 205);
+            this.pctautor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctautor.TabIndex = 8;
+            this.pctautor.TabStop = false;
             // 
-            // button1
+            // btnvoltar
             // 
-            this.button1.Location = new System.Drawing.Point(25, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Voltar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnvoltar.Location = new System.Drawing.Point(25, 311);
+            this.btnvoltar.Name = "btnvoltar";
+            this.btnvoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnvoltar.TabIndex = 9;
+            this.btnvoltar.Text = "Voltar";
+            this.btnvoltar.UseVisualStyleBackColor = true;
+            this.btnvoltar.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmsobre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnvoltar);
+            this.Controls.Add(this.pctautor);
+            this.Controls.Add(this.txtcelular);
+            this.Controls.Add(this.txtcidadeuf);
+            this.Controls.Add(this.txtemail);
+            this.Controls.Add(this.txtautor);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -144,7 +150,7 @@
             this.Name = "frmsobre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dados do Autor";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctautor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,11 +162,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtautor;
+        private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.TextBox txtcidadeuf;
+        private System.Windows.Forms.TextBox txtcelular;
+        private System.Windows.Forms.PictureBox pctautor;
+        private System.Windows.Forms.Button btnvoltar;
     }
 }

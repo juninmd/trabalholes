@@ -70,5 +70,10 @@ namespace LES_17_I_N
         {
 
         }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmsobre().Show();
+        }
     }
 }
