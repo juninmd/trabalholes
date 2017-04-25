@@ -18,52 +18,52 @@ namespace LES_17_I_N
 
         private void paísToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmpais().Show();
+            new frmpais().ShowDialog();
         }
 
         private void estadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmestado().Show();
+            new frmestado().ShowDialog();
         }
 
         private void municípioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmmunicipio().Show();
+            new frmmunicipio().ShowDialog();
         }
 
         private void bairroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmbairro().Show();
+            new frmbairro().ShowDialog();
         }
 
         private void endereçoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmendereco().Show();
+            new frmendereco().ShowDialog();
         }
 
         private void cBOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmcbo().Show();
+            new frmcbo().ShowDialog();
         }
 
         private void funçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmfuncao().Show();
+            new frmfuncao().ShowDialog();
         }
 
         private void tipoHorárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmtipohorario().Show();
+            new frmtipohorario().ShowDialog();
         }
 
         private void deptoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmdepto().Show();
+            new frmdepto().ShowDialog();
         }
 
         private void horárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmhorario().Show();
+            new frmhorario().ShowDialog();
         }
 
         private void funcionárioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace LES_17_I_N
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmsobre().Show();
+            new frmsobre().ShowDialog();
         }
     }
 }

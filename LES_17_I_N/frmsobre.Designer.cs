@@ -79,32 +79,38 @@
             // 
             // txtautor
             // 
+            this.txtautor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtautor.Location = new System.Drawing.Point(127, 13);
             this.txtautor.Name = "txtautor";
+            this.txtautor.ReadOnly = true;
             this.txtautor.Size = new System.Drawing.Size(245, 20);
             this.txtautor.TabIndex = 4;
-            this.txtautor.Text = "Antonio Carlos";
+            this.txtautor.Text = "ANTONIO CARLOS";
             // 
             // txtemail
             // 
             this.txtemail.Location = new System.Drawing.Point(127, 42);
             this.txtemail.Name = "txtemail";
+            this.txtemail.ReadOnly = true;
             this.txtemail.Size = new System.Drawing.Size(245, 20);
             this.txtemail.TabIndex = 5;
             this.txtemail.Text = "jr_acn@hotmail.com";
             // 
             // txtcidadeuf
             // 
+            this.txtcidadeuf.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtcidadeuf.Location = new System.Drawing.Point(127, 105);
             this.txtcidadeuf.Name = "txtcidadeuf";
+            this.txtcidadeuf.ReadOnly = true;
             this.txtcidadeuf.Size = new System.Drawing.Size(245, 20);
             this.txtcidadeuf.TabIndex = 6;
-            this.txtcidadeuf.Text = "Franca - SP";
+            this.txtcidadeuf.Text = "FRANCA - SP";
             // 
             // txtcelular
             // 
             this.txtcelular.Location = new System.Drawing.Point(127, 74);
             this.txtcelular.Name = "txtcelular";
+            this.txtcelular.ReadOnly = true;
             this.txtcelular.Size = new System.Drawing.Size(245, 20);
             this.txtcelular.TabIndex = 7;
             this.txtcelular.Text = "(16) 99241.1372";
@@ -145,6 +151,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmsobre";
