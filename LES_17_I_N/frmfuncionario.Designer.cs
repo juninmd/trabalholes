@@ -326,7 +326,7 @@
             this.txtfunbairro.Name = "txtfunbairro";
             this.txtfunbairro.ReadOnly = true;
             this.txtfunbairro.Size = new System.Drawing.Size(265, 20);
-            this.txtfunbairro.TabIndex = 13;
+            this.txtfunbairro.TabIndex = 20;
             // 
             // label6
             // 
@@ -344,7 +344,7 @@
             this.txtfunpais.Name = "txtfunpais";
             this.txtfunpais.ReadOnly = true;
             this.txtfunpais.Size = new System.Drawing.Size(147, 20);
-            this.txtfunpais.TabIndex = 13;
+            this.txtfunpais.TabIndex = 21;
             // 
             // label19
             // 
@@ -371,7 +371,7 @@
             this.txtfuncidade.Name = "txtfuncidade";
             this.txtfuncidade.ReadOnly = true;
             this.txtfuncidade.Size = new System.Drawing.Size(249, 20);
-            this.txtfuncidade.TabIndex = 13;
+            this.txtfuncidade.TabIndex = 19;
             // 
             // label13
             // 
@@ -389,7 +389,7 @@
             this.txtfunestado.Name = "txtfunestado";
             this.txtfunestado.ReadOnly = true;
             this.txtfunestado.Size = new System.Drawing.Size(118, 20);
-            this.txtfunestado.TabIndex = 13;
+            this.txtfunestado.TabIndex = 22;
             // 
             // txtfunend
             // 
@@ -398,7 +398,7 @@
             this.txtfunend.Name = "txtfunend";
             this.txtfunend.ReadOnly = true;
             this.txtfunend.Size = new System.Drawing.Size(217, 20);
-            this.txtfunend.TabIndex = 13;
+            this.txtfunend.TabIndex = 18;
             // 
             // txtfuncep
             // 
