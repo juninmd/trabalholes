@@ -17,7 +17,8 @@ namespace LES_17_I_N
             InitializeComponent();
             txtendcodi.Text = cep;
             avancar();
-            txtendcodi_Leave(null, null);
+            Bairros = GetBairros();
+            txtendnome.Focus();
             ShowDialog();
 
         }

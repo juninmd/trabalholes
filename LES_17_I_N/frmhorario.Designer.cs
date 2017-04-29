@@ -32,6 +32,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dvgestado = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txthoruf = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txthoricms = new System.Windows.Forms.TextBox();
@@ -45,10 +49,6 @@
             this.txthornome = new System.Windows.Forms.TextBox();
             this.txthorcodi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tbcestado.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgestado)).BeginInit();
@@ -118,13 +118,47 @@
             this.tabPage2.Text = "Detalhado";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // textBox2
+            // 
+            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox2.Location = new System.Drawing.Point(118, 184);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(250, 20);
+            this.textBox2.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(29, 191);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Tars:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(29, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Tare:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox1.Location = new System.Drawing.Point(118, 88);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 20);
+            this.textBox1.TabIndex = 3;
+            // 
             // txthoruf
             // 
             this.txthoruf.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txthoruf.Location = new System.Drawing.Point(118, 154);
             this.txthoruf.Name = "txthoruf";
             this.txthoruf.Size = new System.Drawing.Size(250, 20);
-            this.txthoruf.TabIndex = 13;
+            this.txthoruf.TabIndex = 5;
             // 
             // label5
             // 
@@ -141,7 +175,7 @@
             this.txthoricms.Location = new System.Drawing.Point(118, 121);
             this.txthoricms.Name = "txthoricms";
             this.txthoricms.Size = new System.Drawing.Size(250, 20);
-            this.txthoricms.TabIndex = 11;
+            this.txthoricms.TabIndex = 4;
             // 
             // label4
             // 
@@ -158,7 +192,7 @@
             this.cbltip.Location = new System.Drawing.Point(118, 217);
             this.cbltip.Name = "cbltip";
             this.cbltip.Size = new System.Drawing.Size(250, 21);
-            this.cbltip.TabIndex = 9;
+            this.cbltip.TabIndex = 7;
             // 
             // label3
             // 
@@ -174,7 +208,7 @@
             this.btnvoltar.Location = new System.Drawing.Point(275, 294);
             this.btnvoltar.Name = "btnvoltar";
             this.btnvoltar.Size = new System.Drawing.Size(75, 23);
-            this.btnvoltar.TabIndex = 7;
+            this.btnvoltar.TabIndex = 10;
             this.btnvoltar.Text = "Voltar";
             this.btnvoltar.UseVisualStyleBackColor = true;
             this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
@@ -184,7 +218,7 @@
             this.btnexcluir.Location = new System.Drawing.Point(194, 294);
             this.btnexcluir.Name = "btnexcluir";
             this.btnexcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnexcluir.TabIndex = 6;
+            this.btnexcluir.TabIndex = 99;
             this.btnexcluir.Text = "Excluir";
             this.btnexcluir.UseVisualStyleBackColor = true;
             this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
@@ -194,7 +228,7 @@
             this.btnincluir.Location = new System.Drawing.Point(32, 294);
             this.btnincluir.Name = "btnincluir";
             this.btnincluir.Size = new System.Drawing.Size(156, 23);
-            this.btnincluir.TabIndex = 4;
+            this.btnincluir.TabIndex = 8;
             this.btnincluir.Text = "Incluir / Gravar";
             this.btnincluir.UseVisualStyleBackColor = true;
             this.btnincluir.Click += new System.EventHandler(this.btnincluir_Click);
@@ -233,40 +267,6 @@
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
-            // 
-            // textBox1
-            // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Location = new System.Drawing.Point(118, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 20);
-            this.textBox1.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Tare:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 191);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Tars:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox2.Location = new System.Drawing.Point(118, 184);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 20);
-            this.textBox2.TabIndex = 17;
             // 
             // frmhorario
             // 

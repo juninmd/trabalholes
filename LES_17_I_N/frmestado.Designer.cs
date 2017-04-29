@@ -116,7 +116,7 @@
             this.txtestuf.Location = new System.Drawing.Point(118, 154);
             this.txtestuf.Name = "txtestuf";
             this.txtestuf.Size = new System.Drawing.Size(50, 20);
-            this.txtestuf.TabIndex = 13;
+            this.txtestuf.TabIndex = 5;
             // 
             // label5
             // 
@@ -133,7 +133,7 @@
             this.txtesticms.Location = new System.Drawing.Point(118, 121);
             this.txtesticms.Name = "txtesticms";
             this.txtesticms.Size = new System.Drawing.Size(250, 20);
-            this.txtesticms.TabIndex = 11;
+            this.txtesticms.TabIndex = 4;
             // 
             // label4
             // 
@@ -150,7 +150,7 @@
             this.cblPais.Location = new System.Drawing.Point(118, 87);
             this.cblPais.Name = "cblPais";
             this.cblPais.Size = new System.Drawing.Size(250, 21);
-            this.cblPais.TabIndex = 9;
+            this.cblPais.TabIndex = 3;
             // 
             // label3
             // 
@@ -166,7 +166,7 @@
             this.btnvoltar.Location = new System.Drawing.Point(275, 294);
             this.btnvoltar.Name = "btnvoltar";
             this.btnvoltar.Size = new System.Drawing.Size(75, 23);
-            this.btnvoltar.TabIndex = 7;
+            this.btnvoltar.TabIndex = 8;
             this.btnvoltar.Text = "Voltar";
             this.btnvoltar.UseVisualStyleBackColor = true;
             this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
@@ -176,7 +176,7 @@
             this.btnexcluir.Location = new System.Drawing.Point(194, 294);
             this.btnexcluir.Name = "btnexcluir";
             this.btnexcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnexcluir.TabIndex = 6;
+            this.btnexcluir.TabIndex = 7;
             this.btnexcluir.Text = "Excluir";
             this.btnexcluir.UseVisualStyleBackColor = true;
             this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
@@ -186,7 +186,7 @@
             this.btnincluir.Location = new System.Drawing.Point(32, 294);
             this.btnincluir.Name = "btnincluir";
             this.btnincluir.Size = new System.Drawing.Size(156, 23);
-            this.btnincluir.TabIndex = 4;
+            this.btnincluir.TabIndex = 6;
             this.btnincluir.Text = "Incluir / Gravar";
             this.btnincluir.UseVisualStyleBackColor = true;
             this.btnincluir.Click += new System.EventHandler(this.btnincluir_Click);

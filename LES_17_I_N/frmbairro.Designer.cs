@@ -108,7 +108,7 @@
             this.cblmun.Location = new System.Drawing.Point(118, 87);
             this.cblmun.Name = "cblmun";
             this.cblmun.Size = new System.Drawing.Size(250, 21);
-            this.cblmun.TabIndex = 9;
+            this.cblmun.TabIndex = 3;
             // 
             // label3
             // 
@@ -124,7 +124,7 @@
             this.btnvoltar.Location = new System.Drawing.Point(275, 294);
             this.btnvoltar.Name = "btnvoltar";
             this.btnvoltar.Size = new System.Drawing.Size(75, 23);
-            this.btnvoltar.TabIndex = 7;
+            this.btnvoltar.TabIndex = 6;
             this.btnvoltar.Text = "Voltar";
             this.btnvoltar.UseVisualStyleBackColor = true;
             this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
@@ -134,7 +134,7 @@
             this.btnexcluir.Location = new System.Drawing.Point(194, 294);
             this.btnexcluir.Name = "btnexcluir";
             this.btnexcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnexcluir.TabIndex = 6;
+            this.btnexcluir.TabIndex = 5;
             this.btnexcluir.Text = "Excluir";
             this.btnexcluir.UseVisualStyleBackColor = true;
             this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);

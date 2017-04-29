@@ -30,6 +30,7 @@
         {
             this.tbcpais = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgvpais = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnvoltar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
@@ -38,11 +39,10 @@
             this.txtpainome = new System.Windows.Forms.TextBox();
             this.txtpaicodi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvpais = new System.Windows.Forms.DataGridView();
             this.tbcpais.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpais)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcpais
@@ -67,6 +67,22 @@
             this.tabPage1.Text = "Listagem";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dgvpais
+            // 
+            this.dgvpais.AllowUserToAddRows = false;
+            this.dgvpais.AllowUserToDeleteRows = false;
+            this.dgvpais.AllowUserToOrderColumns = true;
+            this.dgvpais.AllowUserToResizeRows = false;
+            this.dgvpais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvpais.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvpais.Location = new System.Drawing.Point(3, 3);
+            this.dgvpais.Name = "dgvpais";
+            this.dgvpais.ReadOnly = true;
+            this.dgvpais.RowHeadersVisible = false;
+            this.dgvpais.Size = new System.Drawing.Size(370, 329);
+            this.dgvpais.TabIndex = 0;
+            this.dgvpais.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpais_CellDoubleClick);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.btnvoltar);
@@ -89,7 +105,7 @@
             this.btnvoltar.Location = new System.Drawing.Point(275, 294);
             this.btnvoltar.Name = "btnvoltar";
             this.btnvoltar.Size = new System.Drawing.Size(75, 23);
-            this.btnvoltar.TabIndex = 7;
+            this.btnvoltar.TabIndex = 5;
             this.btnvoltar.Text = "Voltar";
             this.btnvoltar.UseVisualStyleBackColor = true;
             this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
@@ -99,7 +115,7 @@
             this.btnexcluir.Location = new System.Drawing.Point(194, 294);
             this.btnexcluir.Name = "btnexcluir";
             this.btnexcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnexcluir.TabIndex = 6;
+            this.btnexcluir.TabIndex = 4;
             this.btnexcluir.Text = "Excluir";
             this.btnexcluir.UseVisualStyleBackColor = true;
             this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
@@ -109,7 +125,7 @@
             this.btnincluir.Location = new System.Drawing.Point(32, 294);
             this.btnincluir.Name = "btnincluir";
             this.btnincluir.Size = new System.Drawing.Size(156, 23);
-            this.btnincluir.TabIndex = 4;
+            this.btnincluir.TabIndex = 3;
             this.btnincluir.Text = "Incluir / Gravar";
             this.btnincluir.UseVisualStyleBackColor = true;
             this.btnincluir.Click += new System.EventHandler(this.btnincluir_Click);
@@ -149,22 +165,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
-            // dgvpais
-            // 
-            this.dgvpais.AllowUserToAddRows = false;
-            this.dgvpais.AllowUserToDeleteRows = false;
-            this.dgvpais.AllowUserToOrderColumns = true;
-            this.dgvpais.AllowUserToResizeRows = false;
-            this.dgvpais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpais.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvpais.Location = new System.Drawing.Point(3, 3);
-            this.dgvpais.Name = "dgvpais";
-            this.dgvpais.ReadOnly = true;
-            this.dgvpais.RowHeadersVisible = false;
-            this.dgvpais.Size = new System.Drawing.Size(370, 329);
-            this.dgvpais.TabIndex = 0;
-            this.dgvpais.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpais_CellDoubleClick);
-            // 
             // frmpais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,9 +182,9 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmpais_KeyDown);
             this.tbcpais.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvpais)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpais)).EndInit();
             this.ResumeLayout(false);
 
         }
