@@ -68,6 +68,7 @@ namespace LES_17_I_N
 
         private void funcionárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            new frmfuncionario().ShowDialog();
 
         }
 
