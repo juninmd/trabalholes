@@ -80,7 +80,7 @@ namespace LES_17_I_N
             {
                 FUNCODI = int.Parse(txtfuncodi.Text),
                 FUNNOME = txtfunnome.Text,
-                ENDCEP = txtfuncpf.Text,
+                ENDCEP = txtfuncep.Text,
                 FUNCCODI = int.Parse(cblfunfunc.SelectedItem.ToString().Split('-')[0]),
                 FUNCEL1 = txtfuncel1.Text,
                 FUNCELU = txtfuncelular.Text,
@@ -221,6 +221,7 @@ namespace LES_17_I_N
                 txtfunbairro.Text = dr["BAINOME"].ToString();
                 txtfunestado.Text = dr["ESTNOME"].ToString();
                 txtfunpais.Text = dr["PAINOME"].ToString();
+                txtfunnumero.Text = dr["FUNNUME"].ToString();
 
                 cblfundep.SelectedItem = Departamentos.FirstOrDefault(q => q.Split('-')[0].Trim() == dr["DEPCODI"].ToString());
                 cblfunfunc.SelectedItem = Funcoes.FirstOrDefault(q => q.Split('-')[0].Trim() == dr["FUNCCODI"].ToString());
@@ -287,8 +288,15 @@ namespace LES_17_I_N
             }
             else
             {
-                var form = new frmendereco(txtfuncep.Text);
-                LimparCep();
+                if ((MessageBox.Show("Registro não encontrado \n deseja cadastra-lo?", "Cadastro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.No))
+                {
+                    LimparCep();
+                }
+                else
+                {
+                    var form = new frmendereco(txtfuncep.Text);
+                    LimparCep();
+                }
             }
             dr.Close();
 
@@ -300,7 +308,7 @@ namespace LES_17_I_N
             txtfuncidade.Clear();
             txtfunbairro.Clear();
             txtfunpais.Clear();
-            txtfunestado.Clear(); 
+            txtfunestado.Clear();
         }
     }
 }

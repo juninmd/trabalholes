@@ -45,7 +45,7 @@ namespace LES_17_I_N
 
         public void Insert(FuncionarioModel entidade)
         {
-            var sql = $"INSERT INTO FUNCIONARIO (FUNCODI,FUNNOME,FUNSALA,FUNDTNA,FUNCPF,FUNRG,FUNFONE,FUNCELU,FUNCEL1,FUNNUME,ENDCEP,FUNCCODI,HORCODI) VALUES"
+            var sql = $"INSERT INTO FUNCIONARIO (FUNCODI,FUNNOME,FUNSALA,FUNDTNA,FUNCPF,FUNRG,FUNFONE,FUNCELU,FUNCEL1,FUNNUME,ENDCEP,FUNCCODI,DEPCODI,HORCODI) VALUES"
            + $"('{entidade.FUNCODI}',"
            + $"'{entidade.FUNNOME}',"
            + $"'{entidade.FUNSALA}',"
@@ -58,6 +58,7 @@ namespace LES_17_I_N
            + $"'{entidade.FUNNUME}',"
            + $"'{entidade.ENDCEP}',"
            + $"'{entidade.FUNCCODI}',"
+           + $"'{entidade.DEPCODI}',"
            + $"'{entidade.HORCODI}')";
             ExecuteNonResult(sql);
             MessageBox.Show("Registro inserido com sucesso !!!");
@@ -69,7 +70,7 @@ namespace LES_17_I_N
            + $"FUNCODI = '{entidade.FUNCODI}',"
            + $"FUNNOME = '{entidade.FUNNOME}',"
            + $"FUNSALA = '{entidade.FUNSALA}',"
-           + $"FUNDTNA = '{entidade.FUNDTNA}',"
+           + $"FUNDTNA = '{entidade.FUNDTNA.ToString("yyyy-MM-dd")}',"
            + $"FUNCPF = '{entidade.FUNCPF}',"
            + $"FUNRG = '{entidade.FUNRG}',"
            + $"FUNFONE = '{entidade.FUNFONE}',"
@@ -78,6 +79,7 @@ namespace LES_17_I_N
            + $"FUNNUME = '{entidade.FUNNUME}',"
            + $"ENDCEP = '{entidade.ENDCEP}',"
            + $"FUNCCODI = '{entidade.FUNCCODI}',"
+           + $"DEPCODI = '{entidade.DEPCODI}',"
            + $"HORCODI = '{entidade.HORCODI}' "
             + $"WHERE FUNCODI = { entidade.FUNCODI}";
             ExecuteNonResult(sql);

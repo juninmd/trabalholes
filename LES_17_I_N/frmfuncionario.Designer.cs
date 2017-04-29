@@ -32,6 +32,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dvgfuncionario = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtfunnumero = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.cblfunhorario = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             this.txtfunbairro = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtfunpais = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txtfuncidade = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -71,8 +73,6 @@
             this.txtfunnome = new System.Windows.Forms.TextBox();
             this.txtfuncodi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtfunnumero = new System.Windows.Forms.TextBox();
             this.tbcfuncionario.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgfuncionario)).BeginInit();
@@ -166,6 +166,14 @@
             this.tabPage2.Text = "Detalhado";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // txtfunnumero
+            // 
+            this.txtfunnumero.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtfunnumero.Location = new System.Drawing.Point(525, 177);
+            this.txtfunnumero.Name = "txtfunnumero";
+            this.txtfunnumero.Size = new System.Drawing.Size(129, 20);
+            this.txtfunnumero.TabIndex = 11;
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -181,7 +189,7 @@
             this.cblfunhorario.Location = new System.Drawing.Point(450, 313);
             this.cblfunhorario.Name = "cblfunhorario";
             this.cblfunhorario.Size = new System.Drawing.Size(204, 21);
-            this.cblfunhorario.TabIndex = 26;
+            this.cblfunhorario.TabIndex = 14;
             // 
             // label14
             // 
@@ -198,7 +206,7 @@
             this.cblfundep.Location = new System.Drawing.Point(470, 265);
             this.cblfundep.Name = "cblfundep";
             this.cblfundep.Size = new System.Drawing.Size(184, 21);
-            this.cblfundep.TabIndex = 24;
+            this.cblfundep.TabIndex = 12;
             // 
             // label17
             // 
@@ -215,7 +223,7 @@
             this.cblfunfunc.Location = new System.Drawing.Point(72, 310);
             this.cblfunfunc.Name = "cblfunfunc";
             this.cblfunfunc.Size = new System.Drawing.Size(322, 21);
-            this.cblfunfunc.TabIndex = 24;
+            this.cblfunfunc.TabIndex = 13;
             // 
             // label11
             // 
@@ -232,7 +240,7 @@
             this.txtfuncel1.Location = new System.Drawing.Point(525, 126);
             this.txtfuncel1.Name = "txtfuncel1";
             this.txtfuncel1.Size = new System.Drawing.Size(129, 20);
-            this.txtfuncel1.TabIndex = 20;
+            this.txtfuncel1.TabIndex = 9;
             // 
             // label15
             // 
@@ -249,7 +257,7 @@
             this.txtfuncelular.Location = new System.Drawing.Point(279, 126);
             this.txtfuncelular.Name = "txtfuncelular";
             this.txtfuncelular.Size = new System.Drawing.Size(129, 20);
-            this.txtfuncelular.TabIndex = 20;
+            this.txtfuncelular.TabIndex = 8;
             // 
             // label3
             // 
@@ -266,7 +274,7 @@
             this.txtfunfone.Location = new System.Drawing.Point(72, 123);
             this.txtfunfone.Name = "txtfunfone";
             this.txtfunfone.Size = new System.Drawing.Size(129, 20);
-            this.txtfunfone.TabIndex = 20;
+            this.txtfunfone.TabIndex = 7;
             // 
             // label9
             // 
@@ -283,7 +291,7 @@
             this.txtfunrg.Location = new System.Drawing.Point(270, 73);
             this.txtfunrg.Name = "txtfunrg";
             this.txtfunrg.Size = new System.Drawing.Size(174, 20);
-            this.txtfunrg.TabIndex = 18;
+            this.txtfunrg.TabIndex = 5;
             // 
             // label8
             // 
@@ -300,7 +308,7 @@
             this.txtfuncpf.Location = new System.Drawing.Point(72, 73);
             this.txtfuncpf.Name = "txtfuncpf";
             this.txtfuncpf.Size = new System.Drawing.Size(147, 20);
-            this.txtfuncpf.TabIndex = 16;
+            this.txtfuncpf.TabIndex = 4;
             // 
             // label7
             // 
@@ -337,6 +345,15 @@
             this.txtfunpais.ReadOnly = true;
             this.txtfunpais.Size = new System.Drawing.Size(147, 20);
             this.txtfunpais.TabIndex = 13;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(467, 177);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(47, 13);
+            this.label19.TabIndex = 12;
+            this.label19.Text = "Número:";
             // 
             // label16
             // 
@@ -389,7 +406,7 @@
             this.txtfuncep.Location = new System.Drawing.Point(72, 174);
             this.txtfuncep.Name = "txtfuncep";
             this.txtfuncep.Size = new System.Drawing.Size(98, 20);
-            this.txtfuncep.TabIndex = 13;
+            this.txtfuncep.TabIndex = 10;
             this.txtfuncep.Leave += new System.EventHandler(this.txtfuncep_Leave);
             // 
             // label12
@@ -416,7 +433,7 @@
             this.txtfundtna.Location = new System.Drawing.Point(561, 22);
             this.txtfundtna.Name = "txtfundtna";
             this.txtfundtna.Size = new System.Drawing.Size(93, 20);
-            this.txtfundtna.TabIndex = 13;
+            this.txtfundtna.TabIndex = 3;
             // 
             // label5
             // 
@@ -442,14 +459,14 @@
             this.txtfunsala.Location = new System.Drawing.Point(505, 73);
             this.txtfunsala.Name = "txtfunsala";
             this.txtfunsala.Size = new System.Drawing.Size(149, 20);
-            this.txtfunsala.TabIndex = 10;
+            this.txtfunsala.TabIndex = 6;
             // 
             // btnvoltar
             // 
             this.btnvoltar.Location = new System.Drawing.Point(417, 374);
             this.btnvoltar.Name = "btnvoltar";
             this.btnvoltar.Size = new System.Drawing.Size(75, 23);
-            this.btnvoltar.TabIndex = 7;
+            this.btnvoltar.TabIndex = 17;
             this.btnvoltar.Text = "Voltar";
             this.btnvoltar.UseVisualStyleBackColor = true;
             this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
@@ -459,7 +476,7 @@
             this.btnexcluir.Location = new System.Drawing.Point(336, 374);
             this.btnexcluir.Name = "btnexcluir";
             this.btnexcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnexcluir.TabIndex = 6;
+            this.btnexcluir.TabIndex = 16;
             this.btnexcluir.Text = "Excluir";
             this.btnexcluir.UseVisualStyleBackColor = true;
             // 
@@ -468,7 +485,7 @@
             this.btnincluir.Location = new System.Drawing.Point(174, 374);
             this.btnincluir.Name = "btnincluir";
             this.btnincluir.Size = new System.Drawing.Size(156, 23);
-            this.btnincluir.TabIndex = 4;
+            this.btnincluir.TabIndex = 15;
             this.btnincluir.Text = "Incluir / Gravar";
             this.btnincluir.UseVisualStyleBackColor = true;
             this.btnincluir.Click += new System.EventHandler(this.btnincluir_Click);
@@ -507,23 +524,6 @@
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(467, 177);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(47, 13);
-            this.label19.TabIndex = 12;
-            this.label19.Text = "Número:";
-            // 
-            // txtfunnumero
-            // 
-            this.txtfunnumero.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtfunnumero.Location = new System.Drawing.Point(525, 177);
-            this.txtfunnumero.Name = "txtfunnumero";
-            this.txtfunnumero.Size = new System.Drawing.Size(129, 20);
-            this.txtfunnumero.TabIndex = 28;
             // 
             // frmfuncionario
             // 
