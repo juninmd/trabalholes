@@ -32,9 +32,12 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dvgfuncionario = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
             this.cblfunhorario = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.cblfunc = new System.Windows.Forms.ComboBox();
+            this.cblfundep = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cblfunfunc = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtfuncel1 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -52,6 +55,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtfuncidade = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.txtfunestado = new System.Windows.Forms.TextBox();
             this.txtfunend = new System.Windows.Forms.TextBox();
             this.txtfuncep = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -67,6 +71,8 @@
             this.txtfunnome = new System.Windows.Forms.TextBox();
             this.txtfuncodi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtfunnumero = new System.Windows.Forms.TextBox();
             this.tbcfuncionario.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgfuncionario)).BeginInit();
@@ -111,9 +117,13 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txtfunnumero);
+            this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.cblfunhorario);
             this.tabPage2.Controls.Add(this.label14);
-            this.tabPage2.Controls.Add(this.cblfunc);
+            this.tabPage2.Controls.Add(this.cblfundep);
+            this.tabPage2.Controls.Add(this.label17);
+            this.tabPage2.Controls.Add(this.cblfunfunc);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.txtfuncel1);
             this.tabPage2.Controls.Add(this.label15);
@@ -128,9 +138,11 @@
             this.tabPage2.Controls.Add(this.txtfunbairro);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.txtfunpais);
+            this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Controls.Add(this.txtfuncidade);
             this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Controls.Add(this.txtfunestado);
             this.tabPage2.Controls.Add(this.txtfunend);
             this.tabPage2.Controls.Add(this.txtfuncep);
             this.tabPage2.Controls.Add(this.label12);
@@ -154,30 +166,56 @@
             this.tabPage2.Text = "Detalhado";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(224, 269);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(43, 13);
+            this.label18.TabIndex = 27;
+            this.label18.Text = "Estado:";
+            // 
             // cblfunhorario
             // 
             this.cblfunhorario.FormattingEnabled = true;
-            this.cblfunhorario.Location = new System.Drawing.Point(387, 313);
+            this.cblfunhorario.Location = new System.Drawing.Point(450, 313);
             this.cblfunhorario.Name = "cblfunhorario";
-            this.cblfunhorario.Size = new System.Drawing.Size(267, 21);
+            this.cblfunhorario.Size = new System.Drawing.Size(204, 21);
             this.cblfunhorario.TabIndex = 26;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(337, 313);
+            this.label14.Location = new System.Drawing.Point(400, 318);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(44, 13);
             this.label14.TabIndex = 25;
             this.label14.Text = "Horário:";
             // 
-            // cblfunc
+            // cblfundep
             // 
-            this.cblfunc.FormattingEnabled = true;
-            this.cblfunc.Location = new System.Drawing.Point(72, 310);
-            this.cblfunc.Name = "cblfunc";
-            this.cblfunc.Size = new System.Drawing.Size(249, 21);
-            this.cblfunc.TabIndex = 24;
+            this.cblfundep.FormattingEnabled = true;
+            this.cblfundep.Location = new System.Drawing.Point(470, 265);
+            this.cblfundep.Name = "cblfundep";
+            this.cblfundep.Size = new System.Drawing.Size(184, 21);
+            this.cblfundep.TabIndex = 24;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(389, 269);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(77, 13);
+            this.label17.TabIndex = 23;
+            this.label17.Text = "Departamento:";
+            // 
+            // cblfunfunc
+            // 
+            this.cblfunfunc.FormattingEnabled = true;
+            this.cblfunfunc.Location = new System.Drawing.Point(72, 310);
+            this.cblfunfunc.Name = "cblfunfunc";
+            this.cblfunfunc.Size = new System.Drawing.Size(322, 21);
+            this.cblfunfunc.TabIndex = 24;
             // 
             // label11
             // 
@@ -225,7 +263,7 @@
             // txtfunfone
             // 
             this.txtfunfone.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtfunfone.Location = new System.Drawing.Point(77, 123);
+            this.txtfunfone.Location = new System.Drawing.Point(72, 123);
             this.txtfunfone.Name = "txtfunfone";
             this.txtfunfone.Size = new System.Drawing.Size(129, 20);
             this.txtfunfone.TabIndex = 20;
@@ -278,6 +316,7 @@
             this.txtfunbairro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtfunbairro.Location = new System.Drawing.Point(389, 226);
             this.txtfunbairro.Name = "txtfunbairro";
+            this.txtfunbairro.ReadOnly = true;
             this.txtfunbairro.Size = new System.Drawing.Size(265, 20);
             this.txtfunbairro.TabIndex = 13;
             // 
@@ -295,13 +334,14 @@
             this.txtfunpais.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtfunpais.Location = new System.Drawing.Point(72, 266);
             this.txtfunpais.Name = "txtfunpais";
-            this.txtfunpais.Size = new System.Drawing.Size(249, 20);
+            this.txtfunpais.ReadOnly = true;
+            this.txtfunpais.Size = new System.Drawing.Size(147, 20);
             this.txtfunpais.TabIndex = 13;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(17, 269);
+            this.label16.Location = new System.Drawing.Point(19, 269);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(30, 13);
             this.label16.TabIndex = 12;
@@ -312,6 +352,7 @@
             this.txtfuncidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtfuncidade.Location = new System.Drawing.Point(72, 226);
             this.txtfuncidade.Name = "txtfuncidade";
+            this.txtfuncidade.ReadOnly = true;
             this.txtfuncidade.Size = new System.Drawing.Size(249, 20);
             this.txtfuncidade.TabIndex = 13;
             // 
@@ -324,12 +365,22 @@
             this.label13.TabIndex = 12;
             this.label13.Text = "Cidade:";
             // 
+            // txtfunestado
+            // 
+            this.txtfunestado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtfunestado.Location = new System.Drawing.Point(268, 269);
+            this.txtfunestado.Name = "txtfunestado";
+            this.txtfunestado.ReadOnly = true;
+            this.txtfunestado.Size = new System.Drawing.Size(118, 20);
+            this.txtfunestado.TabIndex = 13;
+            // 
             // txtfunend
             // 
             this.txtfunend.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtfunend.Location = new System.Drawing.Point(275, 174);
+            this.txtfunend.Location = new System.Drawing.Point(234, 174);
             this.txtfunend.Name = "txtfunend";
-            this.txtfunend.Size = new System.Drawing.Size(379, 20);
+            this.txtfunend.ReadOnly = true;
+            this.txtfunend.Size = new System.Drawing.Size(217, 20);
             this.txtfunend.TabIndex = 13;
             // 
             // txtfuncep
@@ -337,13 +388,14 @@
             this.txtfuncep.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtfuncep.Location = new System.Drawing.Point(72, 174);
             this.txtfuncep.Name = "txtfuncep";
-            this.txtfuncep.Size = new System.Drawing.Size(129, 20);
+            this.txtfuncep.Size = new System.Drawing.Size(98, 20);
             this.txtfuncep.TabIndex = 13;
+            this.txtfuncep.Leave += new System.EventHandler(this.txtfuncep_Leave);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(213, 177);
+            this.label12.Location = new System.Drawing.Point(176, 177);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 13);
             this.label12.TabIndex = 12;
@@ -419,6 +471,7 @@
             this.btnincluir.TabIndex = 4;
             this.btnincluir.Text = "Incluir / Gravar";
             this.btnincluir.UseVisualStyleBackColor = true;
+            this.btnincluir.Click += new System.EventHandler(this.btnincluir_Click);
             // 
             // label2
             // 
@@ -444,6 +497,7 @@
             this.txtfuncodi.Name = "txtfuncodi";
             this.txtfuncodi.Size = new System.Drawing.Size(54, 20);
             this.txtfuncodi.TabIndex = 1;
+            this.txtfuncodi.Leave += new System.EventHandler(this.txtfunccodi_Leave);
             // 
             // label1
             // 
@@ -454,6 +508,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Código:";
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(467, 177);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(47, 13);
+            this.label19.TabIndex = 12;
+            this.label19.Text = "Número:";
+            // 
+            // txtfunnumero
+            // 
+            this.txtfunnumero.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtfunnumero.Location = new System.Drawing.Point(525, 177);
+            this.txtfunnumero.Name = "txtfunnumero";
+            this.txtfunnumero.Size = new System.Drawing.Size(129, 20);
+            this.txtfunnumero.TabIndex = 28;
+            // 
             // frmfuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,6 +532,7 @@
             this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.tbcfuncionario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmfuncionario";
@@ -509,7 +581,7 @@
         private System.Windows.Forms.TextBox txtfunbairro;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cblfunc;
+        private System.Windows.Forms.ComboBox cblfunfunc;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cblfunhorario;
         private System.Windows.Forms.TextBox txtfuncel1;
@@ -518,5 +590,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtfunpais;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cblfundep;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtfunestado;
+        private System.Windows.Forms.TextBox txtfunnumero;
+        private System.Windows.Forms.Label label19;
     }
 }

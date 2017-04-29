@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LES_17_I_N
@@ -18,9 +14,14 @@ namespace LES_17_I_N
         }
 
         public FuncionarioDao FuncionarioDao = new FuncionarioDao();
-        public PaisDao PaisDao = new PaisDao();
+        public DeptoDao DeptoDao = new DeptoDao();
+        public FuncaoDao FuncaoDao = new FuncaoDao();
+        public HorarioDao HorarioDao = new HorarioDao();
+        public EnderecoDao EnderecoDao = new EnderecoDao();
 
-        public List<string> Paises { get; set; }
+        public List<string> Departamentos { get; set; }
+        public List<string> Funcoes { get; set; }
+        public List<string> Horarios { get; set; }
 
         public bool edicao { get; set; }
 
@@ -40,7 +41,11 @@ namespace LES_17_I_N
             txtfuncidade.Clear();
             txtfunbairro.Clear();
             txtfuncodi.Clear();
-            cblfunc.SelectedItem = null;
+            txtfunnumero.Clear();
+            txtfunpais.Clear();
+            txtfunestado.Clear();
+            cblfunfunc.SelectedItem = null;
+            cblfundep.SelectedItem = null;
             cblfunhorario.SelectedItem = null;
             edicao = false;
             DgvDados();
@@ -49,7 +54,23 @@ namespace LES_17_I_N
         private FuncionarioModel Entidade()
         {
             if (String.IsNullOrEmpty(txtfuncodi.Text) ||
-                String.IsNullOrEmpty(txtfunnome.Text))
+                String.IsNullOrEmpty(txtfunnome.Text) ||
+                String.IsNullOrEmpty(txtfundtna.Text) ||
+                String.IsNullOrEmpty(txtfuncpf.Text) ||
+                String.IsNullOrEmpty(txtfunrg.Text) ||
+                String.IsNullOrEmpty(txtfunsala.Text) ||
+                String.IsNullOrEmpty(txtfunfone.Text) ||
+                String.IsNullOrEmpty(txtfuncelular.Text) ||
+                String.IsNullOrEmpty(txtfuncel1.Text) ||
+                String.IsNullOrEmpty(txtfuncep.Text) ||
+                String.IsNullOrEmpty(txtfunend.Text) ||
+                String.IsNullOrEmpty(txtfuncidade.Text) ||
+                String.IsNullOrEmpty(txtfunbairro.Text) ||
+                String.IsNullOrEmpty(txtfuncodi.Text) ||
+                String.IsNullOrEmpty(txtfunnumero.Text) ||
+                cblfunfunc.SelectedItem == null ||
+                cblfundep.SelectedItem == null ||
+                cblfunhorario.SelectedItem == null)
             {
                 MessageBox.Show("Preencha todos os campos!");
                 return null;
@@ -59,6 +80,18 @@ namespace LES_17_I_N
             {
                 FUNCODI = int.Parse(txtfuncodi.Text),
                 FUNNOME = txtfunnome.Text,
+                ENDCEP = txtfuncpf.Text,
+                FUNCCODI = int.Parse(cblfunfunc.SelectedItem.ToString().Split('-')[0]),
+                FUNCEL1 = txtfuncel1.Text,
+                FUNCELU = txtfuncelular.Text,
+                FUNCPF = txtfuncpf.Text,
+                FUNDTNA = DateTime.Parse(txtfundtna.Text),
+                FUNFONE = txtfunfone.Text,
+                FUNNUME = int.Parse(txtfunnumero.Text),
+                FUNRG = txtfunrg.Text,
+                FUNSALA = Double.Parse(txtfunsala.Text),
+                HORCODI = int.Parse(cblfunhorario.SelectedItem.ToString().Split('-')[0]),
+                DEPCODI = int.Parse(cblfundep.SelectedItem.ToString().Split('-')[0])
             };
         }
 
@@ -111,8 +144,13 @@ namespace LES_17_I_N
         private void DgvDados()
         {
             var dt = FuncionarioDao.GetAll();
-            cblfunc.Items.Clear();
+            cblfunfunc.Items.Clear();
             cblfunhorario.Items.Clear();
+            cblfundep.Items.Clear();
+
+            cblfundep.Items.AddRange(Departamentos.ToArray());
+            cblfunfunc.Items.AddRange(Funcoes.ToArray());
+            cblfunhorario.Items.AddRange(Horarios.ToArray());
             if (dt.Rows.Count > 0)
                 dvgfuncionario.DataSource = dt;
         }
@@ -123,24 +161,49 @@ namespace LES_17_I_N
                 this.SelectNextControl(this.ActiveControl, !e.Shift, true, true, true);
         }
 
-        private List<string> GetPaises()
+        private List<string> getDepartamentos()
         {
             var lista = new List<string>();
-            var pais = PaisDao.GetAll();
-            foreach (var item in pais.Rows)
+            var itens = DeptoDao.GetAll();
+            foreach (var item in itens.Rows)
             {
                 var row = item as DataRow;
-                lista.Add($"{row["PAICODI"]} - {row["PAINOME"]}");
+                lista.Add($"{row["DEPCODI"]} - {row["DEPNOME"]}");
             }
             return lista;
         }
 
-        private void txtpaicodi_Leave(object sender, EventArgs e)
+
+        private List<string> getFuncoes()
+        {
+            var lista = new List<string>();
+            var itens = FuncaoDao.GetAll();
+            foreach (var item in itens.Rows)
+            {
+                var row = item as DataRow;
+                lista.Add($"{row["FUNCCODI"]} - {row["FUNCNOME"]}");
+            }
+            return lista;
+        }
+
+        private List<string> getHorario()
+        {
+            var lista = new List<string>();
+            var itens = HorarioDao.GetAll();
+            foreach (var item in itens.Rows)
+            {
+                var row = item as DataRow;
+                lista.Add($"{row["HORCODI"]} - {row["HORNOME"]}");
+            }
+            return lista;
+        }
+
+        private void txtfunccodi_Leave(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(txtfuncodi.Text))
                 return;
 
-            var dr = FuncionarioDao.GetById(int.Parse(txtfuncodi.Text));
+            var dr = FuncionarioDao.GetFullById(int.Parse(txtfuncodi.Text));
             if (dr.Read())
             {
                 txtfuncodi.Text = dr["FUNCODI"].ToString();
@@ -152,12 +215,16 @@ namespace LES_17_I_N
                 txtfunfone.Text = dr["FUNFONE"].ToString();
                 txtfuncelular.Text = dr["FUNCELU"].ToString();
                 txtfuncel1.Text = dr["FUNCEL1"].ToString();
-                txtfuncep.Text = dr["FUNCEP"].ToString();
-                txtfunend.Text = dr["FUNDTNA"].ToString();
-                txtfuncidade.Text = dr["FUNDTNA"].ToString();
-                txtfunbairro.Text = dr["FUNDTNA"].ToString();
-                txtfunpais.Text = dr["FUNDTNA"].ToString();
+                txtfuncep.Text = dr["ENDCEP"].ToString();
+                txtfunend.Text = dr["ENDENDE"].ToString();
+                txtfuncidade.Text = dr["MUNNOME"].ToString();
+                txtfunbairro.Text = dr["BAINOME"].ToString();
+                txtfunestado.Text = dr["ESTNOME"].ToString();
+                txtfunpais.Text = dr["PAINOME"].ToString();
 
+                cblfundep.SelectedItem = Departamentos.FirstOrDefault(q => q.Split('-')[0].Trim() == dr["DEPCODI"].ToString());
+                cblfunfunc.SelectedItem = Funcoes.FirstOrDefault(q => q.Split('-')[0].Trim() == dr["FUNCCODI"].ToString());
+                cblfunhorario.SelectedItem = Horarios.FirstOrDefault(q => q.Split('-')[0].Trim() == dr["HORCODI"].ToString());
                 edicao = true;
             }
             else
@@ -169,10 +236,13 @@ namespace LES_17_I_N
                 }
                 else
                 {
-                    txtfunnome.Text = "";
+                    var tempoCodi = txtfuncodi.Text;
+                    limpar();
+                    txtfuncodi.Text = tempoCodi;
                     txtfunnome.Focus();
                 }
             }
+            dr.Close();
         }
 
         private void btnvoltar_Click(object sender, EventArgs e)
@@ -185,7 +255,7 @@ namespace LES_17_I_N
             if (e.RowIndex < 0)
                 return;
             txtfuncodi.Text = dvgfuncionario.Rows[e.RowIndex].Cells["FUNCODI"].Value.ToString();
-            txtpaicodi_Leave(null, null);
+            txtfunccodi_Leave(null, null);
             tbcfuncionario.SelectedIndex = 1;
             txtfunnome.Focus();
             edicao = true;
@@ -193,8 +263,44 @@ namespace LES_17_I_N
 
         private void frmfuncionario_Load(object sender, EventArgs e)
         {
+            Departamentos = getDepartamentos();
+            Funcoes = getFuncoes();
+            Horarios = getHorario();
             DgvDados();
+
         }
 
+        private void txtfuncep_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtfuncep.Text))
+                return;
+
+            var dr = EnderecoDao.GetFullById(txtfuncep.Text);
+            if (dr.Read())
+            {
+                txtfuncep.Text = dr["ENDCEP"].ToString();
+                txtfunend.Text = dr["ENDENDE"].ToString();
+                txtfuncidade.Text = dr["MUNNOME"].ToString();
+                txtfunbairro.Text = dr["BAINOME"].ToString();
+                txtfunestado.Text = dr["ESTNOME"].ToString();
+                txtfunpais.Text = dr["PAINOME"].ToString();
+            }
+            else
+            {
+                var form = new frmendereco(txtfuncep.Text);
+                LimparCep();
+            }
+            dr.Close();
+
+        }
+        private void LimparCep()
+        {
+            txtfuncep.Clear();
+            txtfunend.Clear();
+            txtfuncidade.Clear();
+            txtfunbairro.Clear();
+            txtfunpais.Clear();
+            txtfunestado.Clear(); 
+        }
     }
 }

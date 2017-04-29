@@ -12,6 +12,15 @@ namespace LES_17_I_N
         {
             InitializeComponent();
         }
+        public frmendereco(string cep)
+        {
+            InitializeComponent();
+            txtendcodi.Text = cep;
+            avancar();
+            txtendcodi_Leave(null, null);
+            ShowDialog();
+
+        }
         public BairroDao BairroDao = new BairroDao();
         public EnderecoDao EnderecoDao = new EnderecoDao();
 
@@ -126,7 +135,7 @@ namespace LES_17_I_N
             return lista;
         }
 
-        private void txtendcodi_Leave(object sender, EventArgs e)
+        public void txtendcodi_Leave(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(txtendcodi.Text))
                 return;
@@ -157,6 +166,11 @@ namespace LES_17_I_N
         private void btnvoltar_Click(object sender, EventArgs e)
         {
             tbcbairro.SelectedIndex = 0;
+        }
+
+        public void avancar()
+        {
+            tbcbairro.SelectedIndex = 1;
         }
 
         private void dvgbairro_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

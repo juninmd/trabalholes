@@ -9,9 +9,9 @@ namespace LES_17_I_N
 
          public string FUNNOME { get; set; }
 
-         public string FUNSALA { get; set; }
+         public double FUNSALA { get; set; }
 
-         public string FUNDTNA { get; set; }
+         public DateTime FUNDTNA { get; set; }
 
          public string FUNCPF { get; set; }
 
@@ -23,13 +23,14 @@ namespace LES_17_I_N
 
          public string FUNCEL1 { get; set; }
 
-         public string FUNNUME { get; set; }
+         public int FUNNUME { get; set; }
 
-         public string FUNCEP { get; set; }
+         public string ENDCEP { get; set; }
 
-         public string FUNCCODI { get; set; }
+         public int FUNCCODI { get; set; }
 
-         public string HORCODI { get; set; }
+         public int HORCODI { get; set; }
 
+        public int DEPCODI { get; set; }
     }
 }
