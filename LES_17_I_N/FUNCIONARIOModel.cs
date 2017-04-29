@@ -5,7 +5,7 @@ namespace LES_17_I_N
     public class FuncionarioModel
     {
 
-         public string FUNCODI { get; set; }
+         public int FUNCODI { get; set; }
 
          public string FUNNOME { get; set; }
 

@@ -65,6 +65,12 @@
     <Compile Include="frmdepto.Designer.cs">
       <DependentUpon>frmdepto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmfuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmfuncionario.Designer.cs">
+      <DependentUpon>frmfuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmhorario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <Compile Include="TipohorarioModel.cs" />
     <EmbeddedResource Include="frmdepto.resx">
       <DependentUpon>frmdepto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmfuncionario.resx">
+      <DependentUpon>frmfuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmhorario.resx">
       <DependentUpon>frmhorario.cs</DependentUpon>
