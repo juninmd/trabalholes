@@ -310,5 +310,6 @@ namespace LES_17_I_N
             txtfunpais.Clear();
             txtfunestado.Clear();
         }
+
     }
 }

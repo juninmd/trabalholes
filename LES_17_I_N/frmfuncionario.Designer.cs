@@ -32,7 +32,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dvgfuncionario = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtfunnumero = new System.Windows.Forms.TextBox();
+            this.txtfunnumero = new System.Windows.Forms.MaskedTextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.cblfunhorario = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -40,15 +40,15 @@
             this.label17 = new System.Windows.Forms.Label();
             this.cblfunfunc = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtfuncel1 = new System.Windows.Forms.TextBox();
+            this.txtfuncel1 = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtfuncelular = new System.Windows.Forms.TextBox();
+            this.txtfuncelular = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtfunfone = new System.Windows.Forms.TextBox();
+            this.txtfunfone = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtfunrg = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtfuncpf = new System.Windows.Forms.TextBox();
+            this.txtfuncpf = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtfunbairro = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -62,10 +62,10 @@
             this.txtfuncep = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtfundtna = new System.Windows.Forms.TextBox();
+            this.txtfundtna = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtfunsala = new System.Windows.Forms.TextBox();
+            this.txtfunsala = new System.Windows.Forms.MaskedTextBox();
             this.btnvoltar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btnincluir = new System.Windows.Forms.Button();
@@ -168,8 +168,8 @@
             // 
             // txtfunnumero
             // 
-            this.txtfunnumero.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtfunnumero.Location = new System.Drawing.Point(525, 177);
+            this.txtfunnumero.Mask = "0000000000";
             this.txtfunnumero.Name = "txtfunnumero";
             this.txtfunnumero.Size = new System.Drawing.Size(129, 20);
             this.txtfunnumero.TabIndex = 11;
@@ -236,8 +236,8 @@
             // 
             // txtfuncel1
             // 
-            this.txtfuncel1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtfuncel1.Location = new System.Drawing.Point(525, 126);
+            this.txtfuncel1.Mask = "00000000000";
             this.txtfuncel1.Name = "txtfuncel1";
             this.txtfuncel1.Size = new System.Drawing.Size(129, 20);
             this.txtfuncel1.TabIndex = 9;
@@ -253,8 +253,8 @@
             // 
             // txtfuncelular
             // 
-            this.txtfuncelular.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtfuncelular.Location = new System.Drawing.Point(279, 126);
+            this.txtfuncelular.Mask = "00000000000";
             this.txtfuncelular.Name = "txtfuncelular";
             this.txtfuncelular.Size = new System.Drawing.Size(129, 20);
             this.txtfuncelular.TabIndex = 8;
@@ -270,8 +270,8 @@
             // 
             // txtfunfone
             // 
-            this.txtfunfone.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtfunfone.Location = new System.Drawing.Point(72, 123);
+            this.txtfunfone.Mask = "0000000000";
             this.txtfunfone.Name = "txtfunfone";
             this.txtfunfone.Size = new System.Drawing.Size(129, 20);
             this.txtfunfone.TabIndex = 7;
@@ -304,8 +304,8 @@
             // 
             // txtfuncpf
             // 
-            this.txtfuncpf.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtfuncpf.Location = new System.Drawing.Point(72, 73);
+            this.txtfuncpf.Mask = "000.000.000-00";
             this.txtfuncpf.Name = "txtfuncpf";
             this.txtfuncpf.Size = new System.Drawing.Size(147, 20);
             this.txtfuncpf.TabIndex = 4;
@@ -429,11 +429,12 @@
             // 
             // txtfundtna
             // 
-            this.txtfundtna.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtfundtna.Location = new System.Drawing.Point(561, 22);
+            this.txtfundtna.Mask = "00/00/0000";
             this.txtfundtna.Name = "txtfundtna";
             this.txtfundtna.Size = new System.Drawing.Size(93, 20);
             this.txtfundtna.TabIndex = 3;
+            this.txtfundtna.ValidatingType = typeof(System.DateTime);
             // 
             // label5
             // 
@@ -455,11 +456,12 @@
             // 
             // txtfunsala
             // 
-            this.txtfunsala.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtfunsala.Location = new System.Drawing.Point(505, 73);
+            this.txtfunsala.Mask = "00000";
             this.txtfunsala.Name = "txtfunsala";
             this.txtfunsala.Size = new System.Drawing.Size(149, 20);
             this.txtfunsala.TabIndex = 6;
+            this.txtfunsala.ValidatingType = typeof(int);
             // 
             // btnvoltar
             // 
@@ -479,6 +481,7 @@
             this.btnexcluir.TabIndex = 16;
             this.btnexcluir.Text = "Excluir";
             this.btnexcluir.UseVisualStyleBackColor = true;
+            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
             // 
             // btnincluir
             // 
@@ -563,14 +566,14 @@
         private System.Windows.Forms.TextBox txtfuncodi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtfunsala;
+        private System.Windows.Forms.MaskedTextBox txtfunsala;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtfundtna;
-        private System.Windows.Forms.TextBox txtfuncpf;
+        private System.Windows.Forms.MaskedTextBox txtfundtna;
+        private System.Windows.Forms.MaskedTextBox txtfuncpf;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtfunrg;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtfunfone;
+        private System.Windows.Forms.MaskedTextBox txtfunfone;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtfuncep;
         private System.Windows.Forms.Label label10;
@@ -584,9 +587,9 @@
         private System.Windows.Forms.ComboBox cblfunfunc;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cblfunhorario;
-        private System.Windows.Forms.TextBox txtfuncel1;
+        private System.Windows.Forms.MaskedTextBox txtfuncel1;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtfuncelular;
+        private System.Windows.Forms.MaskedTextBox txtfuncelular;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtfunpais;
         private System.Windows.Forms.Label label16;
@@ -594,7 +597,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtfunestado;
-        private System.Windows.Forms.TextBox txtfunnumero;
+        private System.Windows.Forms.MaskedTextBox txtfunnumero;
         private System.Windows.Forms.Label label19;
     }
 }
