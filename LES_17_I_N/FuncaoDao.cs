@@ -20,9 +20,9 @@ namespace LES_17_I_N
 
     	public void Insert(FuncaoModel entidade)
     	{
-    	 	var sql = $"INSERT INTO FUNCAO (FUNCCODI,FUNCCNOME,CBOCODI) VALUES"
+    	 	var sql = $"INSERT INTO FUNCAO (FUNCCODI,FUNCNOME,CBOCODI) VALUES"
     		+$"('{entidade.FUNCCODI}',"
-    		+$"'{entidade.FUNCCNOME}',"
+    		+$"'{entidade.FUNCNOME}',"
     		+$"'{entidade.CBOCODI}')";
     	 	ExecuteNonResult(sql); 
     	 	MessageBox.Show("Registro inserido com sucesso !!!"); 
@@ -32,7 +32,7 @@ namespace LES_17_I_N
     	{
     	 	var sql = $"UPDATE FUNCAO SET " 
     		+$"FUNCCODI = '{entidade.FUNCCODI}',"
-    		+$"FUNCCNOME = '{entidade.FUNCCNOME}',"
+    		+$"FUNCNOME = '{entidade.FUNCNOME}',"
     		+$"CBOCODI = '{entidade.CBOCODI}' "
     	 	+$"WHERE FUNCCODI = { entidade.FUNCCODI}"; 
     	 	ExecuteNonResult(sql); 
