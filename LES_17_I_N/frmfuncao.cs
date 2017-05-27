@@ -42,7 +42,7 @@ namespace LES_17_I_N
             return new FuncaoModel
             {
                 FUNCCODI = int.Parse(txtfunccodi.Text),
-                FUNCCNOME = txtfuncnome.Text,
+                FUNCNOME = txtfuncnome.Text,
                 CBOCODI = int.Parse(cblcbo.Text.Split('-')[0])
             };
         }
@@ -135,7 +135,7 @@ namespace LES_17_I_N
             if (dr.Read())
             {
                 txtfunccodi.Text = dr["FUNCCODI"].ToString();
-                txtfuncnome.Text = dr["FUNCCNOME"].ToString();
+                txtfuncnome.Text = dr["FUNCNOME"].ToString();
                 cblcbo.SelectedItem = cbo.FirstOrDefault(q => q.Split('-')[0].Trim() == dr["CBOCODI"].ToString());
                 edicao = true;
             }
