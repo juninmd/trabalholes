@@ -53,6 +53,8 @@
     <Compile Include="BairroModel.cs" />
     <Compile Include="CboDao.cs" />
     <Compile Include="CboModel.cs" />
+    <Compile Include="ClienteDao.cs" />
+    <Compile Include="ClienteModel.cs" />
     <Compile Include="DeptoDao.cs" />
     <Compile Include="DeptoModel.cs" />
     <Compile Include="EnderecoDao.cs" />
@@ -142,16 +144,28 @@
     <Compile Include="FuncaoModel.cs" />
     <Compile Include="FuncionarioDao.cs" />
     <Compile Include="FuncionarioModel.cs" />
+    <Compile Include="GrupoDao.cs" />
+    <Compile Include="GrupoModel.cs" />
     <Compile Include="HorarioDao.cs" />
     <Compile Include="HorarioModel.cs" />
     <Compile Include="MunicipioDao.cs" />
     <Compile Include="MunicipioModel.cs" />
     <Compile Include="PaisDao.cs" />
     <Compile Include="PaisModel.cs" />
+    <Compile Include="PedidoDao.cs" />
+    <Compile Include="PedidoModel.cs" />
+    <Compile Include="Pedido_itemDao.cs" />
+    <Compile Include="Pedido_itemModel.cs" />
+    <Compile Include="ProdutoDao.cs" />
+    <Compile Include="ProdutoModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RamoDao.cs" />
+    <Compile Include="RamoModel.cs" />
     <Compile Include="TipohorarioDao.cs" />
     <Compile Include="TipohorarioModel.cs" />
+    <Compile Include="UnidadeDao.cs" />
+    <Compile Include="UnidadeModel.cs" />
     <EmbeddedResource Include="frmdepto.resx">
       <DependentUpon>frmdepto.cs</DependentUpon>
     </EmbeddedResource>
