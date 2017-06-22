@@ -31,6 +31,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ramosDeAtividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folhaDePagtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deptoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,9 +82,48 @@
             // 
             // vendasToolStripMenuItem
             // 
+            this.vendasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.produtosToolStripMenuItem,
+            this.clientesToolStripMenuItem,
+            this.ramosDeAtividadesToolStripMenuItem,
+            this.gruposToolStripMenuItem,
+            this.unidadesToolStripMenuItem});
             this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
             this.vendasToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.vendasToolStripMenuItem.Text = "Vendas";
+            // 
+            // produtosToolStripMenuItem
+            // 
+            this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.produtosToolStripMenuItem.Text = "Produtos";
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // ramosDeAtividadesToolStripMenuItem
+            // 
+            this.ramosDeAtividadesToolStripMenuItem.Name = "ramosDeAtividadesToolStripMenuItem";
+            this.ramosDeAtividadesToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.ramosDeAtividadesToolStripMenuItem.Text = "Ramos de Atividades";
+            this.ramosDeAtividadesToolStripMenuItem.Click += new System.EventHandler(this.ramosDeAtividadesToolStripMenuItem_Click);
+            // 
+            // gruposToolStripMenuItem
+            // 
+            this.gruposToolStripMenuItem.Name = "gruposToolStripMenuItem";
+            this.gruposToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.gruposToolStripMenuItem.Text = "Grupos";
+            this.gruposToolStripMenuItem.Click += new System.EventHandler(this.gruposToolStripMenuItem_Click);
+            // 
+            // unidadesToolStripMenuItem
+            // 
+            this.unidadesToolStripMenuItem.Name = "unidadesToolStripMenuItem";
+            this.unidadesToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.unidadesToolStripMenuItem.Text = "Unidades";
+            this.unidadesToolStripMenuItem.Click += new System.EventHandler(this.unidadesToolStripMenuItem_Click);
             // 
             // folhaDePagtoToolStripMenuItem
             // 
@@ -252,6 +296,11 @@
         private System.Windows.Forms.ToolStripMenuItem estadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paísToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cBOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ramosDeAtividadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gruposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem unidadesToolStripMenuItem;
     }
 }
 

@@ -61,6 +61,24 @@
     <Compile Include="EnderecoModel.cs" />
     <Compile Include="EstadoModel.cs" />
     <Compile Include="FirebirdRepository.cs" />
+    <Compile Include="frmramo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmramo.Designer.cs">
+      <DependentUpon>frmramo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmgrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmgrupo.Designer.cs">
+      <DependentUpon>frmgrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmunidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmunidade.Designer.cs">
+      <DependentUpon>frmunidade.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmdepto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +184,15 @@
     <Compile Include="TipohorarioModel.cs" />
     <Compile Include="UnidadeDao.cs" />
     <Compile Include="UnidadeModel.cs" />
+    <EmbeddedResource Include="frmramo.resx">
+      <DependentUpon>frmramo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmgrupo.resx">
+      <DependentUpon>frmgrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmunidade.resx">
+      <DependentUpon>frmunidade.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmdepto.resx">
       <DependentUpon>frmdepto.cs</DependentUpon>
     </EmbeddedResource>

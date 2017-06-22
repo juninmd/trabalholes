@@ -1,12 +1,15 @@
 ﻿using System;
 using FirebirdSql.Data.FirebirdClient;
 using System.Data;
+using System.IO;
 
 namespace LES_17_I_N
 {
     public abstract class FirebirdRepository
     {
         private FbConnection _connection;
+
+        private string DataBaseLocal = Directory.GetCurrentDirectory().Replace("\\LES_17_I_N\\bin\\Debug","");
 
         protected void ExecuteNonResult(string query, bool closeAfterExecution = true)
         {
@@ -71,7 +74,7 @@ namespace LES_17_I_N
         protected void OpenConnection()
         {
             if (_connection == null)
-                _connection = new FbConnection("User=SYSDBA;Password=masterkey;Database=D:\\Meus Projetos\\Solutions\\Trabalho Fernando\\BANCO.fdb;DataSource=localhost;Port=3050;");
+                _connection = new FbConnection($"User=SYSDBA;Password=masterkey;Database={DataBaseLocal}\\BANCO.fdb;DataSource=localhost;Port=3050;");
 
             if (_connection.State == ConnectionState.Broken && _connection.State == ConnectionState.Closed)
                 throw new Exception("Falha na conexão com o banco de dados:" + _connection.State + _connection.ConnectionString);
