@@ -3,7 +3,7 @@ namespace LES_17_I_N
     public class RamoModel
     {
 
-         public string RAMCODI { get; set; }
+         public int RAMCODI { get; set; }
 
          public string RAMNOME { get; set; }
 

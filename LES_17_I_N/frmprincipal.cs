@@ -76,5 +76,20 @@ namespace LES_17_I_N
         {
             new frmsobre().ShowDialog();
         }
+
+        private void unidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmunidade().ShowDialog();
+        }
+
+        private void ramosDeAtividadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmramo().ShowDialog();
+        }
+
+        private void gruposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmgrupo().ShowDialog();
+        }
     }
 }
