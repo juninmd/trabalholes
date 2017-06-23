@@ -91,5 +91,10 @@ namespace LES_17_I_N
         {
             new frmgrupo().ShowDialog();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmcliente().ShowDialog();
+        }
     }
 }

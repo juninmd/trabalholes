@@ -112,17 +112,6 @@ namespace LES_17_I_N
             txtfuncodi.Focus();
         }
 
-        private void btngravar_Click(object sender, System.EventArgs e)
-        {
-            var entidade = Entidade();
-            if (entidade == null)
-                return;
-
-            FuncionarioDao.Update(entidade);
-            limpar();
-            txtfuncodi.Focus();
-        }
-
         private void btnexcluir_Click(object sender, System.EventArgs e)
         {
             if (String.IsNullOrEmpty(txtfuncodi.Text))
