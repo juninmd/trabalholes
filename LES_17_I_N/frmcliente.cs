@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace LES_17_I_N
@@ -12,8 +15,11 @@ namespace LES_17_I_N
 
         public ClienteDao ClienteDao = new ClienteDao();
         public EnderecoDao EnderecoDao = new EnderecoDao();
+        public RamoDao RamoDao = new RamoDao();
 
         public bool edicao { get; set; }
+
+        public List<string> Ramos { get; set; }
 
         private void limpar()
         {
@@ -38,6 +44,7 @@ namespace LES_17_I_N
             txtclibairro.Clear();
             txtclipais.Clear();
             txtcliestado.Clear();
+            cblcliramo.SelectedItem = null;
             edicao = false;
             DgvDados();
         }
@@ -57,7 +64,8 @@ namespace LES_17_I_N
                 String.IsNullOrEmpty(txtclicelular.Text) ||
                 String.IsNullOrEmpty(txtclicel1.Text) ||
                 String.IsNullOrEmpty(txtclinumero.Text) ||
-                String.IsNullOrEmpty(txtclistatus.Text))
+                String.IsNullOrEmpty(txtclistatus.Text) ||
+                cblcliramo.SelectedItem == null)
             {
                 MessageBox.Show("Preencha todos os campos!");
                 return null;
@@ -79,7 +87,8 @@ namespace LES_17_I_N
                 CLICEL1 = txtclicel1.Text,
                 CLINUME = txtclinumero.Text,
                 CLISTAT = int.Parse(txtclistatus.Text),
-                ENDCEP = txtclicep.Text
+                ENDCEP = txtclicep.Text,
+                RAMCODI = int.Parse(cblcliramo.SelectedItem.ToString().Split('-')[0])
             };
         }
 
@@ -121,6 +130,10 @@ namespace LES_17_I_N
         private void DgvDados()
         {
             var dt = ClienteDao.GetAll();
+
+            cblcliramo.Items.Clear();
+            cblcliramo.Items.AddRange(Ramos.ToArray());
+
             dvgcliente.DataSource = dt;
         }
 
@@ -155,6 +168,7 @@ namespace LES_17_I_N
                 txtclistatus.Text = dr["CLISTAT"].ToString();
                 txtclicep.Text = dr["ENDCEP"].ToString();
 
+                cblcliramo.SelectedItem = Ramos.FirstOrDefault(q => q.Split('-')[0].Trim() == dr["RAMCODI"].ToString());
                 txtclicep_Leave(null, null);
 
                 edicao = true;
@@ -195,7 +209,20 @@ namespace LES_17_I_N
 
         private void frmcliente_Load(object sender, EventArgs e)
         {
+            Ramos = getRamos();
             DgvDados();
+        }
+
+        private List<string> getRamos()
+        {
+            var lista = new List<string>();
+            var itens = RamoDao.GetAll();
+            foreach (var item in itens.Rows)
+            {
+                var row = item as DataRow;
+                lista.Add($"{row["RAMCODI"]} - {row["RAMNOME"]}");
+            }
+            return lista;
         }
 
         private void txtclicep_Leave(object sender, EventArgs e)

@@ -75,6 +75,8 @@
             this.txtclinome = new System.Windows.Forms.TextBox();
             this.txtclicodi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cblcliramo = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.tbccliente.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgcliente)).BeginInit();
@@ -119,6 +121,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label21);
+            this.tabPage2.Controls.Add(this.cblcliramo);
             this.tabPage2.Controls.Add(this.label20);
             this.tabPage2.Controls.Add(this.txtclistatus);
             this.tabPage2.Controls.Add(this.txtcliemail);
@@ -453,7 +457,7 @@
             // 
             // btnvoltar
             // 
-            this.btnvoltar.Location = new System.Drawing.Point(417, 374);
+            this.btnvoltar.Location = new System.Drawing.Point(420, 390);
             this.btnvoltar.Name = "btnvoltar";
             this.btnvoltar.Size = new System.Drawing.Size(75, 23);
             this.btnvoltar.TabIndex = 18;
@@ -463,7 +467,7 @@
             // 
             // btnexcluir
             // 
-            this.btnexcluir.Location = new System.Drawing.Point(336, 374);
+            this.btnexcluir.Location = new System.Drawing.Point(339, 390);
             this.btnexcluir.Name = "btnexcluir";
             this.btnexcluir.Size = new System.Drawing.Size(75, 23);
             this.btnexcluir.TabIndex = 17;
@@ -473,7 +477,7 @@
             // 
             // btnincluir
             // 
-            this.btnincluir.Location = new System.Drawing.Point(174, 374);
+            this.btnincluir.Location = new System.Drawing.Point(177, 390);
             this.btnincluir.Name = "btnincluir";
             this.btnincluir.Size = new System.Drawing.Size(156, 23);
             this.btnincluir.TabIndex = 16;
@@ -550,6 +554,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Código:";
             // 
+            // cblcliramo
+            // 
+            this.cblcliramo.FormattingEnabled = true;
+            this.cblcliramo.Location = new System.Drawing.Point(72, 347);
+            this.cblcliramo.Name = "cblcliramo";
+            this.cblcliramo.Size = new System.Drawing.Size(268, 21);
+            this.cblcliramo.TabIndex = 31;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(17, 355);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(38, 13);
+            this.label21.TabIndex = 32;
+            this.label21.Text = "Ramo:";
+            // 
             // frmcliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,5 +644,7 @@
         private System.Windows.Forms.TextBox txtcliemail;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.MaskedTextBox txtclistatus;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox cblcliramo;
     }
 }
