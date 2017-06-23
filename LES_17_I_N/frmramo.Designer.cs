@@ -32,15 +32,15 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvramo = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtramobs = new System.Windows.Forms.RichTextBox();
             this.btnvoltar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btnincluir = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtramonome = new System.Windows.Forms.TextBox();
             this.txtramocodi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtramobs = new System.Windows.Forms.RichTextBox();
             this.tbcramo.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvramo)).BeginInit();
@@ -104,6 +104,14 @@
             this.tabPage2.Text = "Detalhado";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // txtramobs
+            // 
+            this.txtramobs.Location = new System.Drawing.Point(118, 95);
+            this.txtramobs.Name = "txtramobs";
+            this.txtramobs.Size = new System.Drawing.Size(250, 114);
+            this.txtramobs.TabIndex = 6;
+            this.txtramobs.Text = "";
+            // 
             // btnvoltar
             // 
             this.btnvoltar.Location = new System.Drawing.Point(275, 294);
@@ -134,10 +142,19 @@
             this.btnincluir.UseVisualStyleBackColor = true;
             this.btnincluir.Click += new System.EventHandler(this.btnincluir_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(27, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Observação:";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 62);
+            this.label2.Location = new System.Drawing.Point(27, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 3;
@@ -163,28 +180,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 29);
+            this.label1.Location = new System.Drawing.Point(27, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Observação:";
-            // 
-            // txtramobs
-            // 
-            this.txtramobs.Location = new System.Drawing.Point(118, 95);
-            this.txtramobs.Name = "txtramobs";
-            this.txtramobs.Size = new System.Drawing.Size(250, 114);
-            this.txtramobs.TabIndex = 6;
-            this.txtramobs.Text = "";
             // 
             // frmramo
             // 
