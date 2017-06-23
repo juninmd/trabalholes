@@ -2,26 +2,50 @@ namespace LES_17_I_N
 {
     public class ProdutoModel
     {
+        public int PROCODI { get; set; }
 
-         public string PROCODI { get; set; }
+        public string PRONOME { get; set; }
 
-         public string PRONOME { get; set; }
+        /// <summary>
+        /// Preço custo
+        /// </summary>
+        public double PROCUST { get; set; }
 
-         public string PROCUST { get; set; }
+        /// <summary>
+        /// Margem Lucro
+        /// </summary>
+        public double PROMARG { get; set; }
 
-         public string PROMARG { get; set; }
+        /// <summary>
+        /// Preço Venda
+        /// </summary>
+        public double PROVEND { get; set; }
 
-         public string PROVEND { get; set; }
+        /// <summary>
+        /// Qtd Estoque
+        /// </summary>
+        public string PROESTO { get; set; }
 
-         public string PROESTO { get; set; }
+        /// <summary>
+        /// Localização do produto
+        /// </summary>
+        public string PROLOCA { get; set; }
 
-         public string PROLOCA { get; set; }
+        /// <summary>
+        /// Observação
+        /// </summary>
+        public string PROOBS { get; set; }
 
-         public string PROOBS { get; set; }
 
-         public string UNICODI { get; set; }
+        /// <summary>
+        /// FK UNIDADE
+        /// </summary>
+        public string UNICODI { get; set; }
 
-         public string GRUCODI { get; set; }
+        /// <summary>
+        /// FK GRUPO
+        /// </summary>
+        public string GRUCODI { get; set; }
 
     }
 }
