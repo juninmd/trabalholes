@@ -96,5 +96,15 @@ namespace LES_17_I_N
         {
             new frmcliente().ShowDialog();
         }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmproduto().ShowDialog();
+        }
+
+        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmpedidos().ShowDialog();
+        }
     }
 }
