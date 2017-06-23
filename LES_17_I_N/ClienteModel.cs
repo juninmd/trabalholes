@@ -53,5 +53,7 @@ namespace LES_17_I_N
 
         public string ENDCEP { get; set; }
 
+        public int RAMCODI { get; set; }
+
     }
 }

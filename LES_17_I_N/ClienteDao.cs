@@ -21,7 +21,7 @@ namespace LES_17_I_N
 
         public void Insert(ClienteModel entidade)
         {
-            var sql = $"INSERT INTO CLIENTE (CLICODI,CLINOME,CLIFANT,CLIAPEL,CLILIMI,CLIDTIN,CLICNPJ,CLIINES,CLIEMAI,CLIFONE,CLICELU,CLICEL1,CLINUME,CLISTAT,ENDCEP) VALUES"
+            var sql = $"INSERT INTO CLIENTE (CLICODI,CLINOME,CLIFANT,CLIAPEL,CLILIMI,CLIDTIN,CLICNPJ,CLIINES,CLIEMAI,CLIFONE,CLICELU,CLICEL1,CLINUME,CLISTAT,ENDCEP,RAMCODI) VALUES"
            + $"('{entidade.CLICODI}',"
            + $"'{entidade.CLINOME}',"
            + $"'{entidade.CLIFANT}',"
@@ -36,7 +36,8 @@ namespace LES_17_I_N
            + $"'{entidade.CLICEL1}',"
            + $"'{entidade.CLINUME}',"
            + $"'{entidade.CLISTAT}',"
-           + $"'{entidade.ENDCEP}')";
+           + $"'{entidade.ENDCEP}',"
+           + $"'{entidade.RAMCODI}')";
             ExecuteNonResult(sql);
             MessageBox.Show("Registro inserido com sucesso !!!");
         }
@@ -58,7 +59,8 @@ namespace LES_17_I_N
            + $"CLICEL1 = '{entidade.CLICEL1}',"
            + $"CLINUME = '{entidade.CLINUME}',"
            + $"CLISTAT = '{entidade.CLISTAT}',"
-           + $"ENDCEP = '{entidade.ENDCEP}' "
+           + $"ENDCEP = '{entidade.ENDCEP}',"
+           + $"RAMCODI = '{entidade.RAMCODI}' "
             + $"WHERE CLICODI = { entidade.CLICODI}";
             ExecuteNonResult(sql);
             MessageBox.Show("Registro gravado com sucesso !!!");
