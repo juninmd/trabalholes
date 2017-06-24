@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbcproduto = new System.Windows.Forms.TabControl();
+            this.tbcpro = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dvgproduto = new System.Windows.Forms.DataGridView();
+            this.dgvpro = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnvoltar = new System.Windows.Forms.Button();
-            this.btnexcluir = new System.Windows.Forms.Button();
-            this.btnincluir = new System.Windows.Forms.Button();
             this.txtproobs = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtproloca = new System.Windows.Forms.TextBox();
@@ -55,26 +52,29 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtprocodi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbcproduto.SuspendLayout();
+            this.btnvoltar = new System.Windows.Forms.Button();
+            this.btnexcluir = new System.Windows.Forms.Button();
+            this.btnincluir = new System.Windows.Forms.Button();
+            this.tbcpro.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgproduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvpro)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tbcproduto
+            // tbcpro
             // 
-            this.tbcproduto.Controls.Add(this.tabPage1);
-            this.tbcproduto.Controls.Add(this.tabPage2);
-            this.tbcproduto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbcproduto.Location = new System.Drawing.Point(0, 0);
-            this.tbcproduto.Name = "tbcproduto";
-            this.tbcproduto.SelectedIndex = 0;
-            this.tbcproduto.Size = new System.Drawing.Size(384, 361);
-            this.tbcproduto.TabIndex = 1;
+            this.tbcpro.Controls.Add(this.tabPage1);
+            this.tbcpro.Controls.Add(this.tabPage2);
+            this.tbcpro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbcpro.Location = new System.Drawing.Point(0, 0);
+            this.tbcpro.Name = "tbcpro";
+            this.tbcpro.SelectedIndex = 0;
+            this.tbcpro.Size = new System.Drawing.Size(384, 361);
+            this.tbcpro.TabIndex = 1;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dvgproduto);
+            this.tabPage1.Controls.Add(this.dgvpro);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -83,19 +83,19 @@
             this.tabPage1.Text = "Listagem";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dvgproduto
+            // dgvpro
             // 
-            this.dvgproduto.AllowUserToAddRows = false;
-            this.dvgproduto.AllowUserToDeleteRows = false;
-            this.dvgproduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgproduto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dvgproduto.Location = new System.Drawing.Point(3, 3);
-            this.dvgproduto.Name = "dvgproduto";
-            this.dvgproduto.ReadOnly = true;
-            this.dvgproduto.RowHeadersVisible = false;
-            this.dvgproduto.Size = new System.Drawing.Size(370, 329);
-            this.dvgproduto.TabIndex = 0;
-            this.dvgproduto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgproduto_CellDoubleClick);
+            this.dgvpro.AllowUserToAddRows = false;
+            this.dgvpro.AllowUserToDeleteRows = false;
+            this.dgvpro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvpro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvpro.Location = new System.Drawing.Point(3, 3);
+            this.dgvpro.Name = "dgvpro";
+            this.dgvpro.ReadOnly = true;
+            this.dgvpro.RowHeadersVisible = false;
+            this.dgvpro.Size = new System.Drawing.Size(370, 329);
+            this.dgvpro.TabIndex = 0;
+            this.dgvpro.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvprod_CellDoubleClick);
             // 
             // tabPage2
             // 
@@ -129,36 +129,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Detalhado";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btnvoltar
-            // 
-            this.btnvoltar.Location = new System.Drawing.Point(292, 304);
-            this.btnvoltar.Name = "btnvoltar";
-            this.btnvoltar.Size = new System.Drawing.Size(75, 23);
-            this.btnvoltar.TabIndex = 18;
-            this.btnvoltar.Text = "Voltar";
-            this.btnvoltar.UseVisualStyleBackColor = true;
-            this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
-            // 
-            // btnexcluir
-            // 
-            this.btnexcluir.Location = new System.Drawing.Point(211, 304);
-            this.btnexcluir.Name = "btnexcluir";
-            this.btnexcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnexcluir.TabIndex = 17;
-            this.btnexcluir.Text = "Excluir";
-            this.btnexcluir.UseVisualStyleBackColor = true;
-            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
-            // 
-            // btnincluir
-            // 
-            this.btnincluir.Location = new System.Drawing.Point(49, 304);
-            this.btnincluir.Name = "btnincluir";
-            this.btnincluir.Size = new System.Drawing.Size(156, 23);
-            this.btnincluir.TabIndex = 16;
-            this.btnincluir.Text = "Incluir / Gravar";
-            this.btnincluir.UseVisualStyleBackColor = true;
-            this.btnincluir.Click += new System.EventHandler(this.btnincluir_Click);
             // 
             // txtproobs
             // 
@@ -344,12 +314,42 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Codigo:";
             // 
+            // btnvoltar
+            // 
+            this.btnvoltar.Location = new System.Drawing.Point(292, 304);
+            this.btnvoltar.Name = "btnvoltar";
+            this.btnvoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnvoltar.TabIndex = 18;
+            this.btnvoltar.Text = "Voltar";
+            this.btnvoltar.UseVisualStyleBackColor = true;
+            this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
+            // 
+            // btnexcluir
+            // 
+            this.btnexcluir.Location = new System.Drawing.Point(211, 304);
+            this.btnexcluir.Name = "btnexcluir";
+            this.btnexcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnexcluir.TabIndex = 17;
+            this.btnexcluir.Text = "Excluir";
+            this.btnexcluir.UseVisualStyleBackColor = true;
+            this.btnexcluir.Click += new System.EventHandler(this.btnexcluir_Click);
+            // 
+            // btnincluir
+            // 
+            this.btnincluir.Location = new System.Drawing.Point(49, 304);
+            this.btnincluir.Name = "btnincluir";
+            this.btnincluir.Size = new System.Drawing.Size(156, 23);
+            this.btnincluir.TabIndex = 16;
+            this.btnincluir.Text = "Incluir / Gravar";
+            this.btnincluir.UseVisualStyleBackColor = true;
+            this.btnincluir.Click += new System.EventHandler(this.btnincluir_Click);
+            // 
             // frmproduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
-            this.Controls.Add(this.tbcproduto);
+            this.Controls.Add(this.tbcpro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -359,9 +359,9 @@
             this.Text = "Manutenção dos produtos";
             this.Load += new System.EventHandler(this.frmproduto_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmproduto_KeyDown);
-            this.tbcproduto.ResumeLayout(false);
+            this.tbcpro.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dvgproduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvpro)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
@@ -370,9 +370,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tbcproduto;
+        private System.Windows.Forms.TabControl tbcpro;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dvgproduto;
+        private System.Windows.Forms.DataGridView dgvpro;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnvoltar;
         private System.Windows.Forms.Button btnexcluir;
