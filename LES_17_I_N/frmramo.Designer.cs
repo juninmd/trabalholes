@@ -39,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtramonome = new System.Windows.Forms.TextBox();
-            this.txtramocodi = new System.Windows.Forms.TextBox();
+            this.txtramocodi = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbcramo.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -170,7 +170,7 @@
             // 
             // txtramocodi
             // 
-            this.txtramocodi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtramocodi.Mask = "00000";
             this.txtramocodi.Location = new System.Drawing.Point(118, 29);
             this.txtramocodi.Name = "txtramocodi";
             this.txtramocodi.Size = new System.Drawing.Size(50, 20);
@@ -217,7 +217,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtramonome;
-        private System.Windows.Forms.TextBox txtramocodi;
+        private System.Windows.Forms.MaskedTextBox txtramocodi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnvoltar;
         private System.Windows.Forms.Button btnexcluir;

@@ -37,7 +37,7 @@
             this.btnincluir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtgruponome = new System.Windows.Forms.TextBox();
-            this.txtgrupocodi = new System.Windows.Forms.TextBox();
+            this.txtgrupocodi = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbcgrupo.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -149,7 +149,7 @@
             // 
             // txtgrupocodi
             // 
-            this.txtgrupocodi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtgrupocodi.Mask = "00000";
             this.txtgrupocodi.Location = new System.Drawing.Point(118, 29);
             this.txtgrupocodi.Name = "txtgrupocodi";
             this.txtgrupocodi.Size = new System.Drawing.Size(50, 20);
@@ -196,7 +196,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtgruponome;
-        private System.Windows.Forms.TextBox txtgrupocodi;
+        private System.Windows.Forms.MaskedTextBox txtgrupocodi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnvoltar;
         private System.Windows.Forms.Button btnexcluir;

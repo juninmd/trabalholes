@@ -1,4 +1,6 @@
-﻿namespace LES_17_I_N
+﻿using System.Windows.Forms;
+
+namespace LES_17_I_N
 {
     partial class frmproduto
     {
@@ -36,21 +38,21 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtproloca = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtproqtes = new System.Windows.Forms.TextBox();
+            this.txtproqtes = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.cbounidade = new System.Windows.Forms.ComboBox();
-            this.txtprovend = new System.Windows.Forms.TextBox();
+            this.txtprovend = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtprolucr = new System.Windows.Forms.TextBox();
+            this.txtprolucr = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtprocust = new System.Windows.Forms.TextBox();
+            this.txtprocust = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lnkgrupo = new System.Windows.Forms.LinkLabel();
             this.cbogrupos = new System.Windows.Forms.ComboBox();
             this.txtpronome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtprocodi = new System.Windows.Forms.TextBox();
+            this.txtprocodi = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnvoltar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
@@ -171,9 +173,11 @@
             // txtproqtes
             // 
             this.txtproqtes.Location = new System.Drawing.Point(73, 237);
+            this.txtproqtes.Mask = "00000";
             this.txtproqtes.Name = "txtproqtes";
             this.txtproqtes.Size = new System.Drawing.Size(71, 20);
             this.txtproqtes.TabIndex = 35;
+            this.txtproqtes.ValidatingType = typeof(int);
             // 
             // label7
             // 
@@ -209,9 +213,11 @@
             // txtprovend
             // 
             this.txtprovend.Location = new System.Drawing.Point(266, 90);
+            this.txtprovend.Mask = "00000";
             this.txtprovend.Name = "txtprovend";
             this.txtprovend.Size = new System.Drawing.Size(101, 20);
             this.txtprovend.TabIndex = 31;
+            this.txtprovend.ValidatingType = typeof(int);
             // 
             // label5
             // 
@@ -226,9 +232,11 @@
             // txtprolucr
             // 
             this.txtprolucr.Location = new System.Drawing.Point(242, 237);
+            this.txtprolucr.Mask = "00000";
             this.txtprolucr.Name = "txtprolucr";
             this.txtprolucr.Size = new System.Drawing.Size(105, 20);
             this.txtprolucr.TabIndex = 29;
+            this.txtprolucr.ValidatingType = typeof(int);
             // 
             // label4
             // 
@@ -243,9 +251,11 @@
             // txtprocust
             // 
             this.txtprocust.Location = new System.Drawing.Point(73, 90);
+            this.txtprocust.Mask = "00000";
             this.txtprocust.Name = "txtprocust";
             this.txtprocust.Size = new System.Drawing.Size(122, 20);
             this.txtprocust.TabIndex = 26;
+            this.txtprocust.ValidatingType = typeof(int);
             // 
             // label2
             // 
@@ -300,9 +310,12 @@
             // txtprocodi
             // 
             this.txtprocodi.Location = new System.Drawing.Point(73, 17);
+            this.txtprocodi.Mask = "00000";
             this.txtprocodi.Name = "txtprocodi";
             this.txtprocodi.Size = new System.Drawing.Size(51, 20);
             this.txtprocodi.TabIndex = 21;
+            this.txtprocodi.ValidatingType = typeof(int);
+            this.txtprocodi.Leave += new System.EventHandler(this.txtprocodi_Leave);
             // 
             // label1
             // 
@@ -381,21 +394,21 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtproloca;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtproqtes;
+        private System.Windows.Forms.MaskedTextBox txtproqtes;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.ComboBox cbounidade;
-        private System.Windows.Forms.TextBox txtprovend;
+        private System.Windows.Forms.MaskedTextBox txtprovend;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtprolucr;
+        private System.Windows.Forms.MaskedTextBox txtprolucr;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtprocust;
+        private System.Windows.Forms.MaskedTextBox txtprocust;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel lnkgrupo;
         private System.Windows.Forms.ComboBox cbogrupos;
         private System.Windows.Forms.TextBox txtpronome;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtprocodi;
+        private System.Windows.Forms.MaskedTextBox txtprocodi;
         private System.Windows.Forms.Label label1;
     }
 }

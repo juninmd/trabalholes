@@ -71,7 +71,7 @@
             this.btnincluir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtfunnome = new System.Windows.Forms.TextBox();
-            this.txtfuncodi = new System.Windows.Forms.TextBox();
+            this.txtfuncodi = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbcfuncionario.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -512,7 +512,7 @@
             // 
             // txtfuncodi
             // 
-            this.txtfuncodi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtfuncodi.Mask = "00000";
             this.txtfuncodi.Location = new System.Drawing.Point(72, 22);
             this.txtfuncodi.Name = "txtfuncodi";
             this.txtfuncodi.Size = new System.Drawing.Size(54, 20);
@@ -563,7 +563,7 @@
         private System.Windows.Forms.Button btnincluir;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtfunnome;
-        private System.Windows.Forms.TextBox txtfuncodi;
+        private System.Windows.Forms.MaskedTextBox txtfuncodi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox txtfunsala;

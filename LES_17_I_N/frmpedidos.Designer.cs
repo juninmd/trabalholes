@@ -32,7 +32,7 @@
             this.dvgpeduto = new System.Windows.Forms.DataGridView();
             this.tbcpeduto = new System.Windows.Forms.TabControl();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtpedcodi = new System.Windows.Forms.TextBox();
+            this.txtpedcodi = new System.Windows.Forms.MaskedTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -125,7 +125,7 @@
             // 
             // txtpedcodi
             // 
-            this.txtpedcodi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtpedcodi.Mask = "00000";
             this.txtpedcodi.Location = new System.Drawing.Point(65, 22);
             this.txtpedcodi.Name = "txtpedcodi";
             this.txtpedcodi.Size = new System.Drawing.Size(67, 20);
@@ -521,7 +521,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtpedcodi;
+        private System.Windows.Forms.MaskedTextBox txtpedcodi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dptpeddtem;
         private System.Windows.Forms.ComboBox cboclientes;
