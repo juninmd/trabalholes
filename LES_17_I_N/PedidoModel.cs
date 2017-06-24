@@ -3,7 +3,7 @@ namespace LES_17_I_N
     public class PedidoModel
     {
 
-         public string PEDCODI { get; set; }
+         public int PEDCODI { get; set; }
 
          public string PEDDTEM { get; set; }
 
