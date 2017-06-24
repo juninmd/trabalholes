@@ -37,7 +37,7 @@
             this.btnincluir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txttipnome = new System.Windows.Forms.TextBox();
-            this.txttipcodi = new System.Windows.Forms.TextBox();
+            this.txttipcodi = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbctip.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -149,7 +149,7 @@
             // 
             // txttipcodi
             // 
-            this.txttipcodi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txttipcodi.Mask = "00000";
             this.txttipcodi.Location = new System.Drawing.Point(118, 29);
             this.txttipcodi.Name = "txttipcodi";
             this.txttipcodi.Size = new System.Drawing.Size(50, 20);
@@ -196,7 +196,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txttipnome;
-        private System.Windows.Forms.TextBox txttipcodi;
+        private System.Windows.Forms.MaskedTextBox txttipcodi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnvoltar;
         private System.Windows.Forms.Button btnexcluir;

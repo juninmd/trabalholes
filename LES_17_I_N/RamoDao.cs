@@ -13,7 +13,6 @@ namespace LES_17_I_N
 
     	public DataTable GetAll()
     	{
-    	 	var datatable = new DataTable();
     	 	var sql = $"SELECT * FROM RAMO";
     	 	return ExecuteReaderDt(sql);
     	}

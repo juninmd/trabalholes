@@ -47,7 +47,7 @@
             this.btnincluir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txthornome = new System.Windows.Forms.TextBox();
-            this.txthorcodi = new System.Windows.Forms.TextBox();
+            this.txthorcodi = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbcestado.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -252,7 +252,7 @@
             // 
             // txthorcodi
             // 
-            this.txthorcodi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txthorcodi.Mask = "00000";
             this.txthorcodi.Location = new System.Drawing.Point(118, 29);
             this.txthorcodi.Name = "txthorcodi";
             this.txthorcodi.Size = new System.Drawing.Size(50, 20);
@@ -299,7 +299,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txthornome;
-        private System.Windows.Forms.TextBox txthorcodi;
+        private System.Windows.Forms.MaskedTextBox txthorcodi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnvoltar;
         private System.Windows.Forms.Button btnexcluir;
