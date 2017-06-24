@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace LES_17_I_N
@@ -14,8 +13,8 @@ namespace LES_17_I_N
         }
 
         public PedidoDao PedidoDao = new PedidoDao();
-        public EnderecoDao EnderecoDao = new EnderecoDao();
-        public RamoDao RamoDao = new RamoDao();
+        public Pedido_itemDao Pedido_itemDao = new Pedido_itemDao();
+        public ProdutoDao ProdutoDao = new ProdutoDao();
 
         public bool edicao { get; set; }
 
@@ -39,6 +38,7 @@ namespace LES_17_I_N
 
             return new PedidoModel
             {
+            
                 
             };
         }
@@ -143,27 +143,10 @@ namespace LES_17_I_N
 
         private void frmpedidos_Load(object sender, EventArgs e)
         {
-            Ramos = getRamos();
             DgvDados();
         }
 
-        private List<string> getRamos()
-        {
-            var lista = new List<string>();
-            var itens = RamoDao.GetAll();
-            foreach (var item in itens.Rows)
-            {
-                var row = item as DataRow;
-                lista.Add($"{row["RAMCODI"]} - {row["RAMNOME"]}");
-            }
-            return lista;
-        }
-
-      
-        private void LimparCep()
-        {
-         
-        }
+        
 
     }
 }
