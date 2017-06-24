@@ -23,7 +23,7 @@ namespace LES_17_I_N
         private void limpar()
         {
             txtpedcodi.Clear();
-         
+
             edicao = false;
             DgvDados();
         }
@@ -38,8 +38,8 @@ namespace LES_17_I_N
 
             return new PedidoModel
             {
-            
-                
+
+
             };
         }
 
@@ -82,7 +82,7 @@ namespace LES_17_I_N
         {
             var dt = PedidoDao.GetAll();
 
-          
+
 
             dvgpeduto.DataSource = dt;
         }
@@ -103,7 +103,7 @@ namespace LES_17_I_N
             if (dr.Read())
             {
                 txtpedcodi.Text = dr["PROCODI"].ToString();
-              
+
 
                 edicao = true;
             }
@@ -119,7 +119,7 @@ namespace LES_17_I_N
                     var tempoCodi = txtpedcodi.Text;
                     limpar();
                     txtpedcodi.Text = tempoCodi;
-            
+
                 }
             }
             dr.Close();
@@ -137,7 +137,7 @@ namespace LES_17_I_N
             txtpedcodi.Text = dvgpeduto.Rows[e.RowIndex].Cells["PROCODI"].Value.ToString();
             txtpedccodi_Leave(null, null);
             tbcpeduto.SelectedIndex = 1;
-           
+
             edicao = true;
         }
 
@@ -146,7 +146,62 @@ namespace LES_17_I_N
             DgvDados();
         }
 
-        
+        private void txtprodcodi_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtprocodi.Text))
+                return;
 
+            var dr = ProdutoDao.GetById(int.Parse(txtprocodi.Text));
+            if (dr.Read())
+            {
+                txtpronome.Text = dr["PRONOME"].ToString();
+                txtproestoque.Text = dr["PROESTO"].ToString();
+                txtprounidade.Text = dr["PROVEND"].ToString();
+                txtproqtd.Text = "";
+                btnAdicionarProduto.Enabled = true;
+            }
+            else
+            {
+                btnAdicionarProduto.Enabled = false;
+                MessageBox.Show("Produto não foi encontrado!");
+                LimparProduto();
+            }
+        }
+
+        private void LimparProduto()
+        {
+            txtprocodi.Clear();
+            txtpronome.Clear();
+            txtprounidade.Clear();
+            txtproestoque.Clear();
+            txtproqtd.Clear();
+            txtprototal.Clear();
+        }
+
+
+        private void txtproqtd_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtproestoque.Text) ||
+                String.IsNullOrEmpty(txtproqtd.Text))
+                return;
+
+            if (int.Parse(txtproqtd.Text) > int.Parse(txtproestoque.Text))
+            {
+                txtproqtd.Text = txtproestoque.Text;
+                MessageBox.Show("A Quantidade de itens não deve ser superior ao estoque");
+            }
+            else if (int.Parse(txtproqtd.Text) <= 0)
+            {
+                MessageBox.Show("A Quantidade de itens deve ser maior que 0");
+            }
+
+            txtprototal.Text = (int.Parse(txtproqtd.Text) * int.Parse(txtprounidade.Text)).ToString();
+        }
+
+        private void btnAdicionarProduto_Click(object sender, EventArgs e)
+        {
+            
+            btnAdicionarProduto.Enabled = true;
+        }
     }
 }
