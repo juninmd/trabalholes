@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace LES_17_I_N
@@ -12,25 +9,31 @@ namespace LES_17_I_N
         {
             InitializeComponent();
         }
-
         public ProdutoDao ProdutoDao = new ProdutoDao();
-        public EnderecoDao EnderecoDao = new EnderecoDao();
-        public RamoDao RamoDao = new RamoDao();
-
         public bool edicao { get; set; }
-
-        public List<string> Ramos { get; set; }
 
         private void limpar()
         {
-            
+            txtprocodi.Clear(); // Limpa o textbox
+            txtpronome.Clear(); // Limpa o textbox
+            txtprocodi.Focus(); // Vai para o textbox código
             edicao = false;
             DgvDados();
         }
 
         private ProdutoModel Entidade()
         {
-          return new ProdutoModel();
+            if (String.IsNullOrEmpty(txtprocodi.Text) || String.IsNullOrEmpty(txtpronome.Text))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+                return null;
+            }
+
+            return new ProdutoModel
+            {
+                PROCODI = int.Parse(txtprocodi.Text),
+                PRONOME = txtpronome.Text
+            };
         }
 
         private void btnincluir_Click(object sender, System.EventArgs e)
@@ -47,20 +50,43 @@ namespace LES_17_I_N
             }
 
             limpar();
-         
+            txtprocodi.Focus();
+        }
+
+        private void btngravar_Click(object sender, System.EventArgs e)
+        {
+            var entidade = Entidade();
+            if (entidade == null)
+                return;
+
+            ProdutoDao.Update(entidade);
+            limpar();
+            txtprocodi.Focus();
         }
 
         private void btnexcluir_Click(object sender, System.EventArgs e)
         {
-             
+            if (String.IsNullOrEmpty(txtprocodi.Text))
+            {
+                MessageBox.Show("Preencha o código!");
+                return;
+            }
+
+            if (!edicao)
+            {
+                MessageBox.Show("Não é possível excluir algo que não existe!");
+                return;
+            }
+
+            ProdutoDao.Delete(int.Parse(txtprocodi.Text));
+            this.limpar();
         }
 
         private void DgvDados()
         {
             var dt = ProdutoDao.GetAll();
-
-         
-            dvgproduto.DataSource = dt;
+            if (dt.Rows.Count > 0)
+                dgvpro.DataSource = dt;
         }
 
         private void frmproduto_KeyDown(object sender, KeyEventArgs e)
@@ -69,49 +95,52 @@ namespace LES_17_I_N
                 this.SelectNextControl(this.ActiveControl, !e.Shift, true, true, true);
         }
 
-
-        private void txtprodccodi_Leave(object sender, EventArgs e)
+        private void frmproduto_Load(object sender, EventArgs e)
         {
-            
+            DgvDados();
+        }
+
+        private void txtprocodi_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtprocodi.Text))
+                return;
+
+            var dr = ProdutoDao.GetById(int.Parse(txtprocodi.Text));
+            if (dr.Read())
+            {
+                txtprocodi.Text = dr["PROCODI"].ToString();
+                txtpronome.Text = dr["PRONOME"].ToString();
+                edicao = true;
+            }
+            else
+            {
+                edicao = false;
+                if ((MessageBox.Show("Registro não encontrado \n deseja cadastra-lo?", "Cadastro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.No))
+                {
+                    limpar();
+                }
+                else
+                {
+                    txtpronome.Text = "";
+                    txtpronome.Focus();
+                }
+            }
         }
 
         private void btnvoltar_Click(object sender, EventArgs e)
         {
-            tbcproduto.SelectedIndex = 0;
+            tbcpro.SelectedIndex = 0;
         }
 
-        private void dvgproduto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvprod_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+            if (e.RowIndex < 0)
+                return;
+            txtprocodi.Text = dgvpro.Rows[e.RowIndex].Cells["PROCODI"].Value.ToString();
+            txtprocodi_Leave(null, null);
+            tbcpro.SelectedIndex = 1;
+            txtpronome.Focus();
+            edicao = true;
         }
-
-        private void frmproduto_Load(object sender, EventArgs e)
-        {
-            Ramos = getRamos();
-            DgvDados();
-        }
-
-        private List<string> getRamos()
-        {
-            var lista = new List<string>();
-            var itens = RamoDao.GetAll();
-            foreach (var item in itens.Rows)
-            {
-                var row = item as DataRow;
-                lista.Add($"{row["RAMCODI"]} - {row["RAMNOME"]}");
-            }
-            return lista;
-        }
-
-        private void txtprodcep_Leave(object sender, EventArgs e)
-        {
-           
-
-        }
-        private void LimparCep()
-        {
-         
-        }
-
     }
 }
