@@ -32,6 +32,7 @@
             this.dvgpeduto = new System.Windows.Forms.DataGridView();
             this.tbcpeduto = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtproestoque = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,7 +50,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dvgprodutos = new System.Windows.Forms.DataGridView();
             this.cboclientes = new System.Windows.Forms.ComboBox();
-            this.dptpeddtem = new System.Windows.Forms.DateTimePicker();
+            this.dppedem = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.btnvoltar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
@@ -57,8 +58,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtpedobs = new System.Windows.Forms.TextBox();
+            this.txtpedcondicao = new System.Windows.Forms.TextBox();
             this.txtpedcodi = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -70,6 +71,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgpeduto)).BeginInit();
             this.tbcpeduto.SuspendLayout();
@@ -118,19 +121,22 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnNovo);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.cboclientes);
-            this.tabPage2.Controls.Add(this.dptpeddtem);
+            this.tabPage2.Controls.Add(this.dateTimePicker1);
+            this.tabPage2.Controls.Add(this.dppedem);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.btnvoltar);
             this.tabPage2.Controls.Add(this.btnexcluir);
             this.tabPage2.Controls.Add(this.btnincluir);
             this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.txtpedobs);
+            this.tabPage2.Controls.Add(this.txtpedcondicao);
             this.tabPage2.Controls.Add(this.txtpedcodi);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.groupBox3);
@@ -141,6 +147,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Detalhado";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Location = new System.Drawing.Point(65, 3);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(67, 19);
+            this.btnNovo.TabIndex = 43;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // groupBox2
             // 
@@ -312,15 +328,15 @@
             this.cboclientes.Size = new System.Drawing.Size(345, 21);
             this.cboclientes.TabIndex = 36;
             // 
-            // dptpeddtem
+            // dppedem
             // 
-            this.dptpeddtem.CustomFormat = "";
-            this.dptpeddtem.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dptpeddtem.Location = new System.Drawing.Point(184, 19);
-            this.dptpeddtem.Name = "dptpeddtem";
-            this.dptpeddtem.Size = new System.Drawing.Size(146, 20);
-            this.dptpeddtem.TabIndex = 35;
-            this.dptpeddtem.Value = new System.DateTime(2016, 12, 2, 0, 0, 0, 0);
+            this.dppedem.CustomFormat = "";
+            this.dppedem.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dppedem.Location = new System.Drawing.Point(172, 22);
+            this.dppedem.Name = "dppedem";
+            this.dppedem.Size = new System.Drawing.Size(82, 20);
+            this.dppedem.TabIndex = 35;
+            this.dppedem.Value = new System.DateTime(2016, 12, 2, 0, 0, 0, 0);
             // 
             // label4
             // 
@@ -382,27 +398,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(148, 25);
+            this.label2.Location = new System.Drawing.Point(138, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Data:";
             // 
-            // textBox2
+            // txtpedobs
             // 
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox2.Location = new System.Drawing.Point(65, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(345, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtpedobs.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtpedobs.Location = new System.Drawing.Point(65, 140);
+            this.txtpedobs.Name = "txtpedobs";
+            this.txtpedobs.Size = new System.Drawing.Size(345, 20);
+            this.txtpedobs.TabIndex = 4;
             // 
-            // textBox1
+            // txtpedcondicao
             // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Location = new System.Drawing.Point(65, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(345, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtpedcondicao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtpedcondicao.Location = new System.Drawing.Point(65, 101);
+            this.txtpedcondicao.Name = "txtpedcondicao";
+            this.txtpedcondicao.Size = new System.Drawing.Size(345, 20);
+            this.txtpedcondicao.TabIndex = 4;
             // 
             // txtpedcodi
             // 
@@ -504,6 +520,25 @@
             this.textBox3.Size = new System.Drawing.Size(121, 20);
             this.textBox3.TabIndex = 39;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(260, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Data:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(294, 22);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(82, 20);
+            this.dateTimePicker1.TabIndex = 35;
+            this.dateTimePicker1.Value = new System.DateTime(2016, 12, 2, 0, 0, 0, 0);
+            // 
             // frmpedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -547,11 +582,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtpedobs;
+        private System.Windows.Forms.TextBox txtpedcondicao;
         private System.Windows.Forms.MaskedTextBox txtpedcodi;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dptpeddtem;
+        private System.Windows.Forms.DateTimePicker dppedem;
         private System.Windows.Forms.ComboBox cboclientes;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox3;
@@ -578,5 +613,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MaskedTextBox txtprocodi;
         private System.Windows.Forms.TextBox txtproestoque;
+        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label5;
     }
 }

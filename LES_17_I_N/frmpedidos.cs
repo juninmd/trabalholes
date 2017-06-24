@@ -38,7 +38,10 @@ namespace LES_17_I_N
 
             return new PedidoModel
             {
-
+                PEDCODI = int.Parse(txtpedcodi.Text),
+                PEDDTEM = DateTime.Parse(dppedem.Text),
+                PEDCOND = txtpedcondicao.Text,
+                PEDOBS = txtpedobs.Text
 
             };
         }
@@ -202,6 +205,12 @@ namespace LES_17_I_N
         {
             
             btnAdicionarProduto.Enabled = true;
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            limpar();
+            LimparProduto();
         }
     }
 }
