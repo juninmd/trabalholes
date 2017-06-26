@@ -96,5 +96,10 @@ namespace LES_17_I_N
         {
             new frmcliente().ShowDialog();
         }
+
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmusuario().ShowDialog();
+        }
     }
 }
