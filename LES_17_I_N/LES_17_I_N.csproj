@@ -61,6 +61,12 @@
     <Compile Include="EnderecoModel.cs" />
     <Compile Include="EstadoModel.cs" />
     <Compile Include="FirebirdRepository.cs" />
+    <Compile Include="frmpedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpedidos.Designer.cs">
+      <DependentUpon>frmpedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmusuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     <Compile Include="TipohorarioModel.cs" />
     <Compile Include="UnidadeDao.cs" />
     <Compile Include="UnidadeModel.cs" />
+    <EmbeddedResource Include="frmpedidos.resx">
+      <DependentUpon>frmpedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmusuario.resx">
       <DependentUpon>frmusuario.cs</DependentUpon>
     </EmbeddedResource>

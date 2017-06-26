@@ -73,7 +73,7 @@
             this.txtcliapelido = new System.Windows.Forms.TextBox();
             this.txtclifantasia = new System.Windows.Forms.TextBox();
             this.txtclinome = new System.Windows.Forms.TextBox();
-            this.txtclicodi = new System.Windows.Forms.TextBox();
+            this.txtclicodi = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cblcliramo = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -538,7 +538,7 @@
             // 
             // txtclicodi
             // 
-            this.txtclicodi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtclicodi.Mask = "00000";
             this.txtclicodi.Location = new System.Drawing.Point(65, 22);
             this.txtclicodi.Name = "txtclicodi";
             this.txtclicodi.Size = new System.Drawing.Size(54, 20);
@@ -606,7 +606,7 @@
         private System.Windows.Forms.Button btnincluir;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtclinome;
-        private System.Windows.Forms.TextBox txtclicodi;
+        private System.Windows.Forms.MaskedTextBox txtclicodi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox txtclilimite;

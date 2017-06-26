@@ -1,29 +1,63 @@
+using System;
+
 namespace LES_17_I_N
 {
     public class PedidoModel
     {
 
-         public string PEDCODI { get; set; }
+        public int PEDCODI { get; set; }
 
-         public string PEDDTEM { get; set; }
+        /// <summary>
+        /// Data de Emissão
+        /// </summary>
+        public DateTime PEDDTEM { get; set; }
 
-         public string PEDDTBA { get; set; }
+        /// <summary>
+        /// Data de Baixa
+        /// </summary>
+        public DateTime PEDDTBA { get; set; }
 
-         public string PEDTOTA { get; set; }
+        /// <summary>
+        /// Total do Pedido
+        /// </summary>
+        public double PEDTOTA { get; set; }
 
-         public string PEDPERC { get; set; }
 
-         public string PEDDESC { get; set; }
+        /// <summary>
+        /// Percentual de Desconto
+        /// </summary>
+        public double PEDPERC { get; set; }
 
-         public string PEDLIQU { get; set; }
 
-         public string PEDCOND { get; set; }
+        /// <summary>
+        /// Valor de Desconto
+        /// </summary>
+        public double PEDDESC { get; set; }
 
-         public string PEDOBS { get; set; }
+        /// <summary>
+        /// PEDTOTA - PEDDESC
+        /// </summary>
+        public double PEDLIQU { get; set; }
 
-         public string CLICODI { get; set; }
+        /// <summary>
+        /// Condição de Pagamento
+        /// </summary>
+        public string PEDCOND { get; set; }
 
-         public string FUNCODI { get; set; }
+        /// <summary>
+        /// Observação
+        /// </summary>
+        public string PEDOBS { get; set; }
+
+        /// <summary>
+        /// Cli Codi
+        /// </summary>
+        public int CLICODI { get; set; }
+
+        /// <summary>
+        /// Vendedor Codi
+        /// </summary>
+        public int FUNCODI { get; set; }
 
     }
 }

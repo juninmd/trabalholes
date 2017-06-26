@@ -37,7 +37,7 @@
             this.btnincluir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtpainome = new System.Windows.Forms.TextBox();
-            this.txtpaicodi = new System.Windows.Forms.TextBox();
+            this.txtpaicodi = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbcpais.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -149,7 +149,7 @@
             // 
             // txtpaicodi
             // 
-            this.txtpaicodi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtpaicodi.Mask = "00000";
             this.txtpaicodi.Location = new System.Drawing.Point(118, 29);
             this.txtpaicodi.Name = "txtpaicodi";
             this.txtpaicodi.Size = new System.Drawing.Size(50, 20);
@@ -196,7 +196,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtpainome;
-        private System.Windows.Forms.TextBox txtpaicodi;
+        private System.Windows.Forms.MaskedTextBox txtpaicodi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnvoltar;
         private System.Windows.Forms.Button btnexcluir;
