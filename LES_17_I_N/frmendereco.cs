@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using LES_17_I_N.Dao;
+using LES_17_I_N.Model;
 
 namespace LES_17_I_N
 {
