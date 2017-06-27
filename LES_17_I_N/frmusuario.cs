@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using System.Windows.Forms;
+using LES_17_I_N.Dao;
+using LES_17_I_N.Model;
 
 namespace LES_17_I_N
 {
@@ -9,28 +14,49 @@ namespace LES_17_I_N
         {
             InitializeComponent();
         }
-        public PaisDao PaisDao = new PaisDao();
+        public UsuarioDao UsuarioDao = new UsuarioDao();
+        public FuncionarioDao FuncionarioDao = new FuncionarioDao();
+
+        public List<string> Funcionarios { get; set; }
+
         public bool edicao { get; set; }
 
         private void limpar()
         {
-            txtusucodi.Clear(); // Limpa o textbox
-            txtusucodi.Focus(); // Vai para o textbox código
+            txtusunome.Clear(); // Limpa o textbox
+            txtusunome.Focus(); // Vai para o textbox código
+            cblfuncionario.SelectedItem = null;
+            chkcontabloqueada.Checked = false;
+            dtpusuexpira.Text = "";
+            cblnivelacesso.SelectedItem = null;
+            txtusuchances.Text = "";
+            txtususenha.Text = "";
             edicao = false;
             DgvDados();
         }
 
-        private PaisModel Entidade()
+        private UsuarioModel Entidade()
         {
-            if (String.IsNullOrEmpty(txtusucodi.Text))
+            if (String.IsNullOrEmpty(txtusunome.Text) ||
+                cblfuncionario.SelectedItem == null ||
+                cblnivelacesso.SelectedItem == null ||
+                String.IsNullOrEmpty(dtpusuexpira.Text) ||
+                String.IsNullOrEmpty(txtusuchances.Text) ||
+                String.IsNullOrEmpty(txtususenha.Text))
             {
-                MessageBox.Show("Preencha todos os campos!");
+                MessageBox.Show("Preencha todos os dados!");
                 return null;
             }
 
-            return new PaisModel
+            return new UsuarioModel
             {
-                PAICODI = int.Parse(txtusucodi.Text),
+                USUNOME = txtusunome.Text,
+                FUNCODI = int.Parse(cblfuncionario.SelectedItem.ToString().Split('-')[0]),
+                USUBLOQ = chkcontabloqueada.Checked ? 'S' : 'N',
+                USUDATA = dtpusuexpira.Value,
+                USUNIVEL = int.Parse(cblnivelacesso.SelectedItem.ToString()),
+                USUQTDE = int.Parse(txtusuchances.Text),
+                USUSENHA = txtususenha.Text
             };
         }
 
@@ -41,32 +67,21 @@ namespace LES_17_I_N
                 return;
 
             if (edicao)
-                PaisDao.Update(entidade);
+                UsuarioDao.Update(entidade);
             else
             {
-                PaisDao.Insert(entidade);
+                UsuarioDao.Insert(entidade);
             }
 
             limpar();
-            txtusucodi.Focus();
-        }
-
-        private void btngravar_Click(object sender, System.EventArgs e)
-        {
-            var entidade = Entidade();
-            if (entidade == null)
-                return;
-
-            PaisDao.Update(entidade);
-            limpar();
-            txtusucodi.Focus();
+            txtusunome.Focus();
         }
 
         private void btnexcluir_Click(object sender, System.EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtusucodi.Text))
+            if (String.IsNullOrEmpty(txtusunome.Text))
             {
-                MessageBox.Show("Preencha o código!");
+                MessageBox.Show("Preencha o username!");
                 return;
             }
 
@@ -76,15 +91,16 @@ namespace LES_17_I_N
                 return;
             }
 
-            PaisDao.Delete(int.Parse(txtusucodi.Text));
+            UsuarioDao.Delete(txtusunome.Text);
             this.limpar();
         }
 
         private void DgvDados()
         {
-            var dt = PaisDao.GetAll();
-            if (dt.Rows.Count > 0)
-                dgvpais.DataSource = dt;
+            var dt = UsuarioDao.GetAll();
+            dgvusuario.DataSource = dt;
+
+            cblfuncionario.Items.AddRange(Funcionarios.ToArray());
         }
 
         private void frmusuario_KeyDown(object sender, KeyEventArgs e)
@@ -95,18 +111,37 @@ namespace LES_17_I_N
 
         private void frmusuario_Load(object sender, EventArgs e)
         {
+            Funcionarios = GetFuncionarios();
             DgvDados();
+        }
+
+        private List<string> GetFuncionarios()
+        {
+            var lista = new List<string>();
+            var itens = FuncionarioDao.GetAll();
+            foreach (var item in itens.Rows)
+            {
+                var row = item as DataRow;
+                lista.Add($"{row["FUNCODI"]} - {row["FUNNOME"]}");
+            }
+            return lista;
         }
 
         private void txtusucodi_Leave(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtusucodi.Text))
+            if (String.IsNullOrEmpty(txtusunome.Text))
                 return;
 
-            var dr = PaisDao.GetById(int.Parse(txtusucodi.Text));
+            var dr = UsuarioDao.GetById(txtusunome.Text);
             if (dr.Read())
             {
-                txtusucodi.Text = dr["PAICODI"].ToString();
+                txtusunome.Text = dr["USUNOME"].ToString();
+                cblfuncionario.SelectedItem = Funcionarios.FirstOrDefault(q => q.Split('-')[0].Trim() == dr["FUNCODI"].ToString());
+                chkcontabloqueada.Checked = dr["USUBLOQ"].ToString() == "S";
+                dtpusuexpira.Text = dr["USUDATA"].ToString();
+                cblnivelacesso.SelectedItem = dr["USUNIVEL"].ToString();
+                txtusuchances.Text = dr["USUQTDE"].ToString();
+                txtususenha.Text = dr["USUSENHA"].ToString();
                 edicao = true;
             }
             else
@@ -124,16 +159,16 @@ namespace LES_17_I_N
 
         private void btnvoltar_Click(object sender, EventArgs e)
         {
-            tbcpais.SelectedIndex = 0;
+            tbcusuario.SelectedIndex = 0;
         }
 
         private void dgvpais_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)
                 return;
-            txtusucodi.Text = dgvpais.Rows[e.RowIndex].Cells["PAICODI"].Value.ToString();
+            txtusunome.Text = dgvusuario.Rows[e.RowIndex].Cells["USUNOME"].Value.ToString();
             txtusucodi_Leave(null, null);
-            tbcpais.SelectedIndex = 1;
+            tbcusuario.SelectedIndex = 1;
             edicao = true;
         }
     }

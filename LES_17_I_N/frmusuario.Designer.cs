@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbcpais = new System.Windows.Forms.TabControl();
+            this.tbcusuario = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgvpais = new System.Windows.Forms.DataGridView();
+            this.dgvusuario = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dtpusuexpira = new System.Windows.Forms.DateTimePicker();
+            this.cblnivelacesso = new System.Windows.Forms.ComboBox();
+            this.cblfuncionario = new System.Windows.Forms.ComboBox();
+            this.txtususenha = new System.Windows.Forms.MaskedTextBox();
+            this.txtusuchances = new System.Windows.Forms.MaskedTextBox();
+            this.chkcontabloqueada = new System.Windows.Forms.CheckBox();
             this.btnvoltar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btnincluir = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtusucodi = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.tbcpais.SuspendLayout();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtusunome = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbcusuario.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpais)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvusuario)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tbcpais
+            // tbcusuario
             // 
-            this.tbcpais.Controls.Add(this.tabPage1);
-            this.tbcpais.Controls.Add(this.tabPage2);
-            this.tbcpais.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbcpais.Location = new System.Drawing.Point(0, 0);
-            this.tbcpais.Name = "tbcpais";
-            this.tbcpais.SelectedIndex = 0;
-            this.tbcpais.Size = new System.Drawing.Size(384, 361);
-            this.tbcpais.TabIndex = 0;
+            this.tbcusuario.Controls.Add(this.tabPage1);
+            this.tbcusuario.Controls.Add(this.tabPage2);
+            this.tbcusuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbcusuario.Location = new System.Drawing.Point(0, 0);
+            this.tbcusuario.Name = "tbcusuario";
+            this.tbcusuario.SelectedIndex = 0;
+            this.tbcusuario.Size = new System.Drawing.Size(384, 361);
+            this.tbcusuario.TabIndex = 0;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dgvpais);
+            this.tabPage1.Controls.Add(this.dgvusuario);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -76,30 +76,30 @@
             this.tabPage1.Text = "Listagem";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dgvpais
+            // dgvusuario
             // 
-            this.dgvpais.AllowUserToAddRows = false;
-            this.dgvpais.AllowUserToDeleteRows = false;
-            this.dgvpais.AllowUserToOrderColumns = true;
-            this.dgvpais.AllowUserToResizeRows = false;
-            this.dgvpais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpais.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvpais.Location = new System.Drawing.Point(3, 3);
-            this.dgvpais.Name = "dgvpais";
-            this.dgvpais.ReadOnly = true;
-            this.dgvpais.RowHeadersVisible = false;
-            this.dgvpais.Size = new System.Drawing.Size(370, 329);
-            this.dgvpais.TabIndex = 0;
-            this.dgvpais.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpais_CellDoubleClick);
+            this.dgvusuario.AllowUserToAddRows = false;
+            this.dgvusuario.AllowUserToDeleteRows = false;
+            this.dgvusuario.AllowUserToOrderColumns = true;
+            this.dgvusuario.AllowUserToResizeRows = false;
+            this.dgvusuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvusuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvusuario.Location = new System.Drawing.Point(3, 3);
+            this.dgvusuario.Name = "dgvusuario";
+            this.dgvusuario.ReadOnly = true;
+            this.dgvusuario.RowHeadersVisible = false;
+            this.dgvusuario.Size = new System.Drawing.Size(370, 329);
+            this.dgvusuario.TabIndex = 0;
+            this.dgvusuario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpais_CellDoubleClick);
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.comboBox2);
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.maskedTextBox4);
-            this.tabPage2.Controls.Add(this.maskedTextBox2);
-            this.tabPage2.Controls.Add(this.maskedTextBox1);
-            this.tabPage2.Controls.Add(this.checkBox1);
+            this.tabPage2.Controls.Add(this.dtpusuexpira);
+            this.tabPage2.Controls.Add(this.cblnivelacesso);
+            this.tabPage2.Controls.Add(this.cblfuncionario);
+            this.tabPage2.Controls.Add(this.txtususenha);
+            this.tabPage2.Controls.Add(this.txtusuchances);
+            this.tabPage2.Controls.Add(this.chkcontabloqueada);
             this.tabPage2.Controls.Add(this.btnvoltar);
             this.tabPage2.Controls.Add(this.btnexcluir);
             this.tabPage2.Controls.Add(this.btnincluir);
@@ -108,7 +108,7 @@
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.txtusucodi);
+            this.tabPage2.Controls.Add(this.txtusunome);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -117,6 +117,68 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Detalhado";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dtpusuexpira
+            // 
+            this.dtpusuexpira.Location = new System.Drawing.Point(99, 176);
+            this.dtpusuexpira.Name = "dtpusuexpira";
+            this.dtpusuexpira.Size = new System.Drawing.Size(249, 20);
+            this.dtpusuexpira.TabIndex = 13;
+            // 
+            // cblnivelacesso
+            // 
+            this.cblnivelacesso.FormattingEnabled = true;
+            this.cblnivelacesso.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cblnivelacesso.Location = new System.Drawing.Point(99, 139);
+            this.cblnivelacesso.Name = "cblnivelacesso";
+            this.cblnivelacesso.Size = new System.Drawing.Size(108, 21);
+            this.cblnivelacesso.TabIndex = 12;
+            // 
+            // cblfuncionario
+            // 
+            this.cblfuncionario.FormattingEnabled = true;
+            this.cblfuncionario.Location = new System.Drawing.Point(99, 64);
+            this.cblfuncionario.Name = "cblfuncionario";
+            this.cblfuncionario.Size = new System.Drawing.Size(249, 21);
+            this.cblfuncionario.TabIndex = 11;
+            // 
+            // txtususenha
+            // 
+            this.txtususenha.Location = new System.Drawing.Point(99, 98);
+            this.txtususenha.Name = "txtususenha";
+            this.txtususenha.PasswordChar = '*';
+            this.txtususenha.Size = new System.Drawing.Size(250, 20);
+            this.txtususenha.TabIndex = 8;
+            this.txtususenha.ValidatingType = typeof(int);
+            // 
+            // txtusuchances
+            // 
+            this.txtusuchances.Location = new System.Drawing.Point(176, 220);
+            this.txtusuchances.Mask = "00000";
+            this.txtusuchances.Name = "txtusuchances";
+            this.txtusuchances.Size = new System.Drawing.Size(46, 20);
+            this.txtusuchances.TabIndex = 7;
+            this.txtusuchances.ValidatingType = typeof(int);
+            // 
+            // chkcontabloqueada
+            // 
+            this.chkcontabloqueada.AutoSize = true;
+            this.chkcontabloqueada.Location = new System.Drawing.Point(241, 223);
+            this.chkcontabloqueada.Name = "chkcontabloqueada";
+            this.chkcontabloqueada.Size = new System.Drawing.Size(107, 17);
+            this.chkcontabloqueada.TabIndex = 6;
+            this.chkcontabloqueada.Text = "Conta bloqueada";
+            this.chkcontabloqueada.UseVisualStyleBackColor = true;
             // 
             // btnvoltar
             // 
@@ -148,42 +210,23 @@
             this.btnincluir.UseVisualStyleBackColor = true;
             this.btnincluir.Click += new System.EventHandler(this.btnincluir_Click);
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Funcionário:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 223);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(155, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Chances trocar senha vencida:";
             // 
-            // txtusucodi
+            // label5
             // 
-            this.txtusucodi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtusucodi.Location = new System.Drawing.Point(99, 30);
-            this.txtusucodi.MaxLength = 20;
-            this.txtusucodi.Name = "txtusucodi";
-            this.txtusucodi.Size = new System.Drawing.Size(250, 20);
-            this.txtusucodi.TabIndex = 1;
-            this.txtusucodi.Leave += new System.EventHandler(this.txtusucodi_Leave);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuário:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 101);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Senha:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 183);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Data expiração:";
             // 
             // label4
             // 
@@ -194,94 +237,49 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Nível Acesso:";
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(213, 143);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Dias expiração:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 101);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Senha:";
             // 
-            // label6
+            // label2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 183);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Chances trocar senha vencida:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Funcionário:";
             // 
-            // checkBox1
+            // txtusunome
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(241, 183);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(107, 17);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Conta bloqueada";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.txtusunome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtusunome.Location = new System.Drawing.Point(99, 30);
+            this.txtusunome.MaxLength = 20;
+            this.txtusunome.Name = "txtusunome";
+            this.txtusunome.Size = new System.Drawing.Size(250, 20);
+            this.txtusunome.TabIndex = 1;
+            this.txtusunome.Leave += new System.EventHandler(this.txtusucodi_Leave);
             // 
-            // maskedTextBox1
+            // label1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(176, 180);
-            this.maskedTextBox1.Mask = "00000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(46, 20);
-            this.maskedTextBox1.TabIndex = 7;
-            this.maskedTextBox1.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(99, 98);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.PasswordChar = '*';
-            this.maskedTextBox2.Size = new System.Drawing.Size(250, 20);
-            this.maskedTextBox2.TabIndex = 8;
-            this.maskedTextBox2.ValidatingType = typeof(int);
-            // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(299, 140);
-            this.maskedTextBox4.Mask = "00000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(50, 20);
-            this.maskedTextBox4.TabIndex = 10;
-            this.maskedTextBox4.ValidatingType = typeof(int);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(99, 64);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(249, 21);
-            this.comboBox1.TabIndex = 11;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.comboBox2.Location = new System.Drawing.Point(99, 139);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(108, 21);
-            this.comboBox2.TabIndex = 12;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Usuário:";
             // 
             // frmusuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
-            this.Controls.Add(this.tbcpais);
+            this.Controls.Add(this.tbcusuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -291,9 +289,9 @@
             this.Text = "Manutenção dos Usuários";
             this.Load += new System.EventHandler(this.frmusuario_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmusuario_KeyDown);
-            this.tbcpais.ResumeLayout(false);
+            this.tbcusuario.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpais)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvusuario)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
@@ -302,25 +300,25 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tbcpais;
+        private System.Windows.Forms.TabControl tbcusuario;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtusucodi;
+        private System.Windows.Forms.TextBox txtusunome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnvoltar;
         private System.Windows.Forms.Button btnexcluir;
         private System.Windows.Forms.Button btnincluir;
-        private System.Windows.Forms.DataGridView dgvpais;
+        private System.Windows.Forms.DataGridView dgvusuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.CheckBox chkcontabloqueada;
+        private System.Windows.Forms.MaskedTextBox txtusuchances;
+        private System.Windows.Forms.MaskedTextBox txtususenha;
+        private System.Windows.Forms.ComboBox cblfuncionario;
+        private System.Windows.Forms.ComboBox cblnivelacesso;
+        private System.Windows.Forms.DateTimePicker dtpusuexpira;
     }
 }

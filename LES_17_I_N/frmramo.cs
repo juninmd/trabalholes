@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using LES_17_I_N.Dao;
+using LES_17_I_N.Model;
 
 namespace LES_17_I_N
 {

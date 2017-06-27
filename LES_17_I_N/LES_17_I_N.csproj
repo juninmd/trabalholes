@@ -49,18 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BairroDao.cs" />
-    <Compile Include="BairroModel.cs" />
-    <Compile Include="CboDao.cs" />
-    <Compile Include="CboModel.cs" />
-    <Compile Include="ClienteDao.cs" />
-    <Compile Include="ClienteModel.cs" />
-    <Compile Include="DeptoDao.cs" />
-    <Compile Include="DeptoModel.cs" />
-    <Compile Include="EnderecoDao.cs" />
-    <Compile Include="EnderecoModel.cs" />
-    <Compile Include="EstadoModel.cs" />
-    <Compile Include="FirebirdRepository.cs" />
+    <Compile Include="Dao\BairroDao.cs" />
+    <Compile Include="Dao\UsuarioDao.cs" />
+    <Compile Include="Model\BairroModel.cs" />
+    <Compile Include="Dao\CboDao.cs" />
+    <Compile Include="Model\CboModel.cs" />
+    <Compile Include="Dao\ClienteDao.cs" />
+    <Compile Include="Model\ClienteModel.cs" />
+    <Compile Include="Dao\DeptoDao.cs" />
+    <Compile Include="Model\DeptoModel.cs" />
+    <Compile Include="Dao\EnderecoDao.cs" />
+    <Compile Include="Model\EnderecoModel.cs" />
+    <Compile Include="Model\EstadoModel.cs" />
+    <Compile Include="Dao\FirebirdRepository.cs" />
     <Compile Include="frmpedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,33 +182,34 @@
     <Compile Include="frmsobre.Designer.cs">
       <DependentUpon>frmsobre.cs</DependentUpon>
     </Compile>
-    <Compile Include="EstadoDao.cs" />
-    <Compile Include="FuncaoDao.cs" />
-    <Compile Include="FuncaoModel.cs" />
-    <Compile Include="FuncionarioDao.cs" />
-    <Compile Include="FuncionarioModel.cs" />
-    <Compile Include="GrupoDao.cs" />
-    <Compile Include="GrupoModel.cs" />
-    <Compile Include="HorarioDao.cs" />
-    <Compile Include="HorarioModel.cs" />
-    <Compile Include="MunicipioDao.cs" />
-    <Compile Include="MunicipioModel.cs" />
-    <Compile Include="PaisDao.cs" />
-    <Compile Include="PaisModel.cs" />
-    <Compile Include="PedidoDao.cs" />
-    <Compile Include="PedidoModel.cs" />
-    <Compile Include="Pedido_itemDao.cs" />
-    <Compile Include="Pedido_itemModel.cs" />
-    <Compile Include="ProdutoDao.cs" />
-    <Compile Include="ProdutoModel.cs" />
+    <Compile Include="Dao\EstadoDao.cs" />
+    <Compile Include="Dao\FuncaoDao.cs" />
+    <Compile Include="Model\FuncaoModel.cs" />
+    <Compile Include="Dao\FuncionarioDao.cs" />
+    <Compile Include="Model\FuncionarioModel.cs" />
+    <Compile Include="Dao\GrupoDao.cs" />
+    <Compile Include="Model\GrupoModel.cs" />
+    <Compile Include="Dao\HorarioDao.cs" />
+    <Compile Include="Model\HorarioModel.cs" />
+    <Compile Include="Dao\MunicipioDao.cs" />
+    <Compile Include="Model\MunicipioModel.cs" />
+    <Compile Include="Dao\PaisDao.cs" />
+    <Compile Include="Model\PaisModel.cs" />
+    <Compile Include="Dao\PedidoDao.cs" />
+    <Compile Include="Model\PedidoModel.cs" />
+    <Compile Include="Dao\Pedido_itemDao.cs" />
+    <Compile Include="Model\Pedido_itemModel.cs" />
+    <Compile Include="Dao\ProdutoDao.cs" />
+    <Compile Include="Model\ProdutoModel.cs" />
+    <Compile Include="Model\UsuarioModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RamoDao.cs" />
-    <Compile Include="RamoModel.cs" />
-    <Compile Include="TipohorarioDao.cs" />
-    <Compile Include="TipohorarioModel.cs" />
-    <Compile Include="UnidadeDao.cs" />
-    <Compile Include="UnidadeModel.cs" />
+    <Compile Include="Dao\RamoDao.cs" />
+    <Compile Include="Model\RamoModel.cs" />
+    <Compile Include="Dao\TipohorarioDao.cs" />
+    <Compile Include="Model\TipohorarioModel.cs" />
+    <Compile Include="Dao\UnidadeDao.cs" />
+    <Compile Include="Model\UnidadeModel.cs" />
     <EmbeddedResource Include="frmpedidos.resx">
       <DependentUpon>frmpedidos.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,6 +297,7 @@
   <ItemGroup>
     <None Include="Resources\vNlsRbF.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
