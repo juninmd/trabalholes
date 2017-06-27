@@ -51,6 +51,12 @@
   <ItemGroup>
     <Compile Include="Dao\BairroDao.cs" />
     <Compile Include="Dao\UsuarioDao.cs" />
+    <Compile Include="frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\BairroModel.cs" />
     <Compile Include="Dao\CboDao.cs" />
     <Compile Include="Model\CboModel.cs" />
@@ -210,6 +216,9 @@
     <Compile Include="Model\TipohorarioModel.cs" />
     <Compile Include="Dao\UnidadeDao.cs" />
     <Compile Include="Model\UnidadeModel.cs" />
+    <EmbeddedResource Include="frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmpedidos.resx">
       <DependentUpon>frmpedidos.cs</DependentUpon>
     </EmbeddedResource>

@@ -13,7 +13,7 @@ namespace LES_17_I_N
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja realmente sair?", "Aviso", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                this.Close(); //fecha o formulário atual
+               Application.Exit();
         }
 
         private void paísToolStripMenuItem_Click(object sender, EventArgs e)
@@ -110,6 +110,11 @@ namespace LES_17_I_N
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frmusuario().ShowDialog();
+        }
+
+        private void frmprincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

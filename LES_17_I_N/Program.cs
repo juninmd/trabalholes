@@ -13,7 +13,7 @@ namespace LES_17_I_N
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmprincipal());
+            Application.Run(new frmlogin());
         }
     }
 }

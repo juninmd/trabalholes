@@ -153,42 +153,42 @@
             // funcionárioToolStripMenuItem
             // 
             this.funcionárioToolStripMenuItem.Name = "funcionárioToolStripMenuItem";
-            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.funcionárioToolStripMenuItem.Text = "Funcionário";
             this.funcionárioToolStripMenuItem.Click += new System.EventHandler(this.funcionárioToolStripMenuItem_Click);
             // 
             // deptoToolStripMenuItem
             // 
             this.deptoToolStripMenuItem.Name = "deptoToolStripMenuItem";
-            this.deptoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deptoToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.deptoToolStripMenuItem.Text = "Departamento";
             this.deptoToolStripMenuItem.Click += new System.EventHandler(this.deptoToolStripMenuItem_Click);
             // 
             // tipoHorárioToolStripMenuItem
             // 
             this.tipoHorárioToolStripMenuItem.Name = "tipoHorárioToolStripMenuItem";
-            this.tipoHorárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tipoHorárioToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.tipoHorárioToolStripMenuItem.Text = "Tipo Horário";
             this.tipoHorárioToolStripMenuItem.Click += new System.EventHandler(this.tipoHorárioToolStripMenuItem_Click);
             // 
             // horárioToolStripMenuItem
             // 
             this.horárioToolStripMenuItem.Name = "horárioToolStripMenuItem";
-            this.horárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.horárioToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.horárioToolStripMenuItem.Text = "Horário";
             this.horárioToolStripMenuItem.Click += new System.EventHandler(this.horárioToolStripMenuItem_Click);
             // 
             // funçãoToolStripMenuItem
             // 
             this.funçãoToolStripMenuItem.Name = "funçãoToolStripMenuItem";
-            this.funçãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.funçãoToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.funçãoToolStripMenuItem.Text = "Função";
             this.funçãoToolStripMenuItem.Click += new System.EventHandler(this.funçãoToolStripMenuItem_Click);
             // 
             // cBOToolStripMenuItem
             // 
             this.cBOToolStripMenuItem.Name = "cBOToolStripMenuItem";
-            this.cBOToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cBOToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.cBOToolStripMenuItem.Text = "CBO";
             this.cBOToolStripMenuItem.Click += new System.EventHandler(this.cBOToolStripMenuItem_Click);
             // 
@@ -208,42 +208,42 @@
             // endereçoToolStripMenuItem
             // 
             this.endereçoToolStripMenuItem.Name = "endereçoToolStripMenuItem";
-            this.endereçoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.endereçoToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.endereçoToolStripMenuItem.Text = "Endereço";
             this.endereçoToolStripMenuItem.Click += new System.EventHandler(this.endereçoToolStripMenuItem_Click);
             // 
             // bairroToolStripMenuItem
             // 
             this.bairroToolStripMenuItem.Name = "bairroToolStripMenuItem";
-            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.bairroToolStripMenuItem.Text = "Bairro";
             this.bairroToolStripMenuItem.Click += new System.EventHandler(this.bairroToolStripMenuItem_Click);
             // 
             // municípioToolStripMenuItem
             // 
             this.municípioToolStripMenuItem.Name = "municípioToolStripMenuItem";
-            this.municípioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.municípioToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.municípioToolStripMenuItem.Text = "Município";
             this.municípioToolStripMenuItem.Click += new System.EventHandler(this.municípioToolStripMenuItem_Click);
             // 
             // estadoToolStripMenuItem
             // 
             this.estadoToolStripMenuItem.Name = "estadoToolStripMenuItem";
-            this.estadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.estadoToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.estadoToolStripMenuItem.Text = "Estado";
             this.estadoToolStripMenuItem.Click += new System.EventHandler(this.estadoToolStripMenuItem_Click);
             // 
             // paísToolStripMenuItem
             // 
             this.paísToolStripMenuItem.Name = "paísToolStripMenuItem";
-            this.paísToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.paísToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.paísToolStripMenuItem.Text = "País";
             this.paísToolStripMenuItem.Click += new System.EventHandler(this.paísToolStripMenuItem_Click);
             // 
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
@@ -287,6 +287,7 @@
             this.Name = "frmprincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Disciplina: LES - Laboratório de Engenharia de Software";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmprincipal_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
