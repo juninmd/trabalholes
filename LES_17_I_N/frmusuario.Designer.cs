@@ -120,9 +120,9 @@
             // 
             // dtpusuexpira
             // 
-            this.dtpusuexpira.Location = new System.Drawing.Point(99, 176);
+            this.dtpusuexpira.Location = new System.Drawing.Point(112, 176);
             this.dtpusuexpira.Name = "dtpusuexpira";
-            this.dtpusuexpira.Size = new System.Drawing.Size(249, 20);
+            this.dtpusuexpira.Size = new System.Drawing.Size(236, 20);
             this.dtpusuexpira.TabIndex = 13;
             // 
             // cblnivelacesso
@@ -166,6 +166,7 @@
             this.txtusuchances.Location = new System.Drawing.Point(176, 220);
             this.txtusuchances.Mask = "00000";
             this.txtusuchances.Name = "txtusuchances";
+            this.txtusuchances.ReadOnly = true;
             this.txtusuchances.Size = new System.Drawing.Size(46, 20);
             this.txtusuchances.TabIndex = 7;
             this.txtusuchances.ValidatingType = typeof(int);
@@ -222,11 +223,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 183);
+            this.label5.Location = new System.Drawing.Point(15, 182);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 13);
+            this.label5.Size = new System.Drawing.Size(91, 13);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Data expiração:";
+            this.label5.Text = "Data Atualização:";
             // 
             // label4
             // 

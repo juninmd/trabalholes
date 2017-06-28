@@ -48,6 +48,25 @@ namespace LES_17_I_N
                 return null;
             }
 
+
+            //O campo ususenha tem que ter obrigatoriamente letras e números, sendo no mínimo
+            //seis dígitos e no máximo 10
+            if (txtususenha.Text.Length >= 6 && txtususenha.Text.Length <= 10)
+            {
+                MessageBox.Show("A senha deve ter no mínimo entre 6 - 10 caracteres");
+                return null;
+            }
+
+            //O campo ususenha tem que ter obrigatoriamente letras e números
+            if (!(txtususenha.Text.Any(char.IsDigit) &&
+                txtususenha.Text.Any(char.IsLetter) &&
+                txtususenha.Text.Any(char.IsSymbol) &&
+                txtususenha.Text.Any(char.IsUpper) &&
+                txtususenha.Text.Any(char.IsLower)))
+            {
+                MessageBox.Show("A senha deve ter obrigatoriamente caracteres especiais, números, letras minúsculas e maiúsculas.");
+            }
+
             return new UsuarioModel
             {
                 USUNOME = txtusunome.Text,
