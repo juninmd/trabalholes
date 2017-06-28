@@ -29,7 +29,6 @@ namespace LES_17_I_N.Dao
     		+$"'{entidade.ITEVALO}',"
     		+$"'{entidade.ITETOTA}')";
     	 	ExecuteNonResult(sql); 
-    	 	MessageBox.Show("Registro inserido com sucesso !!!"); 
     	}
 
     	public void Update(Pedido_itemModel entidade)
@@ -50,7 +49,6 @@ namespace LES_17_I_N.Dao
     	{
     	 	var sql = $"DELETE FROM PEDIDO_ITEM WHERE PEDCODI = { ID }";
     	 	ExecuteNonResult(sql); 
-    	 	MessageBox.Show("Registro excluído com sucesso !!!"); 
     	}
     }
 }

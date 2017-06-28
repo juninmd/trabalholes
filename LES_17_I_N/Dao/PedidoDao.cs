@@ -22,8 +22,8 @@ namespace LES_17_I_N.Dao
     	{
     	 	var sql = $"INSERT INTO PEDIDO (PEDCODI,PEDDTEM,PEDDTBA,PEDTOTA,PEDPERC,PEDDESC,PEDLIQU,PEDCOND,PEDOBS,CLICODI,FUNCODI) VALUES"
     		+$"('{entidade.PEDCODI}',"
-    		+$"'{entidade.PEDDTEM}',"
-    		+$"'{entidade.PEDDTBA}',"
+    		+$"'{entidade.PEDDTEM:yyyy-MM-dd}',"
+    		+$"'{entidade.PEDDTBA:yyyy-MM-dd}',"
     		+$"'{entidade.PEDTOTA}',"
     		+$"'{entidade.PEDPERC}',"
     		+$"'{entidade.PEDDESC}',"
@@ -40,8 +40,8 @@ namespace LES_17_I_N.Dao
     	{
     	 	var sql = $"UPDATE PEDIDO SET " 
     		+$"PEDCODI = '{entidade.PEDCODI}',"
-    		+$"PEDDTEM = '{entidade.PEDDTEM}',"
-    		+$"PEDDTBA = '{entidade.PEDDTBA}',"
+    		+$"PEDDTEM = '{entidade.PEDDTEM:yyyy-MM-dd}',"
+    		+$"PEDDTBA = '{entidade.PEDDTBA:yyyy-MM-dd}',"
     		+$"PEDTOTA = '{entidade.PEDTOTA}',"
     		+$"PEDPERC = '{entidade.PEDPERC}',"
     		+$"PEDDESC = '{entidade.PEDDESC}',"
