@@ -1,3 +1,4 @@
+using System;
 using System.Data;
 using System.Windows.Forms;
 using LES_17_I_N.Model;
@@ -33,7 +34,7 @@ namespace LES_17_I_N.Dao
            + $"'{entidade.USUSENHA}',"
            + $"'{entidade.USUNIVEL}',"
            + $"'{entidade.USUDATA:yyyy-MM-dd}',"
-           + $"'{entidade.USUQTDE}',"
+           + $"'10',"
            + $"'{entidade.USUBLOQ}')";
             ExecuteNonResult(sql);
             MessageBox.Show("Registro inserido com sucesso !!!");
@@ -47,12 +48,36 @@ namespace LES_17_I_N.Dao
            + $"USUSENHA = '{entidade.USUSENHA}',"
            + $"USUNIVEL = '{entidade.USUNIVEL}',"
            + $"USUDATA = '{entidade.USUDATA:yyyy-MM-dd}',"
-           + $"USUQTDE = '{entidade.USUQTDE}',"
            + $"USUBLOQ = '{entidade.USUBLOQ}' "
             + $"WHERE USUNOME = '{ entidade.USUNOME}'";
             ExecuteNonResult(sql);
             MessageBox.Show("Registro gravado com sucesso !!!");
 
+        }
+
+        public void Bloquear(string USUNOME)
+        {
+            var sql = $"UPDATE USUARIO SET "
+                      + $"USUBLOQ = 'S' "
+                      + $"WHERE USUNOME = '{ USUNOME}'";
+            ExecuteNonResult(sql);
+        }
+
+        public void AlterarSenha(UsuarioModel entidade)
+        {
+            var sql = $"UPDATE USUARIO SET "
+                      + $"USUSENHA = '{entidade.USUSENHA}', "
+                      + $"USUDATA = '{DateTime.Now:yyyy-MM-dd}' "
+                      + $"WHERE USUNOME = '{ entidade.USUNOME}'";
+            ExecuteNonResult(sql);
+        }
+
+        public void ChancesBloqueio(UsuarioModel entidade)
+        {
+            var sql = $"UPDATE USUARIO SET "
+                      + $"USUQTDE = '{entidade.USUQTDE}' "
+                      + $"WHERE USUNOME = '{ entidade.USUNOME}'";
+            ExecuteNonResult(sql);
         }
 
         public void Delete(string ID)
