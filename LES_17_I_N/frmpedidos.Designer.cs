@@ -32,10 +32,8 @@
             this.dvgpeduto = new System.Windows.Forms.DataGridView();
             this.tbcpeduto = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grpitem = new System.Windows.Forms.GroupBox();
             this.txtproestoque = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.btnAdicionarProduto = new System.Windows.Forms.Button();
             this.txtpronome = new System.Windows.Forms.TextBox();
@@ -49,13 +47,21 @@
             this.txtprocodi = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dvgprodutos = new System.Windows.Forms.DataGridView();
+            this.ITECODI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PROCODI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRICAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITEQTDE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITEVALO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITETOTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboclientes = new System.Windows.Forms.ComboBox();
-            this.dppedem = new System.Windows.Forms.DateTimePicker();
+            this.dtpbaixa = new System.Windows.Forms.DateTimePicker();
+            this.dtpedem = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.btnvoltar = new System.Windows.Forms.Button();
             this.btnexcluir = new System.Windows.Forms.Button();
             this.btnincluir = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtpedobs = new System.Windows.Forms.TextBox();
@@ -65,19 +71,19 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txttotalliq = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtdescontoreal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtdescontoporc = new System.Windows.Forms.TextBox();
+            this.txttotalitens = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cbofuncionario = new System.Windows.Forms.ComboBox();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgpeduto)).BeginInit();
             this.tbcpeduto.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grpitem.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgprodutos)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -121,18 +127,19 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.btnNovo);
-            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.grpitem);
             this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Controls.Add(this.cbofuncionario);
             this.tabPage2.Controls.Add(this.cboclientes);
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
-            this.tabPage2.Controls.Add(this.dppedem);
+            this.tabPage2.Controls.Add(this.dtpbaixa);
+            this.tabPage2.Controls.Add(this.dtpedem);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.btnvoltar);
             this.tabPage2.Controls.Add(this.btnexcluir);
             this.tabPage2.Controls.Add(this.btnincluir);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.txtpedobs);
@@ -148,38 +155,26 @@
             this.tabPage2.Text = "Detalhado";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnNovo
+            // grpitem
             // 
-            this.btnNovo.Location = new System.Drawing.Point(65, 3);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(67, 19);
-            this.btnNovo.TabIndex = 43;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtproestoque);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.btnAdicionarProduto);
-            this.groupBox2.Controls.Add(this.txtpronome);
-            this.groupBox2.Controls.Add(this.txtprototal);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.txtprounidade);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.txtproqtd);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txtprocodi);
-            this.groupBox2.Enabled = false;
-            this.groupBox2.Location = new System.Drawing.Point(16, 169);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(644, 78);
-            this.groupBox2.TabIndex = 41;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Dados item";
+            this.grpitem.Controls.Add(this.txtproestoque);
+            this.grpitem.Controls.Add(this.label12);
+            this.grpitem.Controls.Add(this.btnAdicionarProduto);
+            this.grpitem.Controls.Add(this.txtpronome);
+            this.grpitem.Controls.Add(this.txtprototal);
+            this.grpitem.Controls.Add(this.label15);
+            this.grpitem.Controls.Add(this.txtprounidade);
+            this.grpitem.Controls.Add(this.label14);
+            this.grpitem.Controls.Add(this.txtproqtd);
+            this.grpitem.Controls.Add(this.label13);
+            this.grpitem.Controls.Add(this.label10);
+            this.grpitem.Controls.Add(this.txtprocodi);
+            this.grpitem.Location = new System.Drawing.Point(16, 169);
+            this.grpitem.Name = "grpitem";
+            this.grpitem.Size = new System.Drawing.Size(644, 78);
+            this.grpitem.TabIndex = 41;
+            this.grpitem.TabStop = false;
+            this.grpitem.Text = "Dados item";
             // 
             // txtproestoque
             // 
@@ -188,15 +183,6 @@
             this.txtproestoque.ReadOnly = true;
             this.txtproestoque.Size = new System.Drawing.Size(32, 20);
             this.txtproestoque.TabIndex = 44;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(483, 44);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 23);
-            this.button2.TabIndex = 43;
-            this.button2.Text = "Remover Item";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -212,9 +198,9 @@
             this.btnAdicionarProduto.Enabled = false;
             this.btnAdicionarProduto.Location = new System.Drawing.Point(483, 16);
             this.btnAdicionarProduto.Name = "btnAdicionarProduto";
-            this.btnAdicionarProduto.Size = new System.Drawing.Size(156, 23);
+            this.btnAdicionarProduto.Size = new System.Drawing.Size(156, 52);
             this.btnAdicionarProduto.TabIndex = 42;
-            this.btnAdicionarProduto.Text = "Adicionar/Editar Item";
+            this.btnAdicionarProduto.Text = "Adicionar Item";
             this.btnAdicionarProduto.UseVisualStyleBackColor = true;
             this.btnAdicionarProduto.Click += new System.EventHandler(this.btnAdicionarProduto_Click);
             // 
@@ -223,6 +209,7 @@
             this.txtpronome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtpronome.Location = new System.Drawing.Point(201, 15);
             this.txtpronome.Name = "txtpronome";
+            this.txtpronome.ReadOnly = true;
             this.txtpronome.Size = new System.Drawing.Size(276, 20);
             this.txtpronome.TabIndex = 3;
             // 
@@ -232,6 +219,7 @@
             this.txtprototal.Location = new System.Drawing.Point(351, 48);
             this.txtprototal.Mask = "0000";
             this.txtprototal.Name = "txtprototal";
+            this.txtprototal.ReadOnly = true;
             this.txtprototal.Size = new System.Drawing.Size(126, 20);
             this.txtprototal.TabIndex = 3;
             // 
@@ -249,6 +237,7 @@
             this.txtprounidade.Location = new System.Drawing.Point(201, 47);
             this.txtprounidade.Mask = "0000";
             this.txtprounidade.Name = "txtprounidade";
+            this.txtprounidade.ReadOnly = true;
             this.txtprounidade.Size = new System.Drawing.Size(97, 20);
             this.txtprounidade.TabIndex = 3;
             // 
@@ -312,6 +301,13 @@
             this.dvgprodutos.AllowUserToAddRows = false;
             this.dvgprodutos.AllowUserToDeleteRows = false;
             this.dvgprodutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgprodutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ITECODI,
+            this.PROCODI,
+            this.DESCRICAO,
+            this.ITEQTDE,
+            this.ITEVALO,
+            this.ITETOTA});
             this.dvgprodutos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvgprodutos.Location = new System.Drawing.Point(3, 16);
             this.dvgprodutos.Name = "dvgprodutos";
@@ -319,6 +315,42 @@
             this.dvgprodutos.RowHeadersVisible = false;
             this.dvgprodutos.Size = new System.Drawing.Size(638, 145);
             this.dvgprodutos.TabIndex = 1;
+            // 
+            // ITECODI
+            // 
+            this.ITECODI.HeaderText = "ITECODI";
+            this.ITECODI.Name = "ITECODI";
+            this.ITECODI.ReadOnly = true;
+            // 
+            // PROCODI
+            // 
+            this.PROCODI.HeaderText = "PROCODI";
+            this.PROCODI.Name = "PROCODI";
+            this.PROCODI.ReadOnly = true;
+            // 
+            // DESCRICAO
+            // 
+            this.DESCRICAO.HeaderText = "DESCRICAO";
+            this.DESCRICAO.Name = "DESCRICAO";
+            this.DESCRICAO.ReadOnly = true;
+            // 
+            // ITEQTDE
+            // 
+            this.ITEQTDE.HeaderText = "ITEQTDE";
+            this.ITEQTDE.Name = "ITEQTDE";
+            this.ITEQTDE.ReadOnly = true;
+            // 
+            // ITEVALO
+            // 
+            this.ITEVALO.HeaderText = "ITEVALO";
+            this.ITEVALO.Name = "ITEVALO";
+            this.ITEVALO.ReadOnly = true;
+            // 
+            // ITETOTA
+            // 
+            this.ITETOTA.HeaderText = "ITETOTA";
+            this.ITETOTA.Name = "ITETOTA";
+            this.ITETOTA.ReadOnly = true;
             // 
             // cboclientes
             // 
@@ -328,15 +360,25 @@
             this.cboclientes.Size = new System.Drawing.Size(345, 21);
             this.cboclientes.TabIndex = 36;
             // 
-            // dppedem
+            // dtpbaixa
             // 
-            this.dppedem.CustomFormat = "";
-            this.dppedem.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dppedem.Location = new System.Drawing.Point(172, 22);
-            this.dppedem.Name = "dppedem";
-            this.dppedem.Size = new System.Drawing.Size(82, 20);
-            this.dppedem.TabIndex = 35;
-            this.dppedem.Value = new System.DateTime(2016, 12, 2, 0, 0, 0, 0);
+            this.dtpbaixa.CustomFormat = "";
+            this.dtpbaixa.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpbaixa.Location = new System.Drawing.Point(294, 22);
+            this.dtpbaixa.Name = "dtpbaixa";
+            this.dtpbaixa.Size = new System.Drawing.Size(82, 20);
+            this.dtpbaixa.TabIndex = 35;
+            this.dtpbaixa.Value = new System.DateTime(2016, 12, 2, 0, 0, 0, 0);
+            // 
+            // dtpedem
+            // 
+            this.dtpedem.CustomFormat = "";
+            this.dtpedem.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpedem.Location = new System.Drawing.Point(172, 22);
+            this.dtpedem.Name = "dtpedem";
+            this.dtpedem.Size = new System.Drawing.Size(82, 20);
+            this.dtpedem.TabIndex = 35;
+            this.dtpedem.Value = new System.DateTime(2016, 12, 2, 0, 0, 0, 0);
             // 
             // label4
             // 
@@ -380,11 +422,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 104);
+            this.label3.Location = new System.Drawing.Point(223, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Forma:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(260, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Data:";
             // 
             // label11
             // 
@@ -407,17 +458,17 @@
             // txtpedobs
             // 
             this.txtpedobs.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtpedobs.Location = new System.Drawing.Point(65, 140);
+            this.txtpedobs.Location = new System.Drawing.Point(65, 138);
             this.txtpedobs.Name = "txtpedobs";
-            this.txtpedobs.Size = new System.Drawing.Size(345, 20);
+            this.txtpedobs.Size = new System.Drawing.Size(152, 20);
             this.txtpedobs.TabIndex = 4;
             // 
             // txtpedcondicao
             // 
             this.txtpedcondicao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtpedcondicao.Location = new System.Drawing.Point(65, 101);
+            this.txtpedcondicao.Location = new System.Drawing.Point(263, 138);
             this.txtpedcondicao.Name = "txtpedcondicao";
-            this.txtpedcondicao.Size = new System.Drawing.Size(345, 20);
+            this.txtpedcondicao.Size = new System.Drawing.Size(147, 20);
             this.txtpedcondicao.TabIndex = 4;
             // 
             // txtpedcodi
@@ -442,13 +493,12 @@
             // 
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.txttotalliq);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.txtdescontoreal);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Enabled = false;
+            this.groupBox3.Controls.Add(this.txtdescontoporc);
+            this.groupBox3.Controls.Add(this.txttotalitens);
             this.groupBox3.Location = new System.Drawing.Point(416, 6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(254, 126);
@@ -461,9 +511,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(15, 23);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 13);
+            this.label6.Size = new System.Drawing.Size(60, 13);
             this.label6.TabIndex = 38;
-            this.label6.Text = "Total itens:";
+            this.label6.Text = "Total Itens:";
             // 
             // label7
             // 
@@ -474,12 +524,13 @@
             this.label7.TabIndex = 38;
             this.label7.Text = "Desconto em %:";
             // 
-            // textBox6
+            // txttotalliq
             // 
-            this.textBox6.Location = new System.Drawing.Point(125, 92);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(121, 20);
-            this.textBox6.TabIndex = 39;
+            this.txttotalliq.Location = new System.Drawing.Point(125, 92);
+            this.txttotalliq.Name = "txttotalliq";
+            this.txttotalliq.ReadOnly = true;
+            this.txttotalliq.Size = new System.Drawing.Size(121, 20);
+            this.txttotalliq.TabIndex = 39;
             // 
             // label8
             // 
@@ -490,12 +541,13 @@
             this.label8.TabIndex = 38;
             this.label8.Text = "Desconto em R$:";
             // 
-            // textBox5
+            // txtdescontoreal
             // 
-            this.textBox5.Location = new System.Drawing.Point(125, 67);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(121, 20);
-            this.textBox5.TabIndex = 39;
+            this.txtdescontoreal.Location = new System.Drawing.Point(125, 67);
+            this.txtdescontoreal.Name = "txtdescontoreal";
+            this.txtdescontoreal.Size = new System.Drawing.Size(121, 20);
+            this.txtdescontoreal.TabIndex = 39;
+            this.txtdescontoreal.Leave += new System.EventHandler(this.CalcularResumos);
             // 
             // label9
             // 
@@ -506,38 +558,38 @@
             this.label9.TabIndex = 38;
             this.label9.Text = "Total Liquido:";
             // 
-            // textBox4
+            // txtdescontoporc
             // 
-            this.textBox4.Location = new System.Drawing.Point(125, 44);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 20);
-            this.textBox4.TabIndex = 39;
+            this.txtdescontoporc.Location = new System.Drawing.Point(125, 44);
+            this.txtdescontoporc.Name = "txtdescontoporc";
+            this.txtdescontoporc.Size = new System.Drawing.Size(121, 20);
+            this.txtdescontoporc.TabIndex = 39;
+            this.txtdescontoporc.Leave += new System.EventHandler(this.CalcularResumos);
             // 
-            // textBox3
+            // txttotalitens
             // 
-            this.textBox3.Location = new System.Drawing.Point(125, 20);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 20);
-            this.textBox3.TabIndex = 39;
+            this.txttotalitens.Location = new System.Drawing.Point(125, 20);
+            this.txttotalitens.Name = "txttotalitens";
+            this.txttotalitens.ReadOnly = true;
+            this.txttotalitens.Size = new System.Drawing.Size(121, 20);
+            this.txttotalitens.TabIndex = 39;
             // 
-            // label5
+            // label16
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(260, 25);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Data:";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(16, 101);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(37, 13);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Func.:";
             // 
-            // dateTimePicker1
+            // cbofuncionario
             // 
-            this.dateTimePicker1.CustomFormat = "";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(294, 22);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(82, 20);
-            this.dateTimePicker1.TabIndex = 35;
-            this.dateTimePicker1.Value = new System.DateTime(2016, 12, 2, 0, 0, 0, 0);
+            this.cbofuncionario.FormattingEnabled = true;
+            this.cbofuncionario.Location = new System.Drawing.Point(65, 95);
+            this.cbofuncionario.Name = "cbofuncionario";
+            this.cbofuncionario.Size = new System.Drawing.Size(345, 21);
+            this.cbofuncionario.TabIndex = 36;
             // 
             // frmpedidos
             // 
@@ -559,8 +611,8 @@
             this.tbcpeduto.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grpitem.ResumeLayout(false);
+            this.grpitem.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dvgprodutos)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -586,19 +638,19 @@
         private System.Windows.Forms.TextBox txtpedcondicao;
         private System.Windows.Forms.MaskedTextBox txtpedcodi;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dppedem;
+        private System.Windows.Forms.DateTimePicker dtpedem;
         private System.Windows.Forms.ComboBox cboclientes;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txttotalitens;
+        private System.Windows.Forms.TextBox txtdescontoporc;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtdescontoreal;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txttotalliq;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dvgprodutos;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpitem;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtpronome;
@@ -610,11 +662,17 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnAdicionarProduto;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MaskedTextBox txtprocodi;
         private System.Windows.Forms.TextBox txtproestoque;
-        private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpbaixa;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITECODI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PROCODI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DESCRICAO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITEQTDE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITEVALO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITETOTA;
+        private System.Windows.Forms.ComboBox cbofuncionario;
+        private System.Windows.Forms.Label label16;
     }
 }
