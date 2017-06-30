@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using LES_17_I_N.Dao;
 using LES_17_I_N.Model;
@@ -29,7 +30,7 @@ namespace LES_17_I_N
             chkcontabloqueada.Checked = false;
             dtpusuexpira.Text = "";
             cblnivelacesso.SelectedItem = null;
-            txtusuchances.Text = "";
+            txtusuchances.Text = "10";
             txtususenha.Text = "";
             edicao = false;
             DgvDados();
@@ -51,7 +52,7 @@ namespace LES_17_I_N
 
             //O campo ususenha tem que ter obrigatoriamente letras e números, sendo no mínimo
             //seis dígitos e no máximo 10
-            if (txtususenha.Text.Length >= 6 && txtususenha.Text.Length <= 10)
+            if (txtususenha.Text.Length < 6 || txtususenha.Text.Length > 10)
             {
                 MessageBox.Show("A senha deve ter no mínimo entre 6 - 10 caracteres");
                 return null;
@@ -60,11 +61,12 @@ namespace LES_17_I_N
             //O campo ususenha tem que ter obrigatoriamente letras e números
             if (!(txtususenha.Text.Any(char.IsDigit) &&
                 txtususenha.Text.Any(char.IsLetter) &&
-                txtususenha.Text.Any(char.IsSymbol) &&
+                  hasSpecialChar(txtususenha.Text) &&
                 txtususenha.Text.Any(char.IsUpper) &&
                 txtususenha.Text.Any(char.IsLower)))
             {
                 MessageBox.Show("A senha deve ter obrigatoriamente caracteres especiais, números, letras minúsculas e maiúsculas.");
+                return null;
             }
 
             return new UsuarioModel
@@ -79,6 +81,21 @@ namespace LES_17_I_N
             };
         }
 
+        private void chkmostrasenha_CheckedChanged(object sender, EventArgs e)
+        {
+            txtususenha.PasswordChar = chkmostrasenha.Checked ? Char.MinValue : '*';
+        }
+
+        public static bool hasSpecialChar(string input)
+        {
+            string specialChar = @"\|!#$%&/()=?»«@£§€{}.-;'<>_,";
+            foreach (var item in specialChar)
+            {
+                if (input.Contains(item)) return true;
+            }
+
+            return false;
+        }
         private void btnincluir_Click(object sender, System.EventArgs e)
         {
             var entidade = Entidade();
@@ -119,6 +136,7 @@ namespace LES_17_I_N
             var dt = UsuarioDao.GetAll();
             dgvusuario.DataSource = dt;
 
+            cblfuncionario.Items.Clear();
             cblfuncionario.Items.AddRange(Funcionarios.ToArray());
         }
 
@@ -172,6 +190,14 @@ namespace LES_17_I_N
                 }
                 else
                 {
+                    cblfuncionario.SelectedItem = null;
+                    chkcontabloqueada.Checked = false;
+                    dtpusuexpira.Text = "";
+                    cblnivelacesso.SelectedItem = null;
+                    txtusuchances.Text = "10";
+                    txtususenha.Text = "";
+                    edicao = false;
+                    DgvDados();
                 }
             }
         }

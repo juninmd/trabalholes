@@ -48,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtusunome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.chkmostrasenha = new System.Windows.Forms.CheckBox();
             this.tbcusuario.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvusuario)).BeginInit();
@@ -94,6 +95,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.chkmostrasenha);
             this.tabPage2.Controls.Add(this.dtpusuexpira);
             this.tabPage2.Controls.Add(this.cblnivelacesso);
             this.tabPage2.Controls.Add(this.cblfuncionario);
@@ -169,6 +171,7 @@
             this.txtusuchances.ReadOnly = true;
             this.txtusuchances.Size = new System.Drawing.Size(46, 20);
             this.txtusuchances.TabIndex = 7;
+            this.txtusuchances.Text = "10";
             this.txtusuchances.ValidatingType = typeof(int);
             // 
             // chkcontabloqueada
@@ -275,6 +278,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuário:";
             // 
+            // chkmostrasenha
+            // 
+            this.chkmostrasenha.AutoSize = true;
+            this.chkmostrasenha.Location = new System.Drawing.Point(263, 142);
+            this.chkmostrasenha.Name = "chkmostrasenha";
+            this.chkmostrasenha.Size = new System.Drawing.Size(85, 17);
+            this.chkmostrasenha.TabIndex = 14;
+            this.chkmostrasenha.Text = "Exibir Senha";
+            this.chkmostrasenha.UseVisualStyleBackColor = true;
+            this.chkmostrasenha.CheckedChanged += new System.EventHandler(this.chkmostrasenha_CheckedChanged);
+            // 
             // frmusuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,5 +335,6 @@
         private System.Windows.Forms.ComboBox cblfuncionario;
         private System.Windows.Forms.ComboBox cblnivelacesso;
         private System.Windows.Forms.DateTimePicker dtpusuexpira;
+        private System.Windows.Forms.CheckBox chkmostrasenha;
     }
 }
