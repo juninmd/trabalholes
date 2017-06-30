@@ -22,7 +22,7 @@ namespace LES_17_I_N.Dao
 
         public DataTable GetAll()
         {
-            var sql = $"SELECT * FROM USUARIO";
+            var sql = $"SELECT USUNOME, FUNCODI, USUNIVEL, USUDATA, USUQTDE, USUBLOQ FROM USUARIO";
             return ExecuteReaderDt(sql);
         }
 
