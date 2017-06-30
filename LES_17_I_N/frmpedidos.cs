@@ -13,6 +13,7 @@ namespace LES_17_I_N
         public frmpedidos()
         {
             InitializeComponent();
+            preencheLista(0);
         }
 
         public PedidoDao PedidoDao = new PedidoDao();
@@ -30,6 +31,24 @@ namespace LES_17_I_N
         private void limpar()
         {
             txtpedcodi.Clear();
+            dtpedem.ResetText();
+            dtpbaixa.ResetText();
+            cboclientes.SelectedItem = null;
+            cbofuncionario.SelectedItem = null;
+            txtpedobs.Text = "";
+            txtpedcondicao.Text = "";
+            txtdescontoporc.Text = "";
+            txtdescontoreal.Text = "";
+            txttotalitens.Text = "";
+            txttotalliq.Text = "";
+
+            txtprocodi.Text = "";
+            txtpronome.Text = "";
+            txtproqtd.Text = "";
+            txtproestoque.Text = "";
+            txtprounidade.Text = "";
+            txtprototal.Text = "";
+            dvgitenspedidos.Rows.Clear();
 
             edicao = false;
             DgvDados();
@@ -61,15 +80,22 @@ namespace LES_17_I_N
 
         private List<Pedido_itemModel> EntidadeItens()
         {
-            if (dvgprodutos.Rows.Count == 0)
+            if (dvgitenspedidos.Rows.Count == 0)
             {
                 MessageBox.Show("Adicione ao menos um produto ao pedido!");
                 return null;
             }
 
+            if (String.IsNullOrEmpty(txtpedcodi.Text))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+                return null;
+            }
+
+
             var lista = new List<Pedido_itemModel>();
 
-            foreach (var item in dvgprodutos.Rows)
+            foreach (var item in dvgitenspedidos.Rows)
             {
                 var c = (DataGridViewRow)item;
 
@@ -90,12 +116,13 @@ namespace LES_17_I_N
 
         private void btnincluir_Click(object sender, System.EventArgs e)
         {
-            var entidade = Entidade();
-            if (entidade == null)
-                return;
 
             var entidadef = EntidadeItens();
             if (entidadef == null)
+                return;
+
+            var entidade = Entidade();
+            if (entidade == null)
                 return;
 
             //Reseta
@@ -136,7 +163,7 @@ namespace LES_17_I_N
         private void DgvDados()
         {
             var dt = PedidoDao.GetAll();
-            dvgpeduto.DataSource = dt;
+            dvgpedidos.DataSource = dt;
 
             cboclientes.Items.Clear();
             cboclientes.Items.AddRange(Clientes.ToArray());
@@ -195,6 +222,8 @@ namespace LES_17_I_N
                 cboclientes.SelectedItem = Clientes.FirstOrDefault(q => q.Split('-')[0].Trim() == dr["CLICODI"].ToString());
                 cbofuncionario.SelectedItem = Funcionarios.FirstOrDefault(q => q.Split('-')[0].Trim() == dr["FUNCODI"].ToString());
                 edicao = true;
+                //Aqui
+                preencheLista(int.Parse(dr["PEDCODI"].ToString()));
             }
             else
             {
@@ -214,6 +243,19 @@ namespace LES_17_I_N
             dr.Close();
         }
 
+        private void preencheLista(int pedicodi)
+        {
+            var listaPedidos = Pedido_itemDao.GetAll(pedicodi);
+            dvgitenspedidos.Rows.Clear();
+
+            foreach (var i in listaPedidos.Rows)
+            {
+                var p = i as DataRow;
+                dvgitenspedidos.Rows.Add(p["PEDCODI"], p["ITECODI"], p["PROCODI"], p["ITEQTDE"], p["ITEVALO"], p["ITETOTA"]);
+            }
+            
+        }
+
         private void btnvoltar_Click(object sender, EventArgs e)
         {
             tbcpeduto.SelectedIndex = 0;
@@ -223,7 +265,7 @@ namespace LES_17_I_N
         {
             if (e.RowIndex < 0)
                 return;
-            txtpedcodi.Text = dvgpeduto.Rows[e.RowIndex].Cells["PEDCODI"].Value.ToString();
+            txtpedcodi.Text = dvgpedidos.Rows[e.RowIndex].Cells["PEDCODI"].Value.ToString();
             txtpedccodi_Leave(null, null);
             tbcpeduto.SelectedIndex = 1;
 
@@ -298,9 +340,9 @@ namespace LES_17_I_N
                 return;
             }
 
-            var existe = dvgprodutos.Rows
+            var existe = dvgitenspedidos.Rows
                 .Cast<DataGridViewRow>()
-                .FirstOrDefault(r => r.Cells["PROCODI"].Value.ToString().Equals(txtprocodi.Text));
+                .FirstOrDefault(r => r.Cells["PROCODI"].Value.ToString().Trim().Equals(txtprocodi.Text.Trim()));
 
             if (existe != null)
             {
@@ -309,11 +351,10 @@ namespace LES_17_I_N
                 return;
             }
 
-            dvgprodutos.Rows.Add(dvgprodutos.Rows.Count + 1, txtprocodi.Text.Trim(),
-                txtpronome.Text.Trim(), txtproqtd.Text.Trim(), txtprounidade.Text.Trim(), txtprototal.Text.Trim());
+            dvgitenspedidos.Rows.Add(txtpedcodi.Text, dvgitenspedidos.Rows.Count + 1, txtprocodi.Text.Trim(), txtproqtd.Text.Trim(), txtprounidade.Text.Trim(), txtprototal.Text.Trim());
 
 
-            var soma = dvgprodutos.Rows
+            var soma = dvgitenspedidos.Rows
                 .Cast<DataGridViewRow>()
                 .Sum(r => double.Parse(r.Cells["ITETOTA"].Value.ToString()));
 

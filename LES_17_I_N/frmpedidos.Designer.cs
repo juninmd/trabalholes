@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dvgpeduto = new System.Windows.Forms.DataGridView();
+            this.dvgpedidos = new System.Windows.Forms.DataGridView();
             this.tbcpeduto = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.grpitem = new System.Windows.Forms.GroupBox();
@@ -46,13 +46,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtprocodi = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dvgprodutos = new System.Windows.Forms.DataGridView();
-            this.ITECODI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PROCODI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCRICAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ITEQTDE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ITEVALO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ITETOTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvgitenspedidos = new System.Windows.Forms.DataGridView();
+            this.cbofuncionario = new System.Windows.Forms.ComboBox();
             this.cboclientes = new System.Windows.Forms.ComboBox();
             this.dtpbaixa = new System.Windows.Forms.DateTimePicker();
             this.dtpedem = new System.Windows.Forms.DateTimePicker();
@@ -62,6 +57,7 @@
             this.btnincluir = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtpedobs = new System.Windows.Forms.TextBox();
@@ -77,21 +73,25 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtdescontoporc = new System.Windows.Forms.TextBox();
             this.txttotalitens = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.cbofuncionario = new System.Windows.Forms.ComboBox();
+            this.PEDCODI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITECODI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PROCODI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITEQTDE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITEVALO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITETOTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgpeduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgpedidos)).BeginInit();
             this.tbcpeduto.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.grpitem.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgprodutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgitenspedidos)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dvgpeduto);
+            this.tabPage1.Controls.Add(this.dvgpedidos);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -100,19 +100,19 @@
             this.tabPage1.Text = "Listagem";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dvgpeduto
+            // dvgpedidos
             // 
-            this.dvgpeduto.AllowUserToAddRows = false;
-            this.dvgpeduto.AllowUserToDeleteRows = false;
-            this.dvgpeduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgpeduto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dvgpeduto.Location = new System.Drawing.Point(3, 3);
-            this.dvgpeduto.Name = "dvgpeduto";
-            this.dvgpeduto.ReadOnly = true;
-            this.dvgpeduto.RowHeadersVisible = false;
-            this.dvgpeduto.Size = new System.Drawing.Size(670, 429);
-            this.dvgpeduto.TabIndex = 0;
-            this.dvgpeduto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgpeduto_CellDoubleClick);
+            this.dvgpedidos.AllowUserToAddRows = false;
+            this.dvgpedidos.AllowUserToDeleteRows = false;
+            this.dvgpedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgpedidos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dvgpedidos.Location = new System.Drawing.Point(3, 3);
+            this.dvgpedidos.Name = "dvgpedidos";
+            this.dvgpedidos.ReadOnly = true;
+            this.dvgpedidos.RowHeadersVisible = false;
+            this.dvgpedidos.Size = new System.Drawing.Size(670, 429);
+            this.dvgpedidos.TabIndex = 0;
+            this.dvgpedidos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgpeduto_CellDoubleClick);
             // 
             // tbcpeduto
             // 
@@ -288,7 +288,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dvgprodutos);
+            this.groupBox1.Controls.Add(this.dvgitenspedidos);
             this.groupBox1.Location = new System.Drawing.Point(16, 253);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(644, 164);
@@ -296,61 +296,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Itens";
             // 
-            // dvgprodutos
+            // dvgitenspedidos
             // 
-            this.dvgprodutos.AllowUserToAddRows = false;
-            this.dvgprodutos.AllowUserToDeleteRows = false;
-            this.dvgprodutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgprodutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgitenspedidos.AllowUserToAddRows = false;
+            this.dvgitenspedidos.AllowUserToDeleteRows = false;
+            this.dvgitenspedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgitenspedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PEDCODI,
             this.ITECODI,
             this.PROCODI,
-            this.DESCRICAO,
             this.ITEQTDE,
             this.ITEVALO,
             this.ITETOTA});
-            this.dvgprodutos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dvgprodutos.Location = new System.Drawing.Point(3, 16);
-            this.dvgprodutos.Name = "dvgprodutos";
-            this.dvgprodutos.ReadOnly = true;
-            this.dvgprodutos.RowHeadersVisible = false;
-            this.dvgprodutos.Size = new System.Drawing.Size(638, 145);
-            this.dvgprodutos.TabIndex = 1;
+            this.dvgitenspedidos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dvgitenspedidos.Location = new System.Drawing.Point(3, 16);
+            this.dvgitenspedidos.Name = "dvgitenspedidos";
+            this.dvgitenspedidos.ReadOnly = true;
+            this.dvgitenspedidos.RowHeadersVisible = false;
+            this.dvgitenspedidos.Size = new System.Drawing.Size(638, 145);
+            this.dvgitenspedidos.TabIndex = 1;
             // 
-            // ITECODI
+            // cbofuncionario
             // 
-            this.ITECODI.HeaderText = "ITECODI";
-            this.ITECODI.Name = "ITECODI";
-            this.ITECODI.ReadOnly = true;
-            // 
-            // PROCODI
-            // 
-            this.PROCODI.HeaderText = "PROCODI";
-            this.PROCODI.Name = "PROCODI";
-            this.PROCODI.ReadOnly = true;
-            // 
-            // DESCRICAO
-            // 
-            this.DESCRICAO.HeaderText = "DESCRICAO";
-            this.DESCRICAO.Name = "DESCRICAO";
-            this.DESCRICAO.ReadOnly = true;
-            // 
-            // ITEQTDE
-            // 
-            this.ITEQTDE.HeaderText = "ITEQTDE";
-            this.ITEQTDE.Name = "ITEQTDE";
-            this.ITEQTDE.ReadOnly = true;
-            // 
-            // ITEVALO
-            // 
-            this.ITEVALO.HeaderText = "ITEVALO";
-            this.ITEVALO.Name = "ITEVALO";
-            this.ITEVALO.ReadOnly = true;
-            // 
-            // ITETOTA
-            // 
-            this.ITETOTA.HeaderText = "ITETOTA";
-            this.ITETOTA.Name = "ITETOTA";
-            this.ITETOTA.ReadOnly = true;
+            this.cbofuncionario.FormattingEnabled = true;
+            this.cbofuncionario.Location = new System.Drawing.Point(65, 95);
+            this.cbofuncionario.Name = "cbofuncionario";
+            this.cbofuncionario.Size = new System.Drawing.Size(345, 21);
+            this.cbofuncionario.TabIndex = 36;
             // 
             // cboclientes
             // 
@@ -436,6 +408,15 @@
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 3;
             this.label5.Text = "Data:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(16, 101);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(37, 13);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Func.:";
             // 
             // label11
             // 
@@ -574,22 +555,41 @@
             this.txttotalitens.Size = new System.Drawing.Size(121, 20);
             this.txttotalitens.TabIndex = 39;
             // 
-            // label16
+            // PEDCODI
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(16, 101);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(37, 13);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Func.:";
+            this.PEDCODI.HeaderText = "PEDCODI";
+            this.PEDCODI.Name = "PEDCODI";
+            this.PEDCODI.ReadOnly = true;
             // 
-            // cbofuncionario
+            // ITECODI
             // 
-            this.cbofuncionario.FormattingEnabled = true;
-            this.cbofuncionario.Location = new System.Drawing.Point(65, 95);
-            this.cbofuncionario.Name = "cbofuncionario";
-            this.cbofuncionario.Size = new System.Drawing.Size(345, 21);
-            this.cbofuncionario.TabIndex = 36;
+            this.ITECODI.HeaderText = "ITECODI";
+            this.ITECODI.Name = "ITECODI";
+            this.ITECODI.ReadOnly = true;
+            // 
+            // PROCODI
+            // 
+            this.PROCODI.HeaderText = "PROCODI";
+            this.PROCODI.Name = "PROCODI";
+            this.PROCODI.ReadOnly = true;
+            // 
+            // ITEQTDE
+            // 
+            this.ITEQTDE.HeaderText = "ITEQTDE";
+            this.ITEQTDE.Name = "ITEQTDE";
+            this.ITEQTDE.ReadOnly = true;
+            // 
+            // ITEVALO
+            // 
+            this.ITEVALO.HeaderText = "ITEVALO";
+            this.ITEVALO.Name = "ITEVALO";
+            this.ITEVALO.ReadOnly = true;
+            // 
+            // ITETOTA
+            // 
+            this.ITETOTA.HeaderText = "ITETOTA";
+            this.ITETOTA.Name = "ITETOTA";
+            this.ITETOTA.ReadOnly = true;
             // 
             // frmpedidos
             // 
@@ -607,14 +607,14 @@
             this.Load += new System.EventHandler(this.frmpedidos_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmpedidos_KeyDown);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dvgpeduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgpedidos)).EndInit();
             this.tbcpeduto.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.grpitem.ResumeLayout(false);
             this.grpitem.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dvgprodutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgitenspedidos)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -624,7 +624,7 @@
         #endregion
 
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dvgpeduto;
+        private System.Windows.Forms.DataGridView dvgpedidos;
         private System.Windows.Forms.TabControl tbcpeduto;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label4;
@@ -649,7 +649,7 @@
         private System.Windows.Forms.TextBox txttotalliq;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dvgprodutos;
+        private System.Windows.Forms.DataGridView dvgitenspedidos;
         private System.Windows.Forms.GroupBox grpitem;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
@@ -666,13 +666,13 @@
         private System.Windows.Forms.TextBox txtproestoque;
         private System.Windows.Forms.DateTimePicker dtpbaixa;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbofuncionario;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PEDCODI;
         private System.Windows.Forms.DataGridViewTextBoxColumn ITECODI;
         private System.Windows.Forms.DataGridViewTextBoxColumn PROCODI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DESCRICAO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ITEQTDE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ITEVALO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ITETOTA;
-        private System.Windows.Forms.ComboBox cbofuncionario;
-        private System.Windows.Forms.Label label16;
     }
 }

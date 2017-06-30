@@ -12,10 +12,10 @@ namespace LES_17_I_N.Dao
     	 	return ExecuteReader(sql);
     	}
 
-    	public DataTable GetAll()
+    	public DataTable GetAll(int PEDCODI)
     	{
     	 	
-    	 	var sql = $"SELECT * FROM PEDIDO_ITEM";
+    	 	var sql = $"SELECT * FROM PEDIDO_ITEM WHERE PEDCODI = '{PEDCODI}'";
     	 	return ExecuteReaderDt(sql);
     	}
 
