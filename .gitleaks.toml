@@ -1,54 +1,10 @@
-[[allowlist]]
-description = "False positive: generic-api-key in LES_17_I_N/frmpedidos.resx"
-rules = ["generic-api-key"]
-paths = ["LES_17_I_N/frmpedidos.resx"]
-
-[[allowlist]]
-description = "False positive: generic-api-key in LES_17_I_N/frmpedidos.resx"
-rules = ["generic-api-key"]
-paths = ["LES_17_I_N/frmpedidos.resx"]
-
-[[allowlist]]
-description = "False positive: generic-api-key in LES_17_I_N/frmpedidos.resx"
-rules = ["generic-api-key"]
-paths = ["LES_17_I_N/frmpedidos.resx"]
-
-[[allowlist]]
-description = "False positive: generic-api-key in LES_17_I_N/frmpedidos.resx"
-rules = ["generic-api-key"]
-paths = ["LES_17_I_N/frmpedidos.resx"]
-
-[[allowlist]]
-description = "False positive: generic-api-key in LES_17_I_N/frmpedidos.resx"
-rules = ["generic-api-key"]
-paths = ["LES_17_I_N/frmpedidos.resx"]
-
-[[allowlist]]
-description = "False positive: generic-api-key in LES_17_I_N/frmpedidos.resx"
-rules = ["generic-api-key"]
-paths = ["LES_17_I_N/frmpedidos.resx"]
-
-[[allowlist]]
-description = "False positive: generic-api-key in LES_17_I_N/frmpedidos.resx"
-rules = ["generic-api-key"]
-paths = ["LES_17_I_N/frmpedidos.resx"]
-
-[[allowlist]]
-description = "False positive: generic-api-key in LES_17_I_N/frmpedidos.resx"
-rules = ["generic-api-key"]
-paths = ["LES_17_I_N/frmpedidos.resx"]
-
-[[allowlist]]
-description = "False positive: generic-api-key in LES_17_I_N/frmpedidos.resx"
-rules = ["generic-api-key"]
-paths = ["LES_17_I_N/frmpedidos.resx"]
-
-[[allowlist]]
-description = "False positive: generic-api-key in LES_17_I_N/Properties/Resources.resx"
-rules = ["generic-api-key"]
-paths = ["LES_17_I_N/Properties/Resources.resx"]
-
-[[allowlist]]
-description = "False positive: generic-api-key in LES_17_I_N/frmpais.resx"
-rules = ["generic-api-key"]
-paths = ["LES_17_I_N/frmpais.resx"]
+[allowlist]
+description = "Merged allowlist"
+rules = [
+  "generic-api-key"
+]
+paths = [
+  "LES_17_I_N/frmpedidos.resx",
+  "LES_17_I_N/Properties/Resources.resx",
+  "LES_17_I_N/frmpais.resx"
+]
